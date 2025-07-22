@@ -1,5 +1,5 @@
 ---
-title: Best practices and practical applications for salmon data mobilization---a practical guide for salmon biologists assuming responsibility for data stewardship
+title: Best practices and practical applications for salmon data mobilization---a guide for salmon biologists assuming responsibility for data stewardship
 authors:
   - name: Brett Johnson
     affiliation: Fisheries and Oceans Canada
