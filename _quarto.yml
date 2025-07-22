@@ -4,16 +4,17 @@ project:
 
 manuscript:
   article: index.qmd
+  manuscript-url: https://br-johnson.github.io/sdm-paper/
+  resources:
+    - examples/Cal_DMP.pdf
 
 format:
   html:
     comments:
-      hypothesis: true
+      utterances:
+        repo: br-johnson/sdm-paper
   docx: default
-  jats: default
-
-  # (other formats)
-  # pdf: default
+  pdf: default
 
 execute:
   freeze: true

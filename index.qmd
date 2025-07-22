@@ -1,44 +1,67 @@
 ---
-title: Best practices to mobilize salmon data---a practical guide for salmon biologists assuming responsibility for data stewardship
+title: Best practices and practical applications for salmon data mobilization---a practical guide for salmon biologists assuming responsibility for data stewardship
 authors:
   - name: Brett Johnson
     affiliation: Fisheries and Oceans Canada
-    roles: writing
+    roles: writing - original draft, conceptualization, data curation, project administration, investigation, methodology
     corresponding: true
+  - name: Scott Akenhead
+    affiliation: TBD
+    roles: writing - original draft, conceptualization
+  - name: Jennifer Bayer
+    affiliation: U.S. Geological Survey
+    roles: writing - original draft, conceptualization, project administration
+  - name: Tomas Bird
+    affiliation: Fisheries and Oceans Canada
+    roles: writing - original draft, conceptualization
+  - name: Samuel Cimino
+    affiliation: U.s Geological Survey
+    roles: writing - original draft
+  - name: Graeme Diack
+    affiliation: Missing Salmon Alliance
+    roles: writing - review and editing, conceptualization
+  - name: Lara Erikson
+    affiliation: Pacific States Marine Fisheries Commission
+    roles: conceptualization, writing - review and editing
+  - name: Nancy Leonard
+    affiliation: Pacific States Marine Fisheries Commission
+    roles: conceptualization, writing - original draft
+  - name: Catherine Michielsens
+    affiliation: Pacific Salmon Commission
+    roles: writing - review and editing
+  - name: Fiona Martens
+    affiliation: Pacific Salmon Commission
+    roles: writing - review and editing
+  - name: Emily Lescak
+    affiliation: University of Alaska Fairbanks
+    roles: writing - review and editing
+  - name: Gottfried Pestal
+    affiliation: Solv Consulting
+    roles: writing - review and editing
+  - name: Matt Jones
+    affiliation: National Centre of Ecological Analysis and Synthesis
+    roles: writing - review and editing
+  - name: Shirly Stephen-Ambrose
+    affiliation: National Centre of Ecological Analysis and Synthesis
+    roles: writing - review and editing
+    
 bibliography: references.bib
+appendix-style: plain
 ---
 
-Brett Johnson^1^, Scott Akenhead, Jennifer Bayer^2^, Tomas Bird^1^, Samuel Cimino^2^, Minh Doan^1^, Lara Erikson^3^, Nancy Leonard^3^, Catherine Michielsens^6^, Fiona Martens^6^, Emily Lescak^4^, Gottfried Pestal, Matt Jones?^5^, Shirly Stephen-Ambrose^5^?, Your name here
-
-1\. Fisheries and Oceans Canada
-
-2\. U.S. Geological Survey
-
-3\. Pacific States Marine Fisheries Commission
-
-4\. University of Alaska Fairbanks
-
-5\. National Centre of Ecological Analysis and Synthesis
-
-6\. Pacific Salmon Commission
-
-corresponding author: Brett Johnson (Brett.Johnson\@dfo-mpo.gc.ca)
-
 **Keywords:** Salmon data stewardship, Data interoperability, FAIR principles, Persistent identifiers (PIDs), Controlled vocabularies, Metadata standards, Application Programming Interface (API), Data citation, Ontology development
-
-TEST GH PAGES DEPLOY FROM MAIN
 
 ### Abstract
 
 Salmon research, management and conservation generates increasingly vast and diverse data crucial for effective decision making for resource management. Yet, these resources remain largely fragmented across jurisdictions, disciplines and outdated infrastructures, limiting their use in responsive fisheries management. Biologists are increasingly assuming the responsibilities of data stewards to address these challenges, yet often lack clear guidance or institutional support to do so. We provide practical guidance for those transitioning into these essential stewardship roles, outlining actionable best practices specific to the salmon research and management domain, and argue that effective salmon management hinges upon formally establishing data stewardship as a dedicated, institutionally supported professional role. We outline key best practices ---including both socio-cultural and technical solutions that collectively ensure salmon data meet FAIR (Findable, Accessible, Interoperable, Reusable) principles and respect Indigenous Data Sovereignty. Through an illustrative case study involving sockeye salmon productivity analyses across Pacific Coast jurisdictions, we highlight how clearly defined stewardship practices can enhance data reproducibility, integration, and management efficacy. With a foundation of shared best practices, salmon data stewards will enable faster, more transparent decisions that draw from broader, cross-jurisdictional datasets, and support development of tools that leverage recent advances in artificial intelligence---ultimately strengthening the management and conservation of salmon populations.
 
-## INTRODUCTION
+## Introduction
 
 Salmon biologists generate vast amounts of data on abundance, health, and environmental conditions, yet these data remain fragmented, inconsistently measured, and often incomplete across time, space, and life history stages—limiting their value for robust research, hypothesis evaluation, and management decision-making [@marmorek2011; @inman2021; @diack2024]. Salmon traverse multiple ecological regions and jurisdictional boundaries, resulting in data collections managed by diverse agencies and institutions, often in isolation. This fragmented data landscape undermines timely, integrated analyses necessary for effective management and conservation decisions. Additionally, the lack of institutional support and dedicated roles for data management frequently relegates critical data stewardship tasks to an ad hoc status---something performed off the side of a biologist's desk. Institutional neglect of formal data stewardship has become a bottleneck in adaptive salmon management and conservation efforts.
 
 The growing complexity of fisheries management, combined with escalating environmental uncertainties due to climate change, demands rapid, integrated, and robust data analyses [@bull2022]. Yet salmon biologists transitioning into data stewardship roles typically receive insufficient guidance or institutional support. We argue that fisheries management agencies must formally acknowledge and fund dedicated data stewardship roles to effectively mobilize and leverage salmon data. Without this institutional commitment, data remain inaccessible and fragmented, severely constraining the responsiveness and adaptability of management actions. To address these critical shortcomings, we outline practical steps that biologists, agencies and organizations can adopt.
 
-## THE PROBLEM
+## The Issue
 
 Effective integration and mobilization of salmon data mirrors the complexity of salmon biology itself: these fish traverse freshwater, estuarine, and marine ecosystems, crossing provincial, state, tribal, federal, and international management boundaries [@groot1991]. While localized successes in data coordination exist---particularly within regional fisheries management offices and treaty commissions---salmon data integrated across agencies for each phase of the salmon life cycle is rare and prohibitively expensive for all but the most pressing challenges. Most salmon datasets remain confined within institutional silos, often undocumented, stored in outdated systems, or formatted according to internal standards that are incompatible with broader integration efforts. As a result, long-term datasets critical to stock assessment and environmental monitoring frequently become inaccessible, poorly understood, or effectively lost once original data holders retire or move on.
 
@@ -46,7 +69,7 @@ This fragmentation is compounded by the number of disciplines and organizations 
 
 The consequences of inaction are already visible. When critical datasets are hard to find, access, or interpret, biologists and analysts lose valuable time trying to reconstruct or harmonize them. This reduces transparency, increases the risk of errors, and delays urgent conservation or management responses. Without clear accountability for data stewardship, the system continues to rely on improvised, inconsistent, and ultimately unsustainable practices.
 
-## THE NEED FOR COORDINATED ACTION
+## The Need for Coorindated Action
 
 For fisheries managers, modernizing data systems and workflows is essential to improve the quality, speed, and interoperability of operational data assets. These systems must support an increasingly complex decision-making landscape that now depends on integrating broader types and sources of data, often in real time. At the same time, researchers face pressure to generate insights on future salmon abundance, the impacts of changing environmental conditions, and the effectiveness of restoration strategies across all salmon life stages. Yet the current scattered and siloed data landscape remains unfit for purpose---both for science and for management.
 
@@ -54,7 +77,7 @@ Despite operating under different mandates, both researchers and managers strugg
 
 A coordinated approach to stewarding salmon data should follow established open science standards and adhere explicitly to FAIR principles, tailored specifically for salmon research and management [@johnson2024]. Achieving meaningful interoperability demands both breadth and depth. **Broad interoperability** integrates diverse scientific domains, systems, and formats, requiring structured, machine-readable data and metadata published openly for maximum discoverability. **Deep interoperability** demands precise definitions of salmon-specific terms and methods, ensuring data remains meaningful and usable across contexts. Salmon data stewards can improve conservation outcomes for salmon by coordinating across boundaries to develop a shared foundation of data stewardship practices.
 
-## DEFINING DATA STEWARDSHIP IN SALMON MANAGEMENT
+## Defining Data Stewardship in Salmon Science
 
 Data stewardship encompasses the coordinated practices, roles, and responsibilities necessary to effectively manage, share, and reuse data throughout its lifecycle. Within fisheries science, stewardship involves ensuring data quality, compliance with agreed-upon standards, and the establishment of clear governance to guide data collection, documentation, integration, and preservation. However, salmon data stewardship goes beyond mere technical data management; it involves actively facilitating collaboration, communication, and consensus-building among data producers and users across multiple institutions and jurisdictions.
 
@@ -70,11 +93,11 @@ A user-centered design approach to salmon data stewardship is critical and focus
 
 Dedicated stewardship roles empower salmon biologists to bridge disciplinary divides and jurisdictional barriers, transforming fragmented datasets into cohesive, interoperable resources. By proactively defining, implementing, and maintaining data standards and workflows, salmon data stewards create conditions for timely, accurate, and reproducible analyses. Such stewardship positions salmon biologists to better inform adaptive management decisions, ultimately strengthening salmon conservation and resilience.
 
-## CASE STUDY --- UPDATING PACIFIC WIDE SOCKEYE PRODUCTIVITY: WHAT AGENCIES COULD DO NOW
+## Updating Pacific-wide Sockeye Productivity: A Case Study for What Agencies Could Do Now
 
 This case study revisits a pacific coast wide sockeye productivity dataset assembled from diverse agency sources by academic researchers [@peterman2012]. We reflect not on the significant work the research team accomplished, but rather on the preventable institutional and technical barriers that impeded their work---and continue to burden data updates and reuse efforts today. Their study examined productivity trends across 64 sockeye salmon stocks spanning Washington, British Columbia (B.C.), and Alaska. However, attempting to replicate or build upon this analysis today is an arduous, time-consuming, and error-prone endeavour due to fragmented data sources, inconsistent formats, and lack of standardized practices among the key institutions involved: the Washington Department of Fish and Wildlife (WDFW), Fisheries and Oceans Canada (DFO), and the Alaska Department of Fish and Game (ADF&G).
 
-Each section below highlights a key challenge faced by the team and proposes practical steps based on our best practices that data-holding agencies could do to enable easier integration, validation, and updating of salmon datasets across jurisdictions and decades. This case study illustrates how implementing the foundational concepts and practical recommendations outlined in this paper can transform data stewardship practices within these organizations. By doing so, they can significantly enhance data accessibility, quality, and interoperability---ultimately enabling more efficient and accurate analyses that support salmon conservation and management.
+Each section below highlights a key challenge faced by the team and proposes practical steps based on our best practices (@tbl-bestpractices) that data-holding agencies could do to enable easier integration, validation, and updating of salmon datasets across jurisdictions and decades. This case study illustrates how implementing the foundational concepts and practical recommendations outlined in this paper can transform data stewardship practices within these organizations. By doing so, they can significantly enhance data accessibility, quality, and interoperability---ultimately enabling more efficient and accurate analyses that support salmon conservation and management.
 
 ### Challenge 1: Interpreting the Data --- What do these numbers actually mean?
 
@@ -117,8 +140,6 @@ Once Peterman and his team completed their analysis, no formal plan existed for 
 
 While the analytical contribution of the Peterman productivity dataset remains significant, the barriers encountered in compiling, interpreting, and maintaining the data are instructive. These challenges are not unique to Peterman's team---they reflect systemic gaps in data governance, documentation, infrastructure, and incentives. By adopting the seven best practices outlined above, agencies and researchers can transform legacy datasets into living resources, enabling reproducibility, easing collaboration, and accelerating insight across the salmon research and management community.
 
-# Table 1. Best Practices for Salmon Data Stewardship
-
 +-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 | **Best Practice**                                                                       | **Summary**                                                                                                                                                                                              | **Practical Applications**                                                                                                      |
 +:========================================================================================+:=========================================================================================================================================================================================================+=================================================================================================================================+
@@ -152,7 +173,9 @@ While the analytical contribution of the Peterman productivity dataset remains s
 |                                                                                         |                                                                                                                                                                                                          | - Support community-engaged research with tangible benefits.                                                                    |
 +-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 
-### CONCLUSION
+: Best practices and practical applications of salmon data stewardship {#tbl-bestpractices}
+
+## Conclusion
 
 We envision a future where salmon data are not locked in filing cabinets, buried in PDFs, or hidden in siloed spreadsheets, but instead flow seamlessly through a well-stewarded digital ecosystem. In this future, field biologists, Indigenous guardians, modelers, and policymakers interact with a living knowledge system---one that is transparent, discoverable, interoperable, and constantly evolving. Metadata standards, controlled vocabularies, and shared governance frameworks are not afterthoughts but integral to the culture of data collection and use. Scientists receive credit for publishing high-quality data, and users trust the provenance and structure of the datasets they rely on to make critical management decisions.
 
@@ -165,3 +188,106 @@ In the face of accelerating environmental change and rapid technological innovat
 ### Acknowledgements
 
 ### References
+
+::: {#refs}
+:::
+
+## Appendix 1. Real-world Example Applications of the Best Practices {.appendix}
+
+Here we provide detailed descriptions of the seven best practices for salmon data stewardship, along with practical applications and real-world examples. This is not an exhaustive list, but rather a starting point for salmon biologists and data stewards to implement effective data stewardship practices in their work based on examples from the salmon research and management community.
+
+#### **1. Make Data Governance Explicit to Support Trust and Reuse**
+
+Clear governance defines roles, responsibilities, and procedures ensuring data quality, long-term maintenance, accountability, and compliance with community principles such as FAIR and CARE. Effective governance fosters trust, facilitates data sharing, and reduces ambiguity regarding decision making, and is critical for coordinating both technical and sociocultural aspects of data stewardship.
+
+In collaborative international or multi-organizational settings, establishing governance at the outset of a project is crucial for aligning diverse groups, including biologists, data managers, Indigenous communities, policymakers, and other participants. Early governance planning should establish clear, collaborative frameworks that respect each group’s expertise and needs from the beginning. 
+
+##### Practical Applications:
+
+Document roles and responsibilities clearly at project start using a Project or Data Product Governance Charter and structured frameworks (e.g., DACI or RACI charts) that relate to organizational data policies.
+
+-   [Example of a Data Management Plan from the California Department of Water Resources](https://raw.githubusercontent.com/Br-Johnson/sdm-paper/refs/heads/main/examples/Cal_DMP.pdf)
+
+-   [Data Management Plan Templates](https://dmptool.org/public_templates?page=ALL)
+
+Integrate CARE principles to ensure ethical governance and respect Indigenous data rights.
+
+-   
+
+Create a governance or oversight committee for regular data practice reviews and decision making regarding data structures, timelines, data sharing agreements and interoperability protocols
+
+#### **2. Reuse Proven Infrastructure to Save Time and Increase Interoperability**
+
+Building custom solutions should be avoided where possible. Maximizing existing platforms and technologies reduces costs, accelerates implementation, and increases data interoperability. Building modular, interoperable systems grounded in proven technologies ensures sustainable long-term stewardship.
+
+##### Practical Applications:
+
+-   [Use the Ocean Biodiversity Information System or the Global Biodiversity Information Facility to standardize and host your data](https://doi.org/10.14286/duc6mu)
+
+-   Use free data catalogue services such as the Knowledge Network for Biocomplexity (KNB) or Zenodo
+
+#### **3. Make Data, People, Projects, and Outputs Discoverable, Linked and Citable with PIDs**
+
+Persistent identifiers (PIDs), including Digital Object Identifiers (DOI) are essential for tracking the provenance and reuse of data, and linking data, protocols, organizations and people. They allow for consistent referencing, integration across systems, and automated credit via data citation.
+
+##### Practical Applications:
+
+-   Encourage researchers to register for an [Open Researcher and Contributor ID (ORCID)](https://orcid.org/) and include ORCIDs in metadata records and submission forms
+
+-   Register your organization with the Research Organization Registry (ROR) and use ROR IDs to identify institutions involved in salmon science.
+
+-   Assign DOIs to data packages, protocols, and reports using DataCite.
+
+-   Embed DOIs in dashboards, figures, and metadata so they persist in derivative products.
+
+#### **4. Use Shared Data Models, Vocabularies and Metadata to Enable Integration**
+
+Standardizing metadata and terminology ensures data can be interpreted correctly and integrated across systems. Controlled vocabularies, community ontologies, and structured metadata schemas allow data to retain its full semantic meaning.
+
+##### Practical Applications:
+
+-   Configure data catalogues and metadata intake tools to accept Internationally recognized metadata schemas such as ISO 19115, Ecological Metadata Language (EML), or DataCite
+
+-   Model datasets and databases using the Darwin Core Data Package model
+
+-   Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology
+
+#### **5. Store Data in Ways That Others Can Easily Access and Use**
+
+Making data easily accessible promotes its use in research and management, enabling seamless integration with tools and applications. Ensuring accessible, persistent data storage requires more than just file hosting. Data should be structured, accessible via API, and stored in repositories that support long-term preservation.
+
+##### Practical Applications:
+
+-   Provide Direct Data Access via Application Programming Interfaces (APIs) using tools such as FastAPI, Flask, or Django REST Framework that allows users to access, filter, and retrieve data programmatically, facilitating automation and integration into analytical tools and decision-support systems
+
+-   Archive data in certified long-term, domain-specific repositories such as the Global Biodiversity Information Facility, the Federated Research Data Repository (FRDR), or NOAA’s NCEI, USGS ScienceBase, or EMODnet
+
+-   Leverage the integration between GitHub and Zenodo to automate archiving and DOI assignment, ensuring long-term data preservation.
+
+**6. Incentivize and Track Data Sharing and Reuse**
+
+The currency of research lies in recognition—credit, citations, and opportunities for collaboration or co-authorship. Promoting data sharing requires both cultural and technical infrastructure. By recognizing contributions, tracking reuse, and supporting citation, data stewards can create a system where sharing is rewarded.
+
+##### Practical Applications:
+
+-   License data for reuse using [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en)
+
+-   Provide recommended citation text and visible credit fields in metadata
+
+-   Create summary dashboards that highlight reuse using [COUNTER Code of Practice compliant metrics](https://www.countermetrics.org/) to track dataset views/downloads and the DataCite APIs
+
+-   Ensure that datasets are properly cited in journal articles using in text citations and the recommended citation in the articles list of references, not just in a Data Availability statement
+
+-   Promote the view that well documented data publications are primary research outputs and are significant contributions to the field
+
+#### **7. Build Community Through Co-Development and Mutual Benefit**
+
+Creating an infrastructure that standardizes and provides cross-border and cross-ecosystem data integration is only effective if there’s community engagement. Standards and tools must be co-developed with their intended users using user-centred design principles (citation required) to be effective. Engaging biologists, Indigenous stewards, and data managers ensures relevance, usability, and long-term participation.
+
+##### Practical Applications:
+
+-   Participate in salmon data focussed communities such as the[Research Data Alliance’s Salmon Research and Monitoring Interest Group](https://www.rd-alliance.org/groups/salmon-research-and-monitoring-ig/) 
+
+-   Run participatory workshops for metadata mapping and vocabulary alignment
+
+-   Support and follow through on Community Engaged Research (citation required) that provides tangible value to the communities in which research or monitoring was conducted
