@@ -1,5 +1,5 @@
 ---
-title: Best practices to mobilize salmon data: a practical guide for salmon biologists assuming responsibility for data stewardship
+title: Best practices to mobilize salmon data---a practical guide for salmon biologists assuming responsibility for data stewardship
 authors:
   - name: Brett Johnson
     affiliation: Fisheries and Oceans Canada
@@ -8,7 +8,7 @@ authors:
 bibliography: references.bib
 ---
 
-Brett Johnson^1^, Scott Akenhead, Jennifer Bayer^2^, Tomas Bird^1^, Samuel Cimino^2^, Minh Doan^1^, Lara Erikson^3^, Nancy Leonard^3^, Catherine Michielsens^6^, Fiona Martens^6^, Emily Lescak^4^, Matt Jones?^5^, Shirly Stephen-Ambrose^5^?, Your name here
+Brett Johnson^1^, Scott Akenhead, Jennifer Bayer^2^, Tomas Bird^1^, Samuel Cimino^2^, Minh Doan^1^, Lara Erikson^3^, Nancy Leonard^3^, Catherine Michielsens^6^, Fiona Martens^6^, Emily Lescak^4^, Gottfried Pestal, Matt Jones?^5^, Shirly Stephen-Ambrose^5^?, Your name here
 
 1\. Fisheries and Oceans Canada
 
@@ -160,9 +160,6 @@ In the face of accelerating environmental change and rapid technological innovat
 
 ### Competing interests
 
-A competing interests statement is required for all papers accepted by and published in *Scientific Data*. If there is no conflict of interest, a statement declaring this must still be included in the manuscript.
-
 ### Acknowledgements
 
 ### References
-
