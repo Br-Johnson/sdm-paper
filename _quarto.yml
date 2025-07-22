@@ -11,7 +11,7 @@ manuscript:
 format:
   html:
     comments:
-      utterances:
+      giscus:
         repo: br-johnson/sdm-paper
   docx: default
   pdf: default
