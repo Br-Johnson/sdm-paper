@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 manuscript:
-  article: index.qmd
+  article: salmon_data_stewardship_paper.qmd
   manuscript-url: https://br-johnson.github.io/sdm-paper/
   resources:
     - examples/Cal_DMP.pdf
