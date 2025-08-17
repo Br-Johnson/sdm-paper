@@ -40,13 +40,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\ifLuaTeX
-  \usepackage{luacolor}
-  \usepackage[soul]{lua-ul}
-\else
-  \usepackage{soul}
-  
-\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
@@ -205,10 +198,10 @@ Stephen-Ambrose}
 \maketitle
 
 
-\textbf{Keywords:} Salmon data stewardship, Data interoperability, FAIR
-principles, Persistent identifiers (PIDs), Controlled vocabularies,
-Metadata standards, Application Programming Interface (API), Data
-citation, Ontology development
+\textbf{Keywords:} Salmon data stewardship, data interoperability, FAIR
+principles, persistent identifiers (PIDs), controlled vocabularies,
+metadata standards, application programming Interface (API), data
+citation, ontology development
 
 \subsubsection{Abstract}\label{abstract}
 
@@ -311,8 +304,8 @@ conservation or management responses. Without clear accountability for
 data stewardship, the system continues to rely on improvised,
 inconsistent, and ultimately unsustainable practices.
 
-\subsection{The Need for Coorindated
-Action}\label{the-need-for-coorindated-action}
+\subsection{The Need for Coordinated
+Action}\label{the-need-for-coordinated-action}
 
 For fisheries managers, modernizing data systems and workflows is
 essential to improve the quality, speed, and interoperability of
@@ -364,14 +357,14 @@ Science}\label{defining-data-stewardship-in-salmon-science}
 
 Data stewardship encompasses the coordinated practices, roles, and
 responsibilities necessary to effectively manage, share, and reuse data
-throughout its lifecycle Peng et al. (2018). Within fisheries science,
-stewardship involves ensuring data quality, compliance with agreed-upon
-standards, and the establishment of clear governance to guide data
-collection, documentation, integration, and preservation. However,
-salmon data stewardship goes beyond mere technical data management; it
-involves actively facilitating collaboration, communication, and
-consensus-building among data producers and users across multiple
-institutions and jurisdictions.
+throughout its lifecycle (NOAA 2007; Plotkin 2014; Peng et al. 2018).
+Within fisheries science, stewardship involves ensuring data quality,
+compliance with agreed-upon standards, and the establishment of clear
+governance to guide data collection, documentation, integration, and
+preservation. However, salmon data stewardship goes beyond mere
+technical data management; it involves actively facilitating
+collaboration, communication, and consensus-building among data
+producers and users across multiple institutions and jurisdictions.
 
 Specifically, effective salmon data stewards perform several critical
 functions:
@@ -483,7 +476,7 @@ stored, and how do I get
 it?}\label{challenge-2-accessing-and-using-the-data-where-is-it-stored-and-how-do-i-get-it}
 
 The Peterman dataset was compiled from multiple files scattered across
-email inboxes, regional offices, and gray literature. Data were stored
+email inboxes, regional offices, and grey literature. Data were stored
 in inconsistent formats, lacked clear versioning, and were difficult to
 discover outside of specific research networks. Even today, no API or
 structured access mechanism exists to update or query the data
@@ -494,16 +487,16 @@ dataset may have to start from scratch.
 
 \begin{itemize}
 \item
-  \textbf{Best Practice 5: Store Data in Ways That Others Can Easily
-  Access and Use\\
-  }Agencies can use open-access data repositories or their own
+  \textbf{Best Practice 5: Store and Analyze Data in Ways That Others
+  Can Easily Access, Use, and Trust}\\
+  Agencies can use open-access data repositories or their own
   institutional data repositories or catalogues that make data
   discoverable using PIDs and provide programmatic access to data
   possible using Application Programming Interfaces.
 \item
   \textbf{Best Practice 2: Reuse Proven Infrastructure to Save Time and
-  Increase Interoperability\\
-  }Rather than developing bespoke data catalogues or repositories,
+  Increase Interoperability}\\
+  Rather than developing bespoke data catalogues or repositories,
   agencies should adopt existing catalogues used beyond their own
   institution such as the Ocean Biodiversity Information System, Zenodo,
   or the Knowledge Network for Biocomplexity). These are proven
@@ -529,29 +522,25 @@ environments today.
 \begin{itemize}
 \item
   \textbf{Best Practice 1: Make Data Governance Explicit to Support
-  Trust and Reuse\\
-  }Agencies should define roles, responsibilities, and decision-making
-  processes through formal governance mechanisms such as data product
-  charters.\\
-  \emph{Practical application:} Use a DACI or RACI framework to assign
-  maintenance responsibility and ensure continuity across staff turnover
-  and institutional change.
+  Trust and Reuse} Agencies should define roles, responsibilities, and
+  decision-making processes through formal governance mechanisms such as
+  data product charters.Use a Data Management Plan with DACI or RACI
+  framework to assign maintenance responsibility and ensure continuity
+  across staff turnover and institutional change.
 \item
-  \textbf{Best Practice 6: Incentivize and Track Data Sharing and
-  Reuse\\
-  }Visibility, credit, and metrics are critical for motivating data
+  \textbf{Best Practice 6: Incentivize and Track Data Sharing and Reuse}
+  Visibility, credit, and metrics are critical for motivating data
   sharing. Agencies can embed citation guidance in metadata and track
   dataset reuse through COUNTER-compliant dashboards or DataCite APIs.
 \item
   \textbf{Best Practice 7: Build Community Through Co-Development and
-  Mutual Benefit\\
-  } Effective data stewardship requires collaboration between
-  biologists, Indigenous communities, managers, and data professionals.
-  Participatory design ensures that systems and standards meet user
-  needs and are adopted over time.\\
-  \emph{Practical application:} Facilitate cross-jurisdictional working
-  groups to co-develop data standards and align on shared outcomes for
-  priority datasets.
+  Mutual Benefit} Effective data stewardship requires collaboration
+  between biologists, Indigenous communities, managers, and data
+  professionals. Participatory design ensures that systems and standards
+  meet user needs and are adopted over time. \emph{Practical
+  application:} Facilitate cross-jurisdictional working groups to
+  co-develop data standards and align on shared outcomes for priority
+  datasets.
 \end{itemize}
 
 While the analytical contribution of the Peterman productivity dataset
@@ -559,22 +548,20 @@ remains significant, the barriers encountered in compiling,
 interpreting, and maintaining the data are instructive. These challenges
 are not unique to Peterman's team---they reflect systemic gaps in data
 governance, documentation, infrastructure, and incentives. By adopting
-the seven best practices outlined above, agencies and researchers can
-transform legacy datasets into living resources, enabling
-reproducibility, easing collaboration, and accelerating insight across
-the salmon research and management community.
+the seven best practices detailed in Table~\ref{tbl-bestpractices},
+agencies and researchers can transform legacy datasets into living
+resources, enabling reproducibility, easing collaboration, and
+accelerating insight across the salmon research and management
+community.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2123}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4788}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3066}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7081}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2919}}@{}}
 \caption{Best practices and practical applications of salmon data
 stewardship}\label{tbl-bestpractices}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Best Practice}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Summary}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Practical Applications}
 \end{minipage} \\
@@ -584,15 +571,13 @@ stewardship}\label{tbl-bestpractices}\tabularnewline
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Best Practice}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Summary}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Practical Applications}
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-1. Make Data Governance Explicit to Support Trust and Reuse &
+\textbf{1. Make Data Governance Explicit to Support Trust and Reuse.}
 Establishing clear governance structures ensures quality,
 accountability, and compliance with FAIR and CARE principles. It enables
 trust and long-term stewardship across multi-organizational projects. &
@@ -600,18 +585,18 @@ trust and long-term stewardship across multi-organizational projects. &
 - Document roles and responsibilities using a Data Product Governance
 Charter and structured frameworks (e.g., DACI or RACI).\\
 - Integrate CARE principles to respect Indigenous data rights.\\
-- Form a governance or oversight committee to review data structures,
+- Form a governance or oversight committee to review data standards,
 timelines, and agreements.\strut
 \end{minipage} \\
-2. Reuse Proven Infrastructure to Save Time and Increase
-Interoperability & Leveraging existing platforms and technologies
+\textbf{2. Reuse Proven Infrastructure to Save Time and Increase
+Interoperability.} Leveraging existing platforms and technologies
 reduces costs and improves long-term interoperability and
 sustainability. & \begin{minipage}[t]{\linewidth}\raggedright
 - Use domain-specific repositories like OBIS or GBIF.\\
 - Publish and archive data with KNB or Zenodo.\strut
 \end{minipage} \\
-3. Make Data, People, Projects, and Outputs Discoverable, Linked and
-Citable with PIDs & Persistent identifiers (PIDs) connect data with
+\textbf{3. Make Data, People, Projects, and Outputs Discoverable, Linked
+and Citable with PIDs.} Persistent identifiers (PIDs) connect data with
 researchers, institutions, and outputs---supporting data citation,
 reuse, and automated attribution. &
 \begin{minipage}[t]{\linewidth}\raggedright
@@ -620,24 +605,29 @@ reuse, and automated attribution. &
 - Assign DOIs via DataCite for data packages.\\
 - Embed DOIs in dashboards and metadata.\strut
 \end{minipage} \\
-4. Use Shared Data Models, Vocabularies and Metadata to Enable
-Integration & Common vocabularies, metadata standards, and ontologies
+\textbf{4. Use Shared Data Models, Ontologies and Metadata to Enable
+Integration.} Common vocabularies, metadata standards, and ontologies
 support integration across systems and preserve semantic meaning. &
 \begin{minipage}[t]{\linewidth}\raggedright
 - Adopt ISO 19115, EML, or DataCite metadata standards.\\
-- Model datasets using the Darwin Core Data Package.\\
-- Use controlled vocabularies or ontologies with PIDs.\strut
+- Re-use terms defined in Salmon Domain Ontology\\
+- Model datasets using the Darwin Core Data Package Model.\strut
 \end{minipage} \\
-5. Store Data in Ways That Others Can Easily Access and Use & Structured
-and accessible data formats ensure usability, reduce wrangling, and
-support integration with analytical tools and applications. &
+\textbf{5. Store and Analyze Data in Ways That Others Can Easily Access,
+Use and Trust.} Structured and accessible data formats ease reusability,
+and support integration with analytical tools and applications while
+data analyzed or wrangled using programmatic scripts (R, Python etc.)
+enable reproducibility and increase trust. &
 \begin{minipage}[t]{\linewidth}\raggedright
 - Provide APIs using FastAPI, Flask, or Django REST.\\
 - Archive in trusted repositories (e.g., GBIF, FRDR, USGS).\\
-- Use GitHub-Zenodo for DOI assignment and preservation.\strut
+- Write scripts in a programming language to wrangle, transform, and
+analyze data\\
+- Use GitHub to host code for collaboration and transparency and the
+GitHunbZenodo integration for DOI assignment and preservation.\strut
 \end{minipage} \\
-6. Incentivize and Track Data Sharing and Reuse & Recognizing data
-contributors and tracking reuse promotes a culture of sharing and
+\textbf{6. Incentivize and Track Data Sharing and Reuse.} Recognizing
+data contributors and tracking reuse promotes a culture of sharing and
 supports professional recognition. &
 \begin{minipage}[t]{\linewidth}\raggedright
 - License data with CC-BY 4.0.\\
@@ -645,9 +635,9 @@ supports professional recognition. &
 - Use COUNTER metrics and DataCite APIs to monitor reuse.\\
 - Encourage dataset citation in references.\strut
 \end{minipage} \\
-7. Build Community Through Co-Development and Mutual Benefit & Engaging
-users early ensures tools and standards meet real-world needs and
-enhances long-term stewardship. &
+\textbf{7. Build Community Through Co-Development and Mutual Benefit.}
+Engaging users early ensures tools and standards meet real-world needs
+and enhances long-term stewardship. &
 \begin{minipage}[t]{\linewidth}\raggedright
 - Participate in RDA Salmon Interest Group.\\
 - Facilitate workshops for metadata and vocabulary alignment.\\
@@ -713,8 +703,8 @@ Realizing this vision will require investment in both people and
 systems. Key to this transformation is the emergence of the data steward
 as a professional role: a hybrid expert who understands operational
 field biology, information science, governance protocols, and community
-needs. As highlighted by (\textbf{roche2020Roche?}), institutionalizing
-data stewardship roles ensures long-term capacity for data governance,
+needs. As highlighted by Roche et al. (2020), institutionalizing data
+stewardship roles ensures long-term capacity for data governance,
 quality control, and interoperability---functions that are often
 neglected or left to informal actors. We must not only train new data
 stewards but also support and upskill biologists to take on stewardship
@@ -758,10 +748,6 @@ Earth Economics. 2021. {``The Sociocultural Significance of Pacific
 Salmon to Tribes and First Nations.''} Tacoma, Washington.
 \url{https://www.psc.org/wp-content/uploads/wpfd/preview_files/The-Sociocultural-Significance-of-Salmon-to-Tribes-and-First-Nations(5da9942da9fb4fe0d77eb32bd6165e43).pdf}.
 
-\bibitem[\citeproctext]{ref-environm2007}
-\emph{Environmental Data Management at NOAA}. 2007. National Academies
-Press. \url{https://doi.org/10.17226/12017}.
-
 \bibitem[\citeproctext]{ref-groot1991}
 Groot, Cornelis, and L. Margolis. 1991. \emph{Pacific Salmon Life
 Histories}. UBC Press.
@@ -800,6 +786,10 @@ Schwarz. 2011. {``Cohen Commision Technical Report 6-Fraser River
 Sockeye Salmon: Data Synthesis and Cumulative Impacts.''} Vancouver,
 B.C. \url{http://www.cohencommission.ca/}.
 
+\bibitem[\citeproctext]{ref-environm2007}
+NOAA. 2007. \emph{Environmental Data Management at NOAA}. National
+Academies Press. \url{https://doi.org/10.17226/12017}.
+
 \bibitem[\citeproctext]{ref-peng2018}
 Peng, Ge, Jeffrey L. Privette, Curt Tilmes, Sky Bristol, Tom Maycock,
 John J. Bates, Scott Hausman, Otis Brown, and Edward J. Kearns. 2018.
@@ -818,6 +808,13 @@ Populations in Western North America.''} Edited by Jordan S. Rosenfeld.
 Plotkin, David. 2014. \emph{Data Stewardship}. Elsevier.
 \url{https://doi.org/10.1016/c2012-0-07057-3}.
 
+\bibitem[\citeproctext]{ref-roche2020}
+Roche, Dominique G., Monica Granados, Claire C. Austin, Scott Wilson,
+Gregory M. Mitchell, Paul A. Smith, Steven J. Cooke, and Joseph R.
+Bennett. 2020. {``Open Government Data and Environmental Science: A
+Federal Canadian Perspective.''} Edited by Tanzy Love. \emph{FACETS} 5
+(1): 942--62. \url{https://doi.org/10.1139/facets-2020-0008}.
+
 \bibitem[\citeproctext]{ref-ween2013}
 Ween, Gro, and Benedict Colombi. 2013. {``Two Rivers: The Politics of
 Wild Salmon, Indigenous Rights and Natural Resource Management.''}
@@ -832,6 +829,10 @@ Stewardship.''} \emph{Scientific Data} 3 (1): 160018.
 \url{https://doi.org/10.1038/sdata.2016.18}.
 
 \end{CSLReferences}
+
+\section{Appendices}\label{appendices}
+
+\section{}\label{section}
 
 \subsection{Appendix 1. Real-world Example Applications of the Best
 Practices}\label{appendix-1.-real-world-example-applications-of-the-best-practices}
@@ -953,8 +954,7 @@ Ecological Metadata Language (EML), or DataCite.
 \item
   The Pacific Salmon Foundation's data portal asks contributors to
   provide metadata in ISO~19115 or other standard formats.
-  \href{https://marinedata.psf.ca/data/data-submission-form/\#:~:text=}{\ul{marinedata.psf.ca}},
-  ensuring consistent metadata structure
+  marinedata.psf.ca, ensuring consistent metadata structure
 \end{itemize}
 
 4.2 Model datasets and databases using the
@@ -968,8 +968,8 @@ Ecological Metadata Language (EML), or DataCite.
   Institute Juvenile Salmon Program}
 \item
   The International Year of the Salmon High Seas Expeditions data
-  moblization efforts (Johnson and Stap 2024) published their data to
-  OBIS: https://www.gbif.org/dataset/search?project\_id=IYS
+  moblization efforts {[}Johnson and Stap (2024){]} published their data
+  to OBIS: \url{https://www.gbif.org/dataset/search?project_id=IYS}
 \end{itemize}
 
 4.3 Re-use or publish data terms that are shared online using a
@@ -982,9 +982,9 @@ persistent identifier in a controlled vocabulary or ontology
   Measurement Types in OBIS\ldots{}
 \end{itemize}
 
-\paragraph{\texorpdfstring{\textbf{5. Store Data in Ways That Others Can
-Easily Access and
-Use}}{5. Store Data in Ways That Others Can Easily Access and Use}}\label{store-data-in-ways-that-others-can-easily-access-and-use}
+\paragraph{\texorpdfstring{\textbf{Best Practice 5: Store and Analyze
+Data in Ways That Others Can Easily Access, Use, and
+Trust}}{Best Practice 5: Store and Analyze Data in Ways That Others Can Easily Access, Use, and Trust}}\label{best-practice-5-store-and-analyze-data-in-ways-that-others-can-easily-access-use-and-trust}
 
 Making data easily accessible promotes its use in research and
 management, enabling seamless integration with tools and applications.
@@ -1083,6 +1083,10 @@ alignment
 7.3 Support and follow through on Community Engaged Research (citation
 required) that provides tangible value to the communities in which
 research or monitoring was conducted
+
+\textsubscript{Source:
+\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-1-real-world-examples-preview.html\#d8dee733-6edf-4b9a-87bf-2535e03ab2c1}{Appendix
+1. Real-world Example Applications of the Best Practices}}
 
 
 

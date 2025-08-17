@@ -1,4 +1,4 @@
-# Salmon Data Stewardship Article
+# Salmon Data Stewardship Manuscript
 
 Welcome to the GitHub repository for our journal article draft:  
 **"Best practices and practical applications for salmon data mobilization—a guide for salmon biologists assuming responsibility for data stewardship"**
@@ -34,20 +34,21 @@ Appendix 2: A training roadmap for biologists assuming responsibility for data s
 
 We welcome feedback and contributions from biologists, data scientists, Indigenous stewards, and anyone invested in salmon data. You have options:
 
-### 🔹 Traditional Workflow (No GitHub Skills Needed)
+### 🔹 Traditional Workflow 
 - [Download the latest Word version](docs/indec.docx)
 - Make suggested edits or comments using **track changes**
 - Email your edits to: `brett.johnson at dfo-mpo.gc.ca`
 
 ### 🔹 GitHub Workflow (for those familiar with Git)
 - Fork this repository
-- Make edits or suggestions via a pull request
+- Make edits or suggestions to your copy of the repo
+- Submit a pull request with your changes for review and integration by lead authors
 - Alternatively, leave comments or feedback in the [**Discussions** tab](https://github.com/br-johnson/sdm-paper/discussions)
 
 ### 💡 Not Sure Where to Start?
 You can:
+- Foremost, we're looking for real-world examples of the best practices in action. If you have a case study or example, please add it to Appendix 1.
 - Suggest improvements to the best practices table or case study section
-- Propose additions to the real-world examples
 - Comment on structure, clarity, or journal fit
 
 ## 📬 Contact

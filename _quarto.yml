@@ -1,9 +1,14 @@
 project:
   type: manuscript
   output-dir: docs
+  render:
+    - index.qmd
+    - appendices/*.qmd
+
+toc: false
 
 manuscript:
-  article: salmon_data_stewardship_paper.qmd
+  article: index.qmd
   manuscript-url: https://br-johnson.github.io/sdm-paper/
   resources:
     - examples/Cal_DMP.pdf

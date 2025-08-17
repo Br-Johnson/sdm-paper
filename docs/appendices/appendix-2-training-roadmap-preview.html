@@ -1,122 +1,291 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.6.40">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>readme</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<script src="README_files/libs/clipboard/clipboard.min.js"></script>
-<script src="README_files/libs/quarto-html/quarto.js"></script>
-<script src="README_files/libs/quarto-html/popper.min.js"></script>
-<script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="README_files/libs/quarto-html/anchor.min.js"></script>
-<link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="README_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="README_files/libs/bootstrap/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+    <title>appendix-2-training-roadmap</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+    </style>
 
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
 
-</head>
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
 
-<body class="fullcontent">
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
 
-<main class="content" id="quarto-document-content">
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
 
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
 
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
 
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
 
-<section id="salmon-data-stewardship-article" class="level1">
-<h1>Salmon Data Stewardship Article</h1>
-<p>Welcome to the GitHub repository for our journal article draft:<br>
-<strong>“Best practices and practical applications for salmon data mobilization—a guide for salmon biologists assuming responsibility for data stewardship”</strong></p>
-<p>This repo hosts the manuscript in <a href="https://quarto.org/">Quarto</a> format and provides a transparent, collaborative space to refine the paper before journal submission.</p>
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">📖 Project Overview</h2>
-<p>Salmon biologists and data managers across agencies and institutions collect vast amounts of data—but much of it remains siloed, undocumented, or difficult to reuse. This article aims to provide practical, actionable guidance for improving salmon data stewardship practices. We highlight common challenges, propose a set of best practices, and offer a case study illustrating the real-world impact of good (and bad) data stewardship.</p>
-<p>Through several appendices, we are accumulating and maintaining real world examples of these best practices in action. Please contribute your own examples or suggest improvements to existing ones.</p>
-<p>We also wish to maintain:</p>
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "...html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a1ff8711b79ae3724c050874b28d9907.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+     
+      </head>
+
+  <body class="quarto-notebook">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> Appendix: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship</h6>
+
+            <a href="../appendices/appendix-2-training-roadmap.qmd" class="btn btn-primary quarto-download-embed" download="appendix-2-training-roadmap.qmd">Download Source</a>
+          </div>
+
+     <div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship" id="toc-appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship" class="nav-link active" data-scroll-target="#appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship">Appendix: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship</a>
+  <ul class="collapse">
+  <li><a href="#foundations-of-data-stewardship" id="toc-foundations-of-data-stewardship" class="nav-link" data-scroll-target="#foundations-of-data-stewardship">1. Foundations of Data Stewardship</a></li>
+  <li><a href="#data-management-governance" id="toc-data-management-governance" class="nav-link" data-scroll-target="#data-management-governance">2. Data Management &amp; Governance</a></li>
+  <li><a href="#metadata-standards-and-ontologies" id="toc-metadata-standards-and-ontologies" class="nav-link" data-scroll-target="#metadata-standards-and-ontologies">3. Metadata Standards and Ontologies</a></li>
+  <li><a href="#controlled-vocabularies-persistent-identifiers-pids" id="toc-controlled-vocabularies-persistent-identifiers-pids" class="nav-link" data-scroll-target="#controlled-vocabularies-persistent-identifiers-pids">4. Controlled Vocabularies &amp; Persistent Identifiers (PIDs)</a></li>
+  <li><a href="#data-integration-interoperability" id="toc-data-integration-interoperability" class="nav-link" data-scroll-target="#data-integration-interoperability">5. Data Integration &amp; Interoperability</a></li>
+  <li><a href="#data-sharing-citation-metrics" id="toc-data-sharing-citation-metrics" class="nav-link" data-scroll-target="#data-sharing-citation-metrics">6. Data Sharing, Citation &amp; Metrics</a></li>
+  <li><a href="#community-engagement-co-development" id="toc-community-engagement-co-development" class="nav-link" data-scroll-target="#community-engagement-co-development">7. Community Engagement &amp; Co-Development</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship">Appendix: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship</h2>
+<p>This roadmap outlines essential topics, resources, and learning materials salmon biologists should engage with to effectively transition into data stewardship roles. The roadmap follows a structured progression similar to <a href="https://roadmap.sh">roadmap.sh</a>.</p>
+<section id="foundations-of-data-stewardship" class="level3">
+<h3 class="anchored" data-anchor-id="foundations-of-data-stewardship">1. Foundations of Data Stewardship</h3>
 <ul>
-<li>checklists and templates to help biologists and data managers implement these practices in their own work.</li>
-<li>A training roadmap for biologists assuming responsibility for data stewardship, including links to existing resources and training materials.</li>
+<li><strong>Principles:</strong>
+<ul>
+<li><a href="https://www.go-fair.org/fair-principles/">FAIR Data Principles</a></li>
+<li><a href="https://www.gida-global.org/care">CARE Principles for Indigenous Data Governance</a></li>
+</ul></li>
+<li><strong>Seminal Papers:</strong>
+<ul>
+<li>Wilkinson et al.&nbsp;2016 <a href="https://doi.org/10.1038/sdata.2016.18">FAIR Guiding Principles</a></li>
+<li>Carroll et al.&nbsp;2019 <a href="https://doi.org/10.5334/dsj-2019-031">Indigenous Data Governance</a></li>
+</ul></li>
+<li><strong>Courses and Tutorials:</strong>
+<ul>
+<li><a href="https://www.go-fair.org/resources/videos/fair-principles-explained/">FAIR Principles Explained (GO-FAIR)</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">🚀 Goals</h2>
+<section id="data-management-governance" class="level3">
+<h3 class="anchored" data-anchor-id="data-management-governance">2. Data Management &amp; Governance</h3>
 <ul>
-<li>Identify core challenges in managing and sharing salmon data.</li>
-<li>Propose a concise and field-tested set of best practices for data stewardship.</li>
-<li>Present a reproducible, FAIR, and CARE-aligned vision for salmon data infrastructure.</li>
-<li>Support the professionalization of the data stewardship role within fisheries science.</li>
+<li><strong>Seminal Papers and Reports:</strong>
+<ul>
+<li>Plotkin, 2014 <a href="https://doi.org/10.1016/c2012-0-07057-3">Data Stewardship</a></li>
+<li>NOAA, 2007 <a href="https://doi.org/10.17226/12017">Environmental Data Management</a></li>
+</ul></li>
+<li><strong>Practical Tools:</strong>
+<ul>
+<li>Data Management Plan Templates (<a href="https://dmptool.org">DMPTool</a>)</li>
+<li>DACI and RACI Frameworks (<a href="https://www.atlassian.com/team-playbook/plays/daci">Atlassian DACI Guide</a>)</li>
+</ul></li>
 </ul>
 </section>
-<section id="repository-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-structure">🛠 Repository Structure</h2>
+<section id="metadata-standards-and-ontologies" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-standards-and-ontologies">3. Metadata Standards and Ontologies</h3>
 <ul>
-<li><code>index.qmd</code> – The working version of the manuscript written in Quarto markdown format</li>
-<li><code>docs/</code> – .docx, .pdf, and HTML versions of the manuscript rendered from the index.qmd for easy or traditional word doc based collaboration.</li>
-<li><code>references.bib</code> – Bibliography and citations.</li>
+<li><strong>Standards to Master:</strong>
+<ul>
+<li><a href="https://www.iso.org/standard/53798.html">ISO 19115 Metadata Standard</a></li>
+<li><a href="https://eml.ecoinformatics.org/">Ecological Metadata Language (EML)</a></li>
+<li><a href="https://dwc.tdwg.org/">Darwin Core Standard</a></li>
+</ul></li>
+<li><strong>Case Studies &amp; Examples:</strong>
+<ul>
+<li><a href="https://marinedata.psf.ca">Pacific Salmon Foundation Metadata Standards</a></li>
+<li><a href="https://obis.org/dataset/81a9b931-8f47-49c4-94ff-0e46d7e9f1c9">Hakai Institute Juvenile Salmon Program</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="how-to-contribute" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-contribute">✍️ How to Contribute</h2>
-<p>We welcome feedback and contributions from biologists, data scientists, Indigenous stewards, and anyone invested in salmon data. You have options:</p>
-<section id="traditional-workflow-no-github-skills-needed" class="level3">
-<h3 class="anchored" data-anchor-id="traditional-workflow-no-github-skills-needed">🔹 Traditional Workflow (No GitHub Skills Needed)</h3>
+<section id="controlled-vocabularies-persistent-identifiers-pids" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-vocabularies-persistent-identifiers-pids">4. Controlled Vocabularies &amp; Persistent Identifiers (PIDs)</h3>
 <ul>
-<li><a href="docs/indec.docx">Download the latest Word version</a></li>
-<li>Make suggested edits or comments using <strong>track changes</strong></li>
-<li>Email your edits to: <code>brett.johnson at dfo-mpo.gc.ca</code></li>
+<li><strong>PIDs to Implement:</strong>
+<ul>
+<li><a href="https://datacite.org">DOIs via DataCite</a></li>
+<li><a href="https://orcid.org">ORCID IDs</a></li>
+<li><a href="https://ror.org">Research Organization Registry (ROR)</a></li>
+</ul></li>
+<li><strong>Practical Guides:</strong>
+<ul>
+<li><a href="https://blog.datacite.org/">Introduction to PIDs (DataCite Blog)</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="github-workflow-for-those-familiar-with-git" class="level3">
-<h3 class="anchored" data-anchor-id="github-workflow-for-those-familiar-with-git">🔹 GitHub Workflow (for those familiar with Git)</h3>
+<section id="data-integration-interoperability" class="level3">
+<h3 class="anchored" data-anchor-id="data-integration-interoperability">5. Data Integration &amp; Interoperability</h3>
 <ul>
-<li>Fork this repository</li>
-<li>Make edits or suggestions via a pull request</li>
-<li>Alternatively, leave comments or feedback in the <a href="https://github.com/br-johnson/sdm-paper/discussions"><strong>Discussions</strong> tab</a></li>
+<li><strong>Seminal Papers:</strong>
+<ul>
+<li>Johnson &amp; Stap, 2024 <a href="https://doi.org/10.23849/npafcb7/6a4ddpde4">Salmon Ocean Observing System</a></li>
+<li>Bull et al.&nbsp;2022 <a href="https://doi.org/10.1093/icesjms/fsac099">Likely Suspects Framework</a></li>
+</ul></li>
+<li><strong>Technical Skills &amp; Tools:</strong>
+<ul>
+<li>APIs with <a href="https://fastapi.tiangolo.com">FastAPI</a>, <a href="https://flask.palletsprojects.com">Flask</a>, <a href="https://www.django-rest-framework.org">Django REST Framework</a></li>
+<li><a href="https://guides.github.com/activities/citable-code/">Zenodo-GitHub Integration</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="not-sure-where-to-start" class="level3">
-<h3 class="anchored" data-anchor-id="not-sure-where-to-start">💡 Not Sure Where to Start?</h3>
-<p>You can: - Suggest improvements to the best practices table or case study section - Propose additions to the real-world examples - Comment on structure, clarity, or journal fit</p>
+<section id="data-sharing-citation-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="data-sharing-citation-metrics">6. Data Sharing, Citation &amp; Metrics</h3>
+<ul>
+<li><strong>Best Practices:</strong>
+<ul>
+<li><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
+</ul></li>
+<li><strong>Tracking &amp; Metrics:</strong>
+<ul>
+<li><a href="https://www.projectcounter.org/">COUNTER Metrics</a></li>
+<li><a href="https://datacite.org/service.html">DataCite API</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="community-engagement-co-development" class="level3">
+<h3 class="anchored" data-anchor-id="community-engagement-co-development">7. Community Engagement &amp; Co-Development</h3>
+<ul>
+<li><strong>Communities &amp; Groups:</strong>
+<ul>
+<li><a href="https://rd-alliance.org/groups/salmon-data-management">Research Data Alliance Salmon Research Group</a></li>
+</ul></li>
+<li><strong>Approaches &amp; Frameworks:</strong>
+<ul>
+<li>User-centered Design (<a href="https://www.interaction-design.org/literature/topics/user-centered-design">Interaction Design Foundation</a>)</li>
+<li>Community Engaged Research (<a href="https://www.uvic.ca/research/assets/docs/Community-Engaged-Research.pdf">University of Victoria Guide</a>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">Additional Resources</h3>
+<ul>
+<li><strong>Free Courses:</strong>
+<ul>
+<li><a href="https://www.fosteropenscience.eu/toolkit">Introduction to Open Science (FOSTER)</a></li>
+<li><a href="https://www.coursera.org/learn/data-management">Research Data Management and Sharing (Coursera)</a></li>
+</ul></li>
+<li><strong>Blogs &amp; Websites:</strong>
+<ul>
+<li><a href="https://blog.okfn.org/">Open Knowledge Foundation Blog</a></li>
+<li><a href="https://www.dataone.org/resources/">DataONE Data Management Resources</a></li>
+</ul></li>
+</ul>
+<p>This roadmap serves as a structured guide to equip salmon biologists with the practical and theoretical skills required to excel in data stewardship roles.</p>
 </section>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">📬 Contact</h2>
-<p>For questions or feedback outside GitHub:<br>
-<strong>Brett Johnson</strong><br>
-<code>Brett.Johnson @ dfo-mpo.gc.ca</code><br>
-Program Head, Data Stewardship Unit<br>
-Fisheries and Oceans Canada</p>
-<hr>
-<p>Thank you for helping us improve data stewardship for salmon and beyond!</p>
-</section>
-</section>
-
-</main>
-<!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -532,10 +701,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>  <script src="https://giscus.app/client.js" data-repo="br-johnson/sdm-paper" data-repo-id="R_kgDOPQ5wkg" data-category="General" data-category-id="DIC_kwDOPQ5wks4CtSJn" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
-</div> <!-- /content -->
-
-
-
-
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">  </div> <!-- /content --> 
+  
 </body></html>
