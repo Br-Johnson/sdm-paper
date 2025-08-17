@@ -41,9 +41,6 @@ authors:
   - name: Matt Jones
     affiliation: National Centre of Ecological Analysis and Synthesis
     roles: writing - review and editing
-  - name: Shirly Stephen-Ambrose
-    affiliation: National Centre of Ecological Analysis and Synthesis
-    roles: writing - review and editing
     
 bibliography: references.bib
 appendix-style: plain
