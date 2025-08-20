@@ -27,7 +27,7 @@ Appendix 2:?? A training roadmap for biologists assuming responsibility for data
 
 We welcome feedback and contributions from biologists, data scientists, Indigenous stewards, and anyone invested in salmon data. You have options:
 
-### 🗣️ Post a topic for discussion in the [Discussions](https://github.com/Br-Johnson/sdm-paper/discussions) tab located at the top of this page.
+### 🗣️ Post an issue for discussion in the [Issues](https://github.com/Br-Johnson/sdm-paper/issues) tab located at the top of this page.
 
 ### 🔹 Traditional Workflow for Direct Edits
 - [Download the latest Word version](https://github.com/Br-Johnson/sdm-paper/raw/refs/heads/main/docs/index.docx)
