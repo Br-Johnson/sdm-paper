@@ -3,7 +3,7 @@
 Welcome to the GitHub repository for our journal article draft:  
 **"Best practices and practical applications for salmon data mobilization—a guide for salmon biologists assuming responsibility for data stewardship"**
 
-This repo hosts the manuscript in [Quarto](https://quarto.org/) format and provides a transparent, collaborative space to refine the paper before journal submission.
+This repo hosts the manuscript in Quarto format and provides a transparent, collaborative space to refine the paper before journal submission. You can read the paper here: https://br-johnson.github.io/sdm-paper/ or download the latest version in Word Doc format here: https://github.com/Br-Johnson/sdm-paper/raw/refs/heads/main/docs/index.docx
 
 ## 📖 Project Overview
 
@@ -35,7 +35,7 @@ Appendix 2: A training roadmap for biologists assuming responsibility for data s
 We welcome feedback and contributions from biologists, data scientists, Indigenous stewards, and anyone invested in salmon data. You have options:
 
 ### 🔹 Traditional Workflow 
-- [Download the latest Word version](docs/indec.docx)
+- [Download the latest Word version](https://github.com/Br-Johnson/sdm-paper/raw/refs/heads/main/docs/index.docx)
 - Make suggested edits or comments using **track changes**
 - Email your edits to: `brett.johnson at dfo-mpo.gc.ca`
 
