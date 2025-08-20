@@ -7,7 +7,7 @@ This repo hosts the manuscript in Quarto format and provides a transparent, coll
 
 ## 📖 Project Overview
 
-Salmon biologists and data managers across agencies and institutions collect vast amounts of data—but much of it remains siloed, undocumented, or difficult to reuse. This article aims to provide practical, actionable guidance for improving salmon data stewardship practices. We highlight common challenges, propose a set of best practices, and offer a case study illustrating the real-world impact of good (and bad) data stewardship.
+Salmon biologists and data managers across agencies and institutions collect vast amounts of data—but much of it remains siloed, undocumented, or difficult to reuse. This article aims to provide practical, actionable guidance for improving salmon data stewardship practices. 
 
 We also maintain several appendices that can serve as living documents beyond the article.
 
@@ -15,14 +15,7 @@ Please contribute to the appendices!
 
 Appendix 1: we are accumulating and maintaining real world examples of these best practices in action. Please contribute your own examples or suggest improvements to existing ones.
 
-Appendix 2: A training roadmap for biologists assuming responsibility for data stewardship, including links to existing resources and training materials.
-
-## 🚀 Goals
-
-- Identify core challenges in managing and sharing salmon data.
-- Propose a concise and field-tested set of best practices for data stewardship.
-- Present a reproducible, FAIR, and CARE-aligned vision for salmon data infrastructure.
-- Support the professionalization of the data stewardship role within fisheries science.
+Appendix 2:?? A training roadmap for biologists assuming responsibility for data stewardship, including links to existing resources and training materials.
 
 ## 🛠 Repository Structure
 
@@ -34,12 +27,14 @@ Appendix 2: A training roadmap for biologists assuming responsibility for data s
 
 We welcome feedback and contributions from biologists, data scientists, Indigenous stewards, and anyone invested in salmon data. You have options:
 
-### 🔹 Traditional Workflow 
+### 🗣️ Post a topic for discussion in the [Discussions](https://github.com/Br-Johnson/sdm-paper/discussions) tab located at the top of this page.
+
+### 🔹 Traditional Workflow for Direct Edits
 - [Download the latest Word version](https://github.com/Br-Johnson/sdm-paper/raw/refs/heads/main/docs/index.docx)
 - Make suggested edits or comments using **track changes**
 - Email your edits to: `brett.johnson at dfo-mpo.gc.ca`
 
-### 🔹 GitHub Workflow (for those familiar with Git)
+### 🔹 GitHub Workflow for Edits (for those familiar with Git)
 - Fork this repository
 - Make edits or suggestions to your copy of the repo
 - Submit a pull request with your changes for review and integration by lead authors
