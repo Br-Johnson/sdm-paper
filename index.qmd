@@ -41,6 +41,12 @@ authors:
   - name: Matt Jones
     affiliation: National Centre of Ecological Analysis and Synthesis
     roles: writing - review and editing
+  - name: Mark Saunders
+    affiliation: North Pacific Anadromous Fish Commission
+    roles: conceptualization, writing - review and editing
+  - name: Yi Xu
+    affiliation: Washington Department of Fish and Wildlife
+    roles: writing - review and editing
     
 bibliography: references.bib
 appendix-style: plain
@@ -50,7 +56,7 @@ appendix-style: plain
 
 ### Abstract
 
-Salmon research, management and conservation generates increasingly vast and diverse data crucial for effective decision making in resource management. Yet, these resources remain largely fragmented across jurisdictions, disciplines and outdated infrastructures, limiting their use in responsive fisheries management. Biologists are increasingly assuming the responsibilities of data stewards to address these challenges, yet often lack clear guidance or institutional support to do so. To address this, we distill seven best practices for salmon data stewardship and demonstrate their application through a case study. We provide practical guidance for those transitioning into these essential stewardship roles, outlining real world examples, tools, and templates specific to the salmon research and management domain. We argue that effective salmon management hinges upon formally establishing data stewardship as a dedicated, institutionally supported professional role. We outline key best practices including both socio-cultural and technical solutions that collectively ensure salmon data meet modern open science principles and respect Indigenous Data Sovereignty. Through an illustrative case study involving sockeye salmon productivity analyses across Pacific Coast jurisdictions, we highlight how clearly defined stewardship practices can enhance data reproducibility, integration, and management efficacy. With a foundation of shared best practices, salmon data stewards will enable faster, more transparent decisions that draw from broader, cross-jurisdictional datasets, and support development of tools that leverage recent advances in artificial intelligence---ultimately strengthening the management and conservation of salmon populations and the ecosystems upon which they depend.
+Salmon research, management and conservation increasingly generates vast and diverse data crucial for effective decision making in resource management. Yet, these resources remain largely fragmented across jurisdictions, disciplines and outdated infrastructures, limiting their use in responsive fisheries management. Biologists are increasingly taking on the responsibilities of data stewardship to address these challenges, often without clear guidance or institutional support. To address this gap, we share seven best practices for salmon data stewardship and demonstrate their application through a real-world case study. We provide practical guidance for those transitioning into these essential stewardship roles, including domain-specific tools, templates, and examples in salmon research and management. We argue that effective salmon management depends upon formally establishing data stewardship as a dedicated, institutionally supported professional role. These best practices integrate both socio-cultural and technical approaches to ensure salmon data meet modern open science principles and respect Indigenous Data Sovereignty. Through a case-study analyzing sockeye salmon productivity across Pacific Coast jurisdictions, we highlight how clearly defined stewardship practices can enhance data reproducibility, integration, and management efficacy. With a foundation of shared best practices, salmon data stewards will enable faster, more transparent decision-making, support development of tools that leverage recent advances in artificial intelligence, and expand the use of a broader, cross-jurisdictional datasets, ---ultimately strengthening the management and conservation of salmon populations and the ecosystems they inhabit.
 
 ## Introduction
 
