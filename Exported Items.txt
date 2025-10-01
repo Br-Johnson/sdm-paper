@@ -1,0 +1,12 @@
+
+@misc{noaa_data_governance_committee_management_2024,
+	title = {Management of {NOAA} {Data} and {Information}, {Data} {Management} {Handbook}},
+	shorttitle = {{NOAA} {Data} {Management} {Handbook}},
+	url = {https://www.noaa.gov/sites/default/files/2025-03/NAO_212-15B_-_Data_Management_Handbook.pdf},
+	language = {en},
+	urldate = {2025-09-28},
+	publisher = {National Oceanic and Atmospheric Administration},
+	author = {NOAA Data Governance Committee},
+	year = {2024},
+	file = {PDF:C\:\\Users\\JOHNSONBRE\\Zotero\\storage\\3GVNG3A5\\NOAA Administrative Order (NAO) 212-15B Management of NOAA Data and Information, Data Management Ha.pdf:application/pdf},
+}
