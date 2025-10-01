@@ -46,7 +46,7 @@ Persistent identifiers (PIDs), including Digital Object Identifiers (DOI) are es
 
 -   Several salmon data holding institutions are already [registered with ROR](https://ror.org/search?page=1&query=salmon). As a result, those organizations can track and demonstrate their scholarly impact from data publications: [DataCite Commons: Pacific Salmon Foundation](https://commons.datacite.org/ror.org/04901nj56)
 
-3.3 Assign DOIs to data packages, protocols, and reports using DataCite.
+3.3 Assign DOIs to data packages, protocols, and reports using DataCite. Maintain version history for all metadata records and document the provenance of metadata creation, updates, and quality control processes to ensure accountability and traceability.
 
 -   The North Pacific Anadromous FIsh Commission (NPAFC) assigns DOIs to IYS-related data packages which are served by a CKAN catalogue at <https://data.npafc.org>. The Commission also assigns DOIs to NPAFC Technical Reports and Bulletins.
 
@@ -58,9 +58,9 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 ##### Practical Applications:
 
-4.1 Configure data catalogues and metadata intake tools to accept Internationally recognized metadata schemas such as ISO 19115, Ecological Metadata Language (EML), or DataCite.
+4.1 Configure data catalogues and metadata intake tools to accept internationally recognized metadata schemas such as ISO 19115, Ecological Metadata Language (EML), or DataCite. Implement automated validation against schema requirements and manual review processes to ensure metadata completeness, accuracy, and consistency before publication.
 
--   The Pacific Salmon Foundation’s data portal asks contributors to provide metadata in ISO 19115 or other standard formats. [[marinedata.psf.ca]{.underline}](https://marinedata.psf.ca/data/data-submission-form/#:~:text=){alt="https://marinedata.psf.ca/data/data-submission-form/#:~:text="}, ensuring consistent metadata structure
+-   The Pacific Salmon Foundation's data portal asks contributors to provide metadata in ISO 19115 or other standard formats. [[marinedata.psf.ca]{.underline}](https://marinedata.psf.ca/data/data-submission-form/#:~:text=){alt="https://marinedata.psf.ca/data/data-submission-form/#:~:text="}, ensuring consistent metadata structure
 -   The NPAFC uses ISO 19115 metadata standard in their data catalogue https://data.npafc.org
 
 4.2 Model datasets and databases using the [Darwin Core Standard](https://dwc.tdwg.org/)
