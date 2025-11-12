@@ -1,5 +1,6 @@
 ---
-title: DRAFT Practical Data Stewardship for Salmon Biologists--A Blueprint for Domain-Specific Best Practices in Fisheries DRAFT
+title: Practical Data Stewardship for Salmon Biologists
+subtitle: DRAFT. A Blueprint for Domain-Specific Best Practices in Fisheries Data Stewardship
   
 authors:
   - name: Brett Johnson

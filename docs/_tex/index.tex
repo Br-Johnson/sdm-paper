@@ -201,7 +201,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={DRAFT Practical Data Stewardship for Salmon Biologists--A Blueprint for Domain-Specific Best Practices in Fisheries DRAFT},
+  pdftitle={Practical Data Stewardship for Salmon Biologists},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -210,8 +210,15 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{DRAFT Practical Data Stewardship for Salmon Biologists--A
-Blueprint for Domain-Specific Best Practices in Fisheries DRAFT}
+\title{Practical Data Stewardship for Salmon Biologists}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{DRAFT. A Blueprint for Domain-Specific Best Practices in
+Fisheries Data Stewardship}
 \author{Brett Johnson \and Scott Akenhead \and Katie
 Barnas \and Jennifer Bayer \and Tomas Bird \and Samuel
 Cimino \and Graeme Diack \and Lara Erikson \and Nancy
@@ -433,7 +440,7 @@ cultures and technical systems, and maintaining long-term relationships,
 data stewards create the social infrastructure necessary for effective
 cross-boundary data collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, arc=.35mm, bottomrule=.15mm, colback=white, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, bottomtitle=1mm, toptitle=1mm, leftrule=.75mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, toprule=.15mm, opacityback=0, colback=white, coltitle=black, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, left=2mm]
 
 Effective salmon data stewards perform several critical functions:
 

@@ -6,3 +6,8 @@
 .quarto
 
 /.quarto/
+
+**/*.quarto_ipynb
+create_wordcloud.py
+lightning-talk-outline.md
+__pycache__/create_wordcloud.cpython-314.pyc
