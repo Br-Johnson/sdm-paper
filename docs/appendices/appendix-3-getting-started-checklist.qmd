@@ -1,0 +1,152 @@
+## Appendix 3: Getting Started Checklist
+
+
+# Getting Started Checklist for Salmon Data Stewardship
+
+Use this practical checklist to assess how well your project, program, or organization aligns to the seven Best Practices in index.qmd. Start at the Project level, then scale to Program and Organization. Check off items you’ve completed and note gaps to prioritize.
+
+Tip: For each item, capture a link to the living source (e.g., repository, shared drive, policy page) and the responsible owner.
+
+## Practice 1 — Make Data Governance Explicit
+
+-   Project
+    -   Do you have a lightweight Data Management Plan (DMP) covering scope, sensitive data, retention, and sharing? (link)
+    -   Is there a RACI (Responsible, Accountable, Consulted, Informed) table for key tasks? (owner)
+    -   Are Indigenous Data Sovereignty requirements identified and documented (who to consult, approvals needed)?
+    -   Is a data product charter written for each dataset or analysis product with purpose, audience, quality thresholds, release plan?
+-   Program
+    -   Are DMP and charter templates standardized across projects and stored centrally?
+    -   Are role definitions for Data Steward, Product Owner, and Maintainer explicit and assigned for priority datasets?
+    -   Are data sharing agreements/MOUs and ethical review pathways documented and reusable?
+-   Organization
+    -   Does a governance policy exist that sets minimum requirements for DMPs, RACI, retention, IDS, and release reviews?
+    -   Is there a standing review forum (e.g., monthly data governance check‑in) and a registry of governed data products?
+
+Evidence to collect: DMP link, data product charter(s), RACI, IDS guidance, sharing agreements registry.
+
+## Practice 2 — Reuse Proven Infrastructure
+
+-   Project
+    -   Is your code in version control (e.g., Git) with an issue tracker and releases?
+    -   Are you using an approved repository or data store rather than creating a new silo? (where)
+    -   Do you use existing organization authentication/authorization and backup processes?
+-   Program
+    -   Is there a preferred stack list (storage, metadata catalog, workflow runner, packaging, container base images)?
+    -   Do projects consistently deposit finalized data in approved repositories with clear intake criteria?
+-   Organization
+    -   Are enterprise services available and documented (data lake, object store, catalog/portal, archival repository)?
+    -   Is there a deprecation pathway for legacy systems and a migration plan for priority datasets?
+
+Evidence to collect: repository URLs, infrastructure inventory, intake criteria, backup/DR documentation.
+
+## Practice 3 — Use Persistent Identifiers (PIDs) for People, Projects, Data, and Methods
+
+-   Project
+    -   Do all contributors have ORCID IDs recorded in metadata?
+    -   Does the project have a resolvable PID (e.g., DOI for a project page or protocol, internal project ID)?
+    -   Are datasets assigned DOIs (or other PIDs) at publication, and are versions tracked?
+    -   Are methods/protocols published and citable (e.g., protocol DOI) and linked from dataset metadata?
+-   Program
+    -   Is there guidance on when to mint PIDs, by whom, and where they resolve?
+    -   Are projects linked to organizational identifiers (e.g., ROR for institutions) in metadata?
+-   Organization
+    -   Is there a PID policy and a provider/registrar configured (e.g., DataCite) with a documented workflow?
+    -   Are PID linkages automated in the catalog (people ↔ projects ↔ datasets ↔ publications)?
+
+Evidence to collect: ORCID list, PID policy, DOI records, resolver links in the catalog.
+
+## Practice 4 — Shared Data Models, Vocabularies, and Metadata
+
+-   Project
+    -   Which metadata profile is used (e.g., ISO 19115, EML)? Is the minimum profile complete and machine‑readable?
+    -   Are core entities modeled consistently (stock/population IDs, locations, temporal coverage, age/brood year semantics)?
+    -   Are controlled vocabularies/code lists applied for key fields (e.g., species codes, gear, life stage, age type)?
+    -   Is a data dictionary included with definitions, units, allowed values, and provenance for each variable?
+-   Program
+    -   Do projects use a shared schema and code lists across datasets to enable easy joins?
+    -   Are validation checks in CI (schema validation, vocab checks) standardized across repositories?
+-   Organization
+    -   Is there an endorsed salmon domain profile and shared code lists with owners and change control?
+    -   Are mappings to external standards maintained (e.g., taxonomic, geospatial, hydrological registries)?
+
+Evidence to collect: metadata profiles, data dictionary, code lists, schema validators, mapping documentation.
+
+## Practice 5 — Store and Analyze Data for Easy Access, Use, and Trust
+
+-   Project
+    -   Is raw data immutable and separated from processed/analysis outputs?
+    -   Is there a fully reproducible workflow (scripts/notebooks + environment + parameters) that runs end‑to‑end?
+    -   Is the computational environment captured (lockfile/conda env, container image) and versioned?
+    -   Are QA/QC checks automated with logs and thresholds documented?
+    -   Are access controls and sensitive data handling documented and implemented?
+-   Program
+    -   Do projects follow a common repo layout and release process (tags, changelog, signed artifacts)?
+    -   Are standard storage classes, lifecycle policies, and archival rules applied?
+-   Organization
+    -   Are security, backup/retention, and audit requirements defined and routinely verified?
+    -   Is there a trusted long‑term archive with fixity checking and preservation metadata?
+
+Evidence to collect: workflow definition, environment files, container references, QA/QC reports, storage/backup settings.
+
+## Practice 6 — Incentivize and Track Sharing and Reuse
+
+-   Project
+    -   Is a clear citation and license statement included in metadata and README?
+    -   Are reuse metrics collected (downloads, citations, API hits) and reviewed?
+    -   Do release notes document what changed and implications for users?
+-   Program
+    -   Are common metrics dashboards available for priority datasets and updated automatically?
+    -   Are data citations tracked in assessments, reports, and staff evaluations?
+-   Organization
+    -   Do policies require citation guidance and permissive, appropriate licensing where possible?
+    -   Are automated reports of reuse (e.g., via DOI provider APIs) delivered to product owners and leadership?
+
+Evidence to collect: LICENSE, CITATION.cff, reuse dashboard link, policy excerpts, sample citations in reports.
+
+## Practice 7 — Build Community Through Co‑Development and Mutual Benefit
+
+-   Project
+    -   Are stakeholders identified, including First Nations/Tribes/Indigenous partners, and engagement needs documented?
+    -   Have you held at least one co‑design session to validate user needs and success criteria?
+    -   Is there an open feedback channel (issues form, contact) and a published roadmap?
+-   Program
+    -   Do cross‑project working groups exist for models, vocabularies, and tooling with regular cadence and notes?
+    -   Are community contributions recognized (authorship, acknowledgements, meeting time, funding)?
+-   Organization
+    -   Is there an endorsed governance body or community of practice with decision records?
+    -   Are procurement/funding mechanisms available to support shared components and Indigenous partnerships?
+
+Evidence to collect: stakeholder map, engagement records, roadmap, working group notes, decision log.
+
+------------------------------------------------------------------------
+
+# Quick Start: 30/60/90‑Day Plan
+
+-   First 30 days
+    -   Create/standardize DMP + RACI; draft data product charters for top 1–2 datasets.
+    -   Move code to version control; document repo structure; capture environment file.
+    -   Choose metadata profile and draft a minimal data dictionary; list code lists in use.
+-   By 60 days
+    -   Mint/plan PIDs (project page/protocols), add ORCIDs to metadata, prepare DOI for first dataset.
+    -   Add schema + vocab validation to CI; separate raw/processed; automate QA/QC checks.
+    -   Stand up a reuse dashboard or basic metrics capture; add citation/license to README and metadata.
+-   By 90 days
+    -   Publish first governed release to approved repository with DOI and complete metadata.
+    -   Formalize cross‑project working group and change control for vocabularies.
+    -   Document archival/retention path and verify backups; schedule governance reviews.
+
+------------------------------------------------------------------------
+
+# Minimal Artifacts Checklist (Project Level)
+
+-   DMP (with IDS considerations) and RACI
+-   Data product charter(s) for priority dataset(s)
+-   Versioned repository with releases and changelog
+-   Metadata profile file + data dictionary + code lists
+-   Reproducible workflow + environment file or container
+-   QA/QC checks and results log
+-   Citation and license statements
+-   Plan for PIDs (ORCID list, dataset/protocol DOIs)
+-   Evidence of stakeholder engagement and roadmap
+
+Maintain this list as a living issue in your repository and review quarterly.

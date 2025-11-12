@@ -34,6 +34,8 @@ Building custom solutions should be avoided where possible. Maximizing existing 
 
 2.2 Use free data catalogue services such as the Knowledge Network for Biocomplexity (KNB) or Zenodo
 
+-   The Pacific Salmon Foundation’s [spawner surveys dataset on Zenodo](https://doi.org/10.5281/zenodo.14194638) (Carturan and Peacock 2025) received more views within weeks than a [analogous dataset in the Salmon Data Library](https://data.salmonwatersheds.ca/result?datasetid=2) (Pacific Salmon Foundation 2025) did over several years, illustrating that leveraging established public data infrastructures, rather than developing institution-specific ones, can substantially increase discoverability.
+
 #### **3. Make Data, People, Projects, and Outputs Discoverable, Linked and Citable with PIDs**
 
 Persistent identifiers (PIDs), including Digital Object Identifiers (DOI) are essential for tracking the provenance and reuse of data, and linking data, protocols, organizations and people. They allow for consistent referencing, integration across systems, and automated credit via data citation.

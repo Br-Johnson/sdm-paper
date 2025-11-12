@@ -1,70 +1,78 @@
-## Appendix: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship
+## Appendix 2: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship
 
 This roadmap outlines essential topics, resources, and learning materials salmon biologists should engage with to effectively transition into data stewardship roles. The roadmap follows a structured progression similar to [roadmap.sh](https://roadmap.sh).
 
 ### 1. Foundations of Data Stewardship
-- **Principles:**
-  - [FAIR Data Principles](https://www.go-fair.org/fair-principles/)
-  - [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
-- **Seminal Papers:**
-  - Wilkinson et al. 2016 [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18)
-  - Carroll et al. 2019 [Indigenous Data Governance](https://doi.org/10.5334/dsj-2019-031)
-- **Courses and Tutorials:**
-  - [FAIR Principles Explained (GO-FAIR)](https://www.go-fair.org/resources/videos/fair-principles-explained/)
+
+-   **Principles:**
+    -   [FAIR Data Principles](https://www.go-fair.org/fair-principles/)
+    -   [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
+-   **Seminal Papers:**
+    -   Wilkinson et al. 2016 [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18)
+    -   Carroll et al. 2019 [Indigenous Data Governance](https://doi.org/10.5334/dsj-2019-031)
+-   **Courses and Tutorials:**
+    -   [FAIR Principles Explained (GO-FAIR)](https://www.go-fair.org/resources/videos/fair-principles-explained/)
 
 ### 2. Data Management & Governance
-- **Seminal Papers and Reports:**
-  - Plotkin, 2014 [Data Stewardship](https://doi.org/10.1016/c2012-0-07057-3)
-  - NOAA, 2007 [Environmental Data Management](https://doi.org/10.17226/12017)
-- **Practical Tools:**
-  - Data Management Plan Templates ([DMPTool](https://dmptool.org))
-  - DACI and RACI Frameworks ([Atlassian DACI Guide](https://www.atlassian.com/team-playbook/plays/daci))
+
+-   **Seminal Papers and Reports:**
+    -   Plotkin, 2014 [Data Stewardship](https://doi.org/10.1016/c2012-0-07057-3)
+    -   NOAA, 2007 [Environmental Data Management](https://doi.org/10.17226/12017)
+-   **Practical Tools:**
+    -   Data Management Plan Templates ([DMPTool](https://dmptool.org))
+    -   DACI and RACI Frameworks ([Atlassian DACI Guide](https://www.atlassian.com/team-playbook/plays/daci))
 
 ### 3. Metadata Standards and Ontologies
-- **Standards to Master:**
-  - [ISO 19115 Metadata Standard](https://www.iso.org/standard/53798.html)
-  - [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/)
-  - [Darwin Core Standard](https://dwc.tdwg.org/)
-- **Case Studies & Examples:**
-  - [Pacific Salmon Foundation Metadata Standards](https://marinedata.psf.ca)
-  - [Hakai Institute Juvenile Salmon Program](https://obis.org/dataset/81a9b931-8f47-49c4-94ff-0e46d7e9f1c9)
+
+-   **Standards to Master:**
+    -   [ISO 19115 Metadata Standard](https://www.iso.org/standard/53798.html)
+    -   [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/)
+    -   [Darwin Core Standard](https://dwc.tdwg.org/)
+-   **Case Studies & Examples:**
+    -   [Pacific Salmon Foundation Metadata Standards](https://marinedata.psf.ca)
+    -   [Hakai Institute Juvenile Salmon Program](https://obis.org/dataset/81a9b931-8f47-49c4-94ff-0e46d7e9f1c9)
 
 ### 4. Controlled Vocabularies & Persistent Identifiers (PIDs)
-- **PIDs to Implement:**
-  - [DOIs via DataCite](https://datacite.org)
-  - [ORCID IDs](https://orcid.org)
-  - [Research Organization Registry (ROR)](https://ror.org)
-- **Practical Guides:**
-  - [Introduction to PIDs (DataCite Blog)](https://blog.datacite.org/)
+
+-   **PIDs to Implement:**
+    -   [DOIs via DataCite](https://datacite.org)
+    -   [ORCID IDs](https://orcid.org)
+    -   [Research Organization Registry (ROR)](https://ror.org)
+-   **Practical Guides:**
+    -   [Introduction to PIDs (DataCite Blog)](https://blog.datacite.org/)
 
 ### 5. Data Integration & Interoperability
-- **Seminal Papers:**
-  - Johnson & Stap, 2024 [Salmon Ocean Observing System](https://doi.org/10.23849/npafcb7/6a4ddpde4)
-  - Bull et al. 2022 [Likely Suspects Framework](https://doi.org/10.1093/icesjms/fsac099)
-- **Technical Skills & Tools:**
-  - APIs with [FastAPI](https://fastapi.tiangolo.com), [Flask](https://flask.palletsprojects.com), [Django REST Framework](https://www.django-rest-framework.org)
-  - [Zenodo-GitHub Integration](https://guides.github.com/activities/citable-code/)
+
+-   **Seminal Papers:**
+    -   Johnson & Stap, 2024 [Salmon Ocean Observing System](https://doi.org/10.23849/npafcb7/6a4ddpde4)
+    -   Bull et al. 2022 [Likely Suspects Framework](https://doi.org/10.1093/icesjms/fsac099)
+-   **Technical Skills & Tools:**
+    -   APIs with [FastAPI](https://fastapi.tiangolo.com), [Flask](https://flask.palletsprojects.com), [Django REST Framework](https://www.django-rest-framework.org)
+    -   [Zenodo-GitHub Integration](https://guides.github.com/activities/citable-code/)
 
 ### 6. Data Sharing, Citation & Metrics
-- **Best Practices:**
-  - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
-- **Tracking & Metrics:**
-  - [COUNTER Metrics](https://www.projectcounter.org/)
-  - [DataCite API](https://datacite.org/service.html)
+
+-   **Best Practices:**
+    -   [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+-   **Tracking & Metrics:**
+    -   [COUNTER Metrics](https://www.projectcounter.org/)
+    -   [DataCite API](https://datacite.org/service.html)
 
 ### 7. Community Engagement & Co-Development
-- **Communities & Groups:**
-  - [Research Data Alliance Salmon Research Group](https://rd-alliance.org/groups/salmon-data-management)
-- **Approaches & Frameworks:**
-  - User-centered Design ([Interaction Design Foundation](https://www.interaction-design.org/literature/topics/user-centered-design))
-  - Community Engaged Research ([University of Victoria Guide](https://www.uvic.ca/research/assets/docs/Community-Engaged-Research.pdf))
+
+-   **Communities & Groups:**
+    -   [Research Data Alliance Salmon Research Group](https://rd-alliance.org/groups/salmon-data-management)
+-   **Approaches & Frameworks:**
+    -   User-centered Design ([Interaction Design Foundation](https://www.interaction-design.org/literature/topics/user-centered-design))
+    -   Community Engaged Research ([University of Victoria Guide](https://www.uvic.ca/research/assets/docs/Community-Engaged-Research.pdf))
 
 ### Additional Resources
-- **Free Courses:**
-  - [Introduction to Open Science (FOSTER)](https://www.fosteropenscience.eu/toolkit)
-  - [Research Data Management and Sharing (Coursera)](https://www.coursera.org/learn/data-management)
-- **Blogs & Websites:**
-  - [Open Knowledge Foundation Blog](https://blog.okfn.org/)
-  - [DataONE Data Management Resources](https://www.dataone.org/resources/)
+
+-   **Free Courses:**
+    -   [Introduction to Open Science (FOSTER)](https://www.fosteropenscience.eu/toolkit)
+    -   [Research Data Management and Sharing (Coursera)](https://www.coursera.org/learn/data-management)
+-   **Blogs & Websites:**
+    -   [Open Knowledge Foundation Blog](https://blog.okfn.org/)
+    -   [DataONE Data Management Resources](https://www.dataone.org/resources/)
 
 This roadmap serves as a structured guide to equip salmon biologists with the practical and theoretical skills required to excel in data stewardship roles.
