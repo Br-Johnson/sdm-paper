@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,6 +91,8 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -126,6 +126,18 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
@@ -185,13 +197,11 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
-  pdftitle={Practical Data Stewardship for Salmon Biologists},
+  pdftitle={DRAFT Practical Data Stewardship for Salmon Biologists--A Blueprint for Domain-Specific Best Practices in Fisheries DRAFT},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -200,23 +210,15 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Practical Data Stewardship for Salmon Biologists}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{DRAFT A Blueprint for Domain-Specific Best Practice}
+\title{DRAFT Practical Data Stewardship for Salmon Biologists--A
+Blueprint for Domain-Specific Best Practices in Fisheries DRAFT}
 \author{Brett Johnson \and Scott Akenhead \and Katie
-Barnas \and Jennifer Bayer \and Tomas Bird \and Bruno
-Carturan \and Samuel Cimino \and Graeme Diack \and Lara
-Erikson \and Eric Hertz \and Nancy Leonard \and Catherine
-Michielsens \and Fiona Martens \and Emily Lescak \and Stephanie
-Peacock \and Gottfried Pestal \and Matt Jones \and Mark Saunders \and Yi
+Barnas \and Jennifer Bayer \and Tomas Bird \and Samuel
+Cimino \and Graeme Diack \and Lara Erikson \and Nancy
+Leonard \and Catherine Michielsens \and Fiona Martens \and Emily
+Lescak \and Gottfried Pestal \and Matt Jones \and Mark Saunders \and Yi
 Xu}
 \date{}
-
 \begin{document}
 \maketitle
 
@@ -226,60 +228,37 @@ principles, persistent identifiers (PIDs), controlled vocabularies,
 metadata standards, application programming Interface (API), data
 citation, ontology development
 
-To do items:
-
-\begin{itemize}
-\tightlist
-\item
-  Discuss differences between data management plans, data governance
-  charters, data sharing agreements
-\item
-  Incorporate ref to Streamnet Data Exchange Standards somehow
-\item
-  Add in figures
-\item
-  fill out appendix 1 more thoroughly
-\item
-  Refine Reorg the content in appendix 2 (traning roadmap) and decide if
-  it Makes sense to put some of that content into a 3rd column in table
-  1
-\item
-  Abstract refinement
-\end{itemize}
-
 \subsubsection{Abstract}\label{abstract}
 
-Fisheries management, research, and broader conservation efforts
-increasingly generate vast and diverse data crucial for timely
-decision-making. Yet these data remain largely fragmented across
-jurisdictions, disciplines, and outdated infrastructure, limiting their
-use in responsive fisheries management. This is precisely the work of
-data stewardship---making scattered, cross‑jurisdictional data usable
-across systems. Biologists are increasingly taking on data stewardship
-responsibilities to address these challenges, often without clear
-guidance, training, or support. Shared, community-agreed practices for
-implementing domain-specific data standards are needed to move beyond
-generic data management guidance toward fit-for-purpose tools and
-workflows. To address this gap---and to show how other communities can
-do so---we develop seven practices for salmon data stewardship. Through
+Fisheries research, management, and conservation increasingly generate
+vast and diverse data crucial for timely decision-making. Yet these data
+remain largely fragmented across jurisdictions, disciplines, and
+outdated infrastructure, limiting their use in responsive management.
+Biologists are increasingly taking on data stewardship responsibilities
+to address these challenges, often without clear guidance, training, or
+support. Shared, community-agreed practices for implementing
+domain-specific data standards are needed to move beyond generic data
+management guidance toward fit-for-purpose tools and workflows. To
+address this gap---and to show how other communities can do so---we
+develop seven practices for salmon data stewardship and demonstrate
+their application through a real-world case study. We provide practical
+guidance for those transitioning into these essential stewardship roles,
+including domain-specific tools, templates, and examples from salmon
+research and management. We argue that effective salmon management
+depends on formally establishing data stewardship as a dedicated,
+institutionally supported professional role. These practices integrate
+both sociocultural and technical approaches to ensure data meet modern
+open science principles and respect Indigenous Data Sovereignty. Through
 a case study of a historical sockeye salmon productivity analysis
 spanning Pacific Coast jurisdictions, we highlight how clearly defined
 data stewardship practices enhance data reproducibility, integration,
-and management efficacy. We provide practical guidance for those
-transitioning into these essential stewardship roles, including
-domain-specific tools, templates, and examples from salmon research and
-management. We argue that effective salmon management depends on
-formally recognizing data stewardship as an institutionally supported
-responsibility. These practices integrate both sociocultural and
-technical approaches to ensure data meet modern open science principles
-and respect Indigenous Data Sovereignty. With a foundation of shared
-practices, data stewards will enable faster, more transparent
-decision-making, support development of machine-actionable datasets with
-high-quality metadata and consistent semantics that enable automated
-analysis, and expand the use of cross-jurisdictional
-datasets---ultimately strengthening the management and conservation of
-salmon populations and the ecosystems they inhabit, and, by extension,
-other data-rich fisheri
+and management efficacy. With a foundation of shared practices, data
+stewards will enable faster, more transparent decision-making, support
+development of machine-actionable datasets with high-quality metadata
+and consistent semantics that enable automated analysis, and expand the
+use of cross-jurisdictional datasets---ultimately strengthening the
+management and conservation of salmon populations and the ecosystems
+they inhabit, and, by extension, other data-rich fisheries data domains.
 
 \subsection{The Data Stewardship
 Challenge}\label{the-data-stewardship-challenge}
@@ -293,7 +272,7 @@ persistent challenges in achieving these goals. Data on fish
 populations, health, and environmental conditions are often fragmented,
 inconsistently measured, and incomplete across time, space, and
 life-history stages (NOAA Data Governance Committee 2024). These issues
-limit the utility of fisheries data for research and management.
+limit the utility of these data for research and management.
 
 \subsubsection{Cross-Jurisdictional Data
 Fragmentation}\label{cross-jurisdictional-data-fragmentation}
@@ -454,7 +433,7 @@ cultures and technical systems, and maintaining long-term relationships,
 data stewards create the social infrastructure necessary for effective
 cross-boundary data collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, colback=white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, breakable, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, toptitle=1mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, arc=.35mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, arc=.35mm, bottomrule=.15mm, colback=white, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, bottomtitle=1mm, toptitle=1mm, leftrule=.75mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
 
 Effective salmon data stewards perform several critical functions:
 
@@ -973,6 +952,25 @@ embedding these practices into the everyday work of data generation,
 documentation, publication, and reuse, we can move salmon science
 decisively into the era of data-intensive discovery.
 
+To do items:
+
+\begin{itemize}
+\tightlist
+\item
+  Discuss differences between data management plans, data governance
+  charters, data sharing agreements
+\item
+  Incorporate ref to Streamnet Data Exchange Standards somehow
+\item
+  Add in figures
+\item
+  fill out appendix 1 more thoroughly
+\item
+  Refine Reorg the content in appendix 2 (traning roadmap) and decide if
+  it Makes sense to put some of that content into a 3rd column in table
+  1
+\end{itemize}
+
 \subsubsection{Competing interests}\label{competing-interests}
 
 \subsubsection{Acknowledgements}\label{acknowledgements}
@@ -1198,6 +1196,20 @@ standardize and host your data}
 
 2.2 Use free data catalogue services such as the Knowledge Network for
 Biocomplexity (KNB) or Zenodo
+
+\begin{itemize}
+\tightlist
+\item
+  The Pacific Salmon Foundation's
+  \href{https://doi.org/10.5281/zenodo.14194638}{spawner surveys dataset
+  on Zenodo} (Carturan and Peacock 2025) received more views within
+  weeks than a
+  \href{https://data.salmonwatersheds.ca/result?datasetid=2}{analogous
+  dataset in the Salmon Data Library} (Pacific Salmon Foundation 2025)
+  did over several years, illustrating that leveraging established
+  public data infrastructures, rather than developing
+  institution-specific ones, can substantially increase discoverability.
+\end{itemize}
 
 \paragraph{\texorpdfstring{\textbf{3. Make Data, People, Projects, and
 Outputs Discoverable, Linked and Citable with
@@ -1440,14 +1452,14 @@ provides tangible value to the communities in which research or
 monitoring was conducted.
 
 \textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-1-real-world-examples-preview.html\#db49f911-1b05-49e2-a38e-2960c283159b}{Appendix
+\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-1-real-world-examples-preview.html\#30b34dea-aa0c-434f-83f6-11e787d2ff9d}{Appendix
 1. Real-world Example Applications of the Best Practices}}
 
 \section{}\label{section-1}
 
-\subsection{Appendix: Training Roadmap for Salmon Biologists
+\subsection{Appendix 2: Training Roadmap for Salmon Biologists
 Transitioning to Data
-Stewardship}\label{appendix-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship}
+Stewardship}\label{appendix-2-training-roadmap-for-salmon-biologists-transitioning-to-data-stewardship}
 
 This roadmap outlines essential topics, resources, and learning
 materials salmon biologists should engage with to effectively transition
@@ -1712,9 +1724,473 @@ with the practical and theoretical skills required to excel in data
 stewardship roles.
 
 \textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-2-training-roadmap-preview.html\#7c3b2b24-38fb-439b-9e99-6e340c1fcb2b}{Appendix:
-Training Roadmap for Salmon Biologists Transitioning to Data
+\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-2-training-roadmap-preview.html\#58b31dec-16b4-4641-8c4b-057e26e04581}{Appendix
+2: Training Roadmap for Salmon Biologists Transitioning to Data
 Stewardship}}
+
+\section{}\label{section-2}
+
+\subsection{Appendix 3: Getting Started
+Checklist}\label{appendix-3-getting-started-checklist}
+
+\section{Getting Started Checklist for Salmon Data
+Stewardship}\label{getting-started-checklist-for-salmon-data-stewardship}
+
+Use this practical checklist to assess how well your project, program,
+or organization aligns to the seven Best Practices in index.qmd. Start
+at the Project level, then scale to Program and Organization. Check off
+items you've completed and note gaps to prioritize.
+
+Tip: For each item, capture a link to the living source (e.g.,
+repository, shared drive, policy page) and the responsible owner.
+
+\subsection{Practice 1 --- Make Data Governance
+Explicit}\label{practice-1-make-data-governance-explicit}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do you have a lightweight Data Management Plan (DMP) covering scope,
+    sensitive data, retention, and sharing? (link)
+  \item
+    Is there a RACI (Responsible, Accountable, Consulted, Informed)
+    table for key tasks? (owner)
+  \item
+    Are Indigenous Data Sovereignty requirements identified and
+    documented (who to consult, approvals needed)?
+  \item
+    Is a data product charter written for each dataset or analysis
+    product with purpose, audience, quality thresholds, release plan?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Are DMP and charter templates standardized across projects and
+    stored centrally?
+  \item
+    Are role definitions for Data Steward, Product Owner, and Maintainer
+    explicit and assigned for priority datasets?
+  \item
+    Are data sharing agreements/MOUs and ethical review pathways
+    documented and reusable?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Does a governance policy exist that sets minimum requirements for
+    DMPs, RACI, retention, IDS, and release reviews?
+  \item
+    Is there a standing review forum (e.g., monthly data governance
+    check‑in) and a registry of governed data products?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: DMP link, data product charter(s), RACI, IDS
+guidance, sharing agreements registry.
+
+\subsection{Practice 2 --- Reuse Proven
+Infrastructure}\label{practice-2-reuse-proven-infrastructure}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is your code in version control (e.g., Git) with an issue tracker
+    and releases?
+  \item
+    Are you using an approved repository or data store rather than
+    creating a new silo? (where)
+  \item
+    Do you use existing organization authentication/authorization and
+    backup processes?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is there a preferred stack list (storage, metadata catalog, workflow
+    runner, packaging, container base images)?
+  \item
+    Do projects consistently deposit finalized data in approved
+    repositories with clear intake criteria?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Are enterprise services available and documented (data lake, object
+    store, catalog/portal, archival repository)?
+  \item
+    Is there a deprecation pathway for legacy systems and a migration
+    plan for priority datasets?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: repository URLs, infrastructure inventory, intake
+criteria, backup/DR documentation.
+
+\subsection{Practice 3 --- Use Persistent Identifiers (PIDs) for People,
+Projects, Data, and
+Methods}\label{practice-3-use-persistent-identifiers-pids-for-people-projects-data-and-methods}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do all contributors have ORCID IDs recorded in metadata?
+  \item
+    Does the project have a resolvable PID (e.g., DOI for a project page
+    or protocol, internal project ID)?
+  \item
+    Are datasets assigned DOIs (or other PIDs) at publication, and are
+    versions tracked?
+  \item
+    Are methods/protocols published and citable (e.g., protocol DOI) and
+    linked from dataset metadata?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is there guidance on when to mint PIDs, by whom, and where they
+    resolve?
+  \item
+    Are projects linked to organizational identifiers (e.g., ROR for
+    institutions) in metadata?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is there a PID policy and a provider/registrar configured (e.g.,
+    DataCite) with a documented workflow?
+  \item
+    Are PID linkages automated in the catalog (people ↔ projects ↔
+    datasets ↔ publications)?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: ORCID list, PID policy, DOI records, resolver links
+in the catalog.
+
+\subsection{Practice 4 --- Shared Data Models, Vocabularies, and
+Metadata}\label{practice-4-shared-data-models-vocabularies-and-metadata}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Which metadata profile is used (e.g., ISO 19115, EML)? Is the
+    minimum profile complete and machine‑readable?
+  \item
+    Are core entities modeled consistently (stock/population IDs,
+    locations, temporal coverage, age/brood year semantics)?
+  \item
+    Are controlled vocabularies/code lists applied for key fields (e.g.,
+    species codes, gear, life stage, age type)?
+  \item
+    Is a data dictionary included with definitions, units, allowed
+    values, and provenance for each variable?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do projects use a shared schema and code lists across datasets to
+    enable easy joins?
+  \item
+    Are validation checks in CI (schema validation, vocab checks)
+    standardized across repositories?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is there an endorsed salmon domain profile and shared code lists
+    with owners and change control?
+  \item
+    Are mappings to external standards maintained (e.g., taxonomic,
+    geospatial, hydrological registries)?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: metadata profiles, data dictionary, code lists,
+schema validators, mapping documentation.
+
+\subsection{Practice 5 --- Store and Analyze Data for Easy Access, Use,
+and
+Trust}\label{practice-5-store-and-analyze-data-for-easy-access-use-and-trust}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is raw data immutable and separated from processed/analysis outputs?
+  \item
+    Is there a fully reproducible workflow (scripts/notebooks +
+    environment + parameters) that runs end‑to‑end?
+  \item
+    Is the computational environment captured (lockfile/conda env,
+    container image) and versioned?
+  \item
+    Are QA/QC checks automated with logs and thresholds documented?
+  \item
+    Are access controls and sensitive data handling documented and
+    implemented?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do projects follow a common repo layout and release process (tags,
+    changelog, signed artifacts)?
+  \item
+    Are standard storage classes, lifecycle policies, and archival rules
+    applied?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Are security, backup/retention, and audit requirements defined and
+    routinely verified?
+  \item
+    Is there a trusted long‑term archive with fixity checking and
+    preservation metadata?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: workflow definition, environment files, container
+references, QA/QC reports, storage/backup settings.
+
+\subsection{Practice 6 --- Incentivize and Track Sharing and
+Reuse}\label{practice-6-incentivize-and-track-sharing-and-reuse}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is a clear citation and license statement included in metadata and
+    README?
+  \item
+    Are reuse metrics collected (downloads, citations, API hits) and
+    reviewed?
+  \item
+    Do release notes document what changed and implications for users?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Are common metrics dashboards available for priority datasets and
+    updated automatically?
+  \item
+    Are data citations tracked in assessments, reports, and staff
+    evaluations?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do policies require citation guidance and permissive, appropriate
+    licensing where possible?
+  \item
+    Are automated reports of reuse (e.g., via DOI provider APIs)
+    delivered to product owners and leadership?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: LICENSE, CITATION.cff, reuse dashboard link, policy
+excerpts, sample citations in reports.
+
+\subsection{Practice 7 --- Build Community Through Co‑Development and
+Mutual
+Benefit}\label{practice-7-build-community-through-codevelopment-and-mutual-benefit}
+
+\begin{itemize}
+\tightlist
+\item
+  Project
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Are stakeholders identified, including First
+    Nations/Tribes/Indigenous partners, and engagement needs documented?
+  \item
+    Have you held at least one co‑design session to validate user needs
+    and success criteria?
+  \item
+    Is there an open feedback channel (issues form, contact) and a
+    published roadmap?
+  \end{itemize}
+\item
+  Program
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Do cross‑project working groups exist for models, vocabularies, and
+    tooling with regular cadence and notes?
+  \item
+    Are community contributions recognized (authorship,
+    acknowledgements, meeting time, funding)?
+  \end{itemize}
+\item
+  Organization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Is there an endorsed governance body or community of practice with
+    decision records?
+  \item
+    Are procurement/funding mechanisms available to support shared
+    components and Indigenous partnerships?
+  \end{itemize}
+\end{itemize}
+
+Evidence to collect: stakeholder map, engagement records, roadmap,
+working group notes, decision log.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Quick Start: 30/60/90‑Day
+Plan}\label{quick-start-306090day-plan}
+
+\begin{itemize}
+\tightlist
+\item
+  First 30 days
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Create/standardize DMP + RACI; draft data product charters for top
+    1--2 datasets.
+  \item
+    Move code to version control; document repo structure; capture
+    environment file.
+  \item
+    Choose metadata profile and draft a minimal data dictionary; list
+    code lists in use.
+  \end{itemize}
+\item
+  By 60 days
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Mint/plan PIDs (project page/protocols), add ORCIDs to metadata,
+    prepare DOI for first dataset.
+  \item
+    Add schema + vocab validation to CI; separate raw/processed;
+    automate QA/QC checks.
+  \item
+    Stand up a reuse dashboard or basic metrics capture; add
+    citation/license to README and metadata.
+  \end{itemize}
+\item
+  By 90 days
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Publish first governed release to approved repository with DOI and
+    complete metadata.
+  \item
+    Formalize cross‑project working group and change control for
+    vocabularies.
+  \item
+    Document archival/retention path and verify backups; schedule
+    governance reviews.
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Minimal Artifacts Checklist (Project
+Level)}\label{minimal-artifacts-checklist-project-level}
+
+\begin{itemize}
+\tightlist
+\item
+  DMP (with IDS considerations) and RACI
+\item
+  Data product charter(s) for priority dataset(s)
+\item
+  Versioned repository with releases and changelog
+\item
+  Metadata profile file + data dictionary + code lists
+\item
+  Reproducible workflow + environment file or container
+\item
+  QA/QC checks and results log
+\item
+  Citation and license statements
+\item
+  Plan for PIDs (ORCID list, dataset/protocol DOIs)
+\item
+  Evidence of stakeholder engagement and roadmap
+\end{itemize}
+
+Maintain this list as a living issue in your repository and review
+quarterly.
+
+\textsubscript{Source:
+\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-3-getting-started-checklist-preview.html\#454edf0c-0379-49db-a45c-ffa3400c9f4c}{Appendix
+3: Getting Started Checklist}}
 
 
 
