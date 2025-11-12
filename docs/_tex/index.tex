@@ -69,7 +69,6 @@
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
-\usepackage{multirow}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -192,7 +191,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={DRAFT Practical Data Stewardship for Salmon Biologists--A Blueprint for Domain-Specific Best Practices in Fisheries DRAFT},
+  pdftitle={Practical Data Stewardship for Salmon Biologists},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -201,13 +200,20 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{DRAFT Practical Data Stewardship for Salmon Biologists--A
-Blueprint for Domain-Specific Best Practices in Fisheries DRAFT}
+\title{Practical Data Stewardship for Salmon Biologists}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{DRAFT A Blueprint for Domain-Specific Best Practice}
 \author{Brett Johnson \and Scott Akenhead \and Katie
-Barnas \and Jennifer Bayer \and Tomas Bird \and Samuel
-Cimino \and Graeme Diack \and Lara Erikson \and Nancy
-Leonard \and Catherine Michielsens \and Fiona Martens \and Emily
-Lescak \and Gottfried Pestal \and Matt Jones \and Mark Saunders \and Yi
+Barnas \and Jennifer Bayer \and Tomas Bird \and Bruno
+Carturan \and Samuel Cimino \and Graeme Diack \and Lara
+Erikson \and Eric Hertz \and Nancy Leonard \and Catherine
+Michielsens \and Fiona Martens \and Emily Lescak \and Stephanie
+Peacock \and Gottfried Pestal \and Matt Jones \and Mark Saunders \and Yi
 Xu}
 \date{}
 
@@ -243,36 +249,37 @@ To do items:
 
 \subsubsection{Abstract}\label{abstract}
 
-Fisheries research, management, and conservation increasingly generate
-vast and diverse data crucial for timely decision-making. Yet these data
-remain largely fragmented across jurisdictions, disciplines, and
-outdated infrastructure, limiting their use in responsive fisheries
-management. Biologists are increasingly taking on data stewardship
+Fisheries management, research, and broader conservation efforts
+increasingly generate vast and diverse data crucial for timely
+decision-making. Yet these data remain largely fragmented across
+jurisdictions, disciplines, and outdated infrastructure, limiting their
+use in responsive fisheries management. This is precisely the work of
+data stewardship---making scattered, cross‑jurisdictional data usable
+across systems. Biologists are increasingly taking on data stewardship
 responsibilities to address these challenges, often without clear
 guidance, training, or support. Shared, community-agreed practices for
 implementing domain-specific data standards are needed to move beyond
 generic data management guidance toward fit-for-purpose tools and
 workflows. To address this gap---and to show how other communities can
-do so---we develop seven practices for salmon data stewardship and
-demonstrate their application through a real-world case study. We
-provide practical guidance for those transitioning into these essential
-stewardship roles, including domain-specific tools, templates, and
-examples from salmon research and management. We argue that effective
-salmon management depends on formally establishing data stewardship as a
-dedicated, institutionally supported professional role. These practices
-integrate both sociocultural and technical approaches to ensure data
-meet modern open science principles and respect Indigenous Data
-Sovereignty. Through a case study of a historical sockeye salmon
-productivity analysis spanning Pacific Coast jurisdictions, we highlight
-how clearly defined data stewardship practices enhance data
-reproducibility, integration, and management efficacy. With a foundation
-of shared practices, data stewards will enable faster, more transparent
+do so---we develop seven practices for salmon data stewardship. Through
+a case study of a historical sockeye salmon productivity analysis
+spanning Pacific Coast jurisdictions, we highlight how clearly defined
+data stewardship practices enhance data reproducibility, integration,
+and management efficacy. We provide practical guidance for those
+transitioning into these essential stewardship roles, including
+domain-specific tools, templates, and examples from salmon research and
+management. We argue that effective salmon management depends on
+formally recognizing data stewardship as an institutionally supported
+responsibility. These practices integrate both sociocultural and
+technical approaches to ensure data meet modern open science principles
+and respect Indigenous Data Sovereignty. With a foundation of shared
+practices, data stewards will enable faster, more transparent
 decision-making, support development of machine-actionable datasets with
 high-quality metadata and consistent semantics that enable automated
 analysis, and expand the use of cross-jurisdictional
 datasets---ultimately strengthening the management and conservation of
 salmon populations and the ecosystems they inhabit, and, by extension,
-other data-rich fisheries data domains.
+other data-rich fisheri
 
 \subsection{The Data Stewardship
 Challenge}\label{the-data-stewardship-challenge}
@@ -447,7 +454,7 @@ cultures and technical systems, and maintaining long-term relationships,
 data stewards create the social infrastructure necessary for effective
 cross-boundary data collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, leftrule=.75mm, left=2mm, breakable, rightrule=.15mm, bottomtitle=1mm, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, toptitle=1mm, toprule=.15mm, opacitybacktitle=0.6, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, colback=white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, breakable, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, toptitle=1mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, arc=.35mm, titlerule=0mm]
 
 Effective salmon data stewards perform several critical functions:
 
@@ -697,56 +704,69 @@ credibility and portability of our approach across different domains and
 institutions.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1203}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2689}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0672}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0756}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0840}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0924}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0756}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1681}}@{}}
 \caption{Mapping of seven best practices to NOAA Data Lifecycle stages
 and cross-cutting elements}\label{tbl-lifecycle}\tabularnewline
 \toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Plan
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Obtain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Process
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Preserve
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Access
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Disposition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cross-cutting
+\end{minipage} \\
+\midrule\noalign{}
 \endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Plan
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Obtain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Process
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Preserve
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Access
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Disposition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cross-cutting
+\end{minipage} \\
+\midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.9620} + 14\tabcolsep}@{}}{%
-\multirow{2}{=}{\textbf{Best Practice} \textbar{} \textbf{Plan}
-\textbar{} \textbf{Obtain} \textbar{} \textbf{Process} \textbar{}
-\textbf{Preserve} \textbar{} \textbf{Access} \textbar{}
-\textbf{Disposition} \textbar{} \textbf{Cross-cutting} \textbar{}
-:=================:+:========:+:=========:+:=========:+:==========:+:=========:+:============:+:================:+
-\textbf{1. Data Governance} \textbar{} ● \textbar{} ● \textbar{} ●
-\textbar{} ● \textbar{} ● \textbar{} ● \textbar{} Document, Quality
-\textbar{}}} \\
- \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2405} + 2\tabcolsep}}{%
-\textbf{2. Reuse Infrastructure} \textbar{} ● \textbar{} \textbar{}} &
-\multicolumn{6}{>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.7215} + 10\tabcolsep}@{}}{%
-● \textbar{} ● \textbar{} \textbar{} Track and Monitor \textbar{}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2405} + 2\tabcolsep}}{%
-\textbf{3. Persistent Identifiers} \textbar{} ● \textbar{}} &
-\multicolumn{6}{>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.7215} + 10\tabcolsep}@{}}{%
-● \textbar{} ● \textbar{} ● \textbar{} \textbar{} Document, Track
-\textbar{}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2405} + 2\tabcolsep}}{%
-\textbf{4. Shared Data Models} \textbar{} ● \textbar{} \textbar{} ●} &
-\multicolumn{6}{>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.7215} + 10\tabcolsep}@{}}{%
-● \textbar{} \textbar{} \textbar{} Quality \textbar{}} \\
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.9620} + 14\tabcolsep}@{}}{%
-\textbf{5. Accessible Storage} \textbar{} \textbar{} \textbar{} ●
-\textbar{} ● \textbar{} ● \textbar{} \textbar{} Security, Quality
-\textbar{}} \\
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.9620} + 14\tabcolsep}@{}}{%
-\textbf{6. Incentivize Sharing} \textbar{} ● \textbar{} \textbar{}
-\textbar{} ● \textbar{} ● \textbar{} \textbar{} Track and Monitor
-\textbar{}} \\
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.9620} + 14\tabcolsep}@{}}{%
-\textbf{7. Community Building} \textbar{} ● \textbar{} ● \textbar{} ●
-\textbar{} ● \textbar{} ● \textbar{} ● \textbar{} Document, Quality
-\textbar{}} \\
+\textbf{1. Data Governance} & ● & ● & ● & ● & ● & ● & Document,
+Quality \\
+\textbf{2. Reuse Infrastructure} & ● & & & ● & ● & & Track and
+Monitor \\
+\textbf{3. Persistent Identifiers} & ● & & & ● & ● & ● & Document,
+Track \\
+\textbf{4. Shared Data Models} & ● & & ● & ● & & & Quality \\
+\textbf{5. Accessible Storage} & & & ● & ● & ● & & Security, Quality \\
+\textbf{6. Incentivize Sharing} & ● & & & ● & ● & & Track and Monitor \\
+\textbf{7. Community Building} & ● & ● & ● & ● & ● & ● & Document,
+Quality \\
 \end{longtable}
 
 \subsubsection{Metadata governance as a cross-cutting
@@ -774,89 +794,96 @@ resources, trained personnel, and systematic processes that operate
 continuously across all data activities.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6646}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2781}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0552}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7035}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2965}}@{}}
 \caption{Best practices and practical applications of salmon data
 stewardship}\label{tbl-bestpractices}\tabularnewline
 \toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Practical Applications
+\end{minipage} \\
+\midrule\noalign{}
 \endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Practical Applications
+\end{minipage} \\
+\midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\multirow{2}{=}{\textbf{Best Practice}
-:===================================================================================================================================================================================================================================================================================================================================
 \textbf{1. Make Data Governance Explicit to Support Trust and Reuse.}
 Establishing clear governance structures ensures quality,
 accountability, and compliance with FAIR and CARE principles. It enables
-trust and long-term stewardship across multi-organizational projects.} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333} + 2\tabcolsep}@{}}{%
-\multirow{2}{=}{\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Practical Applications} \textbar{}
-:======================================================================================================================================+
+trust and long-term stewardship across multi-organizational projects. &
 - Document roles and responsibilities using a Data Product Governance
-Charter and structured frameworks (e.g., DACI or RACI).~ \textbar{} -
-Integrate CARE principles to respect First Nations, Tribes, and
-Indigenous data rights.\\
+Charter and structured frameworks (e.g., DACI or RACI).
+
+- Integrate CARE principles to respect First Nations, Tribes, and
+Indigenous data rights.
+
 - Form a governance or oversight committee to review data standards,
-timelines, and agreements. \textbar{}\strut
-\end{minipage}}} \\
- \\
+timelines, and agreements. \\
 \textbf{2. Reuse Proven Infrastructure to Save Time and Increase
 Interoperability.} Leveraging existing platforms and technologies
 reduces costs and improves long-term interoperability and
-sustainability. & \begin{minipage}[t]{\linewidth}\raggedright
-- Use domain-specific repositories like OBIS or GBIF.\\
-- Publish and archive data with KNB or Zenodo.\strut
-\end{minipage} & \\
+sustainability. & - Use domain-specific repositories like OBIS or GBIF.
+
+- Publish and archive data with KNB or Zenodo. \\
 \textbf{3. Make Data, People, Projects, and Outputs Discoverable, Linked
 and Citable with PIDs.} Persistent identifiers (PIDs) connect data with
 researchers, institutions, and outputs---supporting data citation,
-reuse, and automated attribution. &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Encourage use of ORCID iDs for researchers.\\
-- Use ROR IDs for institutions.\\
-- Assign DOIs via DataCite for data packages.\\
-- Embed DOIs in dashboards and metadata.\strut
-\end{minipage} & \\
+reuse, and automated attribution. & - Encourage use of ORCID iDs for
+researchers.
+
+- Use ROR IDs for institutions.
+
+- Assign DOIs via DataCite for data packages.
+
+- Embed DOIs in dashboards and metadata. \\
 \textbf{4. Use Shared Data Models, Ontologies and Metadata to Enable
 Integration.} Common vocabularies, metadata standards, and ontologies
-support integration across systems and preserve semantic meaning. &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Adopt ISO 19115, EML, or DataCite metadata standards.\\
-- Re-use terms defined in Salmon Domain Ontology\\
-- Model datasets using the Darwin Core Data Package Model.\strut
-\end{minipage} & \\
+support integration across systems and preserve semantic meaning. & -
+Adopt ISO 19115, EML, or DataCite metadata standards.
+
+- Re-use terms defined in Salmon Domain Ontology.
+
+- Model datasets using the Darwin Core Data Package Model. \\
 \textbf{5. Store and Analyze Data in Ways That Others Can Easily Access,
 Use and Trust.} Structured and accessible data formats ease reusability,
 and support integration with analytical tools and applications while
 data analyzed or wrangled using programmatic scripts (R, Python etc.)
-enable reproducibility and increase trust. &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Provide APIs using FastAPI, Flask, or Django REST.\\
-- Archive in trusted repositories (e.g., GBIF, FRDR, USGS).\\
+enable reproducibility and increase trust. & - Provide APIs using
+FastAPI, Flask, or Django REST.
+
+- Archive in trusted repositories (e.g., GBIF, FRDR, USGS).
+
 - Write scripts in a programming language to wrangle, transform, and
-analyze data\\
+analyze data.
+
 - Use GitHub to host code for collaboration and transparency and the
-GitHub / Zenodo integration for DOI assignment and preservation.\strut
-\end{minipage} & \\
+GitHub / Zenodo integration for DOI assignment and preservation. \\
 \textbf{6. Incentivize and Track Data Sharing and Reuse.} Recognizing
 data contributors and tracking reuse promotes a culture of sharing and
-supports professional recognition. &
-\begin{minipage}[t]{\linewidth}\raggedright
-- License data with CC-BY 4.0.\\
-- Include citation text and visible credit fields.\\
-- Use COUNTER metrics and DataCite APIs to monitor reuse.\\
-- Encourage dataset citation in references.\strut
-\end{minipage} & \\
+supports professional recognition. & - License data with CC-BY 4.0.
+
+- Include citation text and visible credit fields.
+
+- Use COUNTER metrics and DataCite APIs to monitor reuse.
+
+- Encourage dataset citation in references. \\
 \textbf{7. Build Community Through Co-Development and Mutual Benefit.}
 Engaging users early ensures tools and standards meet real-world needs
-and enhances long-term stewardship. &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Participate in RDA Salmon Interest Group.\\
-- Facilitate workshops for metadata and vocabulary alignment.\\
-- Support community-engaged research with tangible benefits.\strut
-\end{minipage} & \\
+and enhances long-term stewardship. & - Participate in RDA Salmon
+Interest Group.
+
+- Facilitate workshops for metadata and vocabulary alignment.
+
+- Support community-engaged research with tangible benefits. \\
 \end{longtable}
 
 \subsection{Conclusion}\label{conclusion}
