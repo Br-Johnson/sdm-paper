@@ -440,7 +440,7 @@ cultures and technical systems, and maintaining long-term relationships,
 data stewards create the social infrastructure necessary for effective
 cross-boundary data collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, toprule=.15mm, opacityback=0, colback=white, coltitle=black, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, breakable, arc=.35mm, coltitle=black, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, rightrule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, colbacktitle=quarto-callout-note-color!10!white, left=2mm]
 
 Effective salmon data stewards perform several critical functions:
 
@@ -1744,9 +1744,9 @@ Checklist}\label{appendix-3-getting-started-checklist}
 Stewardship}\label{getting-started-checklist-for-salmon-data-stewardship}
 
 Use this practical checklist to assess how well your project, program,
-or organization aligns to the seven Best Practices in index.qmd. Start
-at the Project level, then scale to Program and Organization. Check off
-items you've completed and note gaps to prioritize.
+or organization aligns to the seven Best Practices. Start at the Project
+level, then scale to Program and Organization. Check off items you've
+completed and note gaps to prioritize.
 
 Tip: For each item, capture a link to the living source (e.g.,
 repository, shared drive, policy page) and the responsible owner.
@@ -1754,54 +1754,31 @@ repository, shared drive, policy page) and the responsible owner.
 \subsection{Practice 1 --- Make Data Governance
 Explicit}\label{practice-1-make-data-governance-explicit}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do you have a lightweight Data Management Plan (DMP) covering scope,
-    sensitive data, retention, and sharing? (link)
-  \item
-    Is there a RACI (Responsible, Accountable, Consulted, Informed)
-    table for key tasks? (owner)
-  \item
-    Are Indigenous Data Sovereignty requirements identified and
-    documented (who to consult, approvals needed)?
-  \item
-    Is a data product charter written for each dataset or analysis
-    product with purpose, audience, quality thresholds, release plan?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Do you have a Data Management Plan (DMP) covering scope, sensitive data, retention, and sharing? (link)
+- [ ] Is there a RACI (Responsible, Accountable, Consulted, Informed) table for key tasks? (owner)
+- [ ] Are Indigenous knoweledge holders or community members involved in the project?
+- [ ] Are Indigenous Data Sovereignty (IDS) requirements identified and documented (who to consult, approvals needed)?
+- [ ] Is a data product charter written for each dataset or analysis product with purpose, audience, quality thresholds, release plan?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Are DMP and charter templates standardized across projects and
-    stored centrally?
-  \item
-    Are role definitions for Data Steward, Product Owner, and Maintainer
-    explicit and assigned for priority datasets?
-  \item
-    Are data sharing agreements/MOUs and ethical review pathways
-    documented and reusable?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Does a governance policy exist that sets minimum requirements for
-    DMPs, RACI, retention, IDS, and release reviews?
-  \item
-    Is there a standing review forum (e.g., monthly data governance
-    check‑in) and a registry of governed data products?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Are DMP and charter templates standardized across projects and stored centrally?
+- [ ] Are role definitions for Data Steward, Product Owner, and Maintainer explicit and assigned for priority datasets?
+- [ ] Is this 'community-engaged' research that provides tangible benefit to communities?
+- [ ] Are data sharing agreements/MOUs and ethical review pathways documented and reusable?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization}
+
+\begin{verbatim}
+- [ ] Does a governance policy exist that sets minimum requirements for DMPs, RACI, retention, IDS, and release reviews?
+- [ ] Is there a standing review forum (e.g., monthly data governance check‑in) and a registry of governed data products?
+\end{verbatim}
 
 Evidence to collect: DMP link, data product charter(s), RACI, IDS
 guidance, sharing agreements registry.
@@ -1809,48 +1786,28 @@ guidance, sharing agreements registry.
 \subsection{Practice 2 --- Reuse Proven
 Infrastructure}\label{practice-2-reuse-proven-infrastructure}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-1}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is your code in version control (e.g., Git) with an issue tracker
-    and releases?
-  \item
-    Are you using an approved repository or data store rather than
-    creating a new silo? (where)
-  \item
-    Do you use existing organization authentication/authorization and
-    backup processes?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Have you researched the existing data sharing infrastructure and data storage options specific to your data and context? Eg. Ocean Biodiversity Information System, Global Biodiversity Information Facility, Knowledge Network for Biocomplexity, Zenodo, Dataverse, etc.
+- [ ] Is your code in version control (e.g., Git) with an issue tracker and releases?
+- [ ] Are you using an approved repository or data store rather than creating a new silo? (where)
+- [ ] Do you use existing organization authentication/authorization and backup processes?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is there a preferred stack list (storage, metadata catalog, workflow
-    runner, packaging, container base images)?
-  \item
-    Do projects consistently deposit finalized data in approved
-    repositories with clear intake criteria?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-1}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Are enterprise services available and documented (data lake, object
-    store, catalog/portal, archival repository)?
-  \item
-    Is there a deprecation pathway for legacy systems and a migration
-    plan for priority datasets?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Is there a preferred stack list (storage, metadata catalog, workflow runner, packaging, container base images)?
+- [ ] Do projects consistently deposit finalized data in approved repositories with clear intake criteria?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization-1}
+
+\begin{verbatim}
+- [ ] Are enterprise services available and documented (data lake, object store, catalog/portal, archival repository)?
+- [ ] Is there a deprecation pathway for legacy systems and a migration plan for priority datasets?
+\end{verbatim}
 
 Evidence to collect: repository URLs, infrastructure inventory, intake
 criteria, backup/DR documentation.
@@ -1859,50 +1816,28 @@ criteria, backup/DR documentation.
 Projects, Data, and
 Methods}\label{practice-3-use-persistent-identifiers-pids-for-people-projects-data-and-methods}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-2}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do all contributors have ORCID IDs recorded in metadata?
-  \item
-    Does the project have a resolvable PID (e.g., DOI for a project page
-    or protocol, internal project ID)?
-  \item
-    Are datasets assigned DOIs (or other PIDs) at publication, and are
-    versions tracked?
-  \item
-    Are methods/protocols published and citable (e.g., protocol DOI) and
-    linked from dataset metadata?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Do all contributors have ORCID IDs recorded in metadata?
+- [ ] Does the project have a resolvable PID (e.g., DOI for a project page or protocol, internal project ID)?
+- [ ] Are datasets assigned DOIs (or other PIDs) at publication, and are versions tracked?
+- [ ] Are methods/protocols published and citable (e.g., protocol DOI) and linked from dataset metadata?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is there guidance on when to mint PIDs, by whom, and where they
-    resolve?
-  \item
-    Are projects linked to organizational identifiers (e.g., ROR for
-    institutions) in metadata?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-2}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is there a PID policy and a provider/registrar configured (e.g.,
-    DataCite) with a documented workflow?
-  \item
-    Are PID linkages automated in the catalog (people ↔ projects ↔
-    datasets ↔ publications)?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Is there guidance on when to mint PIDs, by whom, and where they resolve?
+- [ ] Are projects linked to organizational identifiers (e.g., ROR for institutions) in metadata?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization-2}
+
+\begin{verbatim}
+- [ ] Is there a PID policy and a provider/registrar configured (e.g., DataCite) with a documented workflow?
+- [ ] Are PID linkages automated in the catalog (people ↔ projects ↔ datasets ↔ publications)?
+\end{verbatim}
 
 Evidence to collect: ORCID list, PID policy, DOI records, resolver links
 in the catalog.
@@ -1910,51 +1845,28 @@ in the catalog.
 \subsection{Practice 4 --- Shared Data Models, Vocabularies, and
 Metadata}\label{practice-4-shared-data-models-vocabularies-and-metadata}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-3}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Which metadata profile is used (e.g., ISO 19115, EML)? Is the
-    minimum profile complete and machine‑readable?
-  \item
-    Are core entities modeled consistently (stock/population IDs,
-    locations, temporal coverage, age/brood year semantics)?
-  \item
-    Are controlled vocabularies/code lists applied for key fields (e.g.,
-    species codes, gear, life stage, age type)?
-  \item
-    Is a data dictionary included with definitions, units, allowed
-    values, and provenance for each variable?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Which metadata profile is used (e.g., ISO 19115, EML)? Is the minimum profile complete and machine‑readable?
+- [ ] Are core entities modeled consistently (stock/population IDs, locations, temporal coverage, age/brood year semantics)?
+- [ ] Are controlled vocabularies/code lists applied for key fields (e.g., species codes, gear, life stage, age type)?
+- [ ] Is a data dictionary included with definitions, units, allowed values, and provenance for each variable?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do projects use a shared schema and code lists across datasets to
-    enable easy joins?
-  \item
-    Are validation checks in CI (schema validation, vocab checks)
-    standardized across repositories?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-3}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is there an endorsed salmon domain profile and shared code lists
-    with owners and change control?
-  \item
-    Are mappings to external standards maintained (e.g., taxonomic,
-    geospatial, hydrological registries)?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Do projects use a shared schema and code lists across datasets to enable easy joins?
+- [ ] Are validation checks in CI (schema validation, vocab checks) standardized across repositories?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization-3}
+
+\begin{verbatim}
+- [ ] Is there an endorsed salmon domain profile and shared code lists with owners and change control?
+- [ ] Are mappings to external standards maintained (e.g., taxonomic, geospatial, hydrological registries)?
+\end{verbatim}
 
 Evidence to collect: metadata profiles, data dictionary, code lists,
 schema validators, mapping documentation.
@@ -1963,52 +1875,29 @@ schema validators, mapping documentation.
 and
 Trust}\label{practice-5-store-and-analyze-data-for-easy-access-use-and-trust}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-4}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is raw data immutable and separated from processed/analysis outputs?
-  \item
-    Is there a fully reproducible workflow (scripts/notebooks +
-    environment + parameters) that runs end‑to‑end?
-  \item
-    Is the computational environment captured (lockfile/conda env,
-    container image) and versioned?
-  \item
-    Are QA/QC checks automated with logs and thresholds documented?
-  \item
-    Are access controls and sensitive data handling documented and
-    implemented?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Is raw data immutable and separated from processed/analysis outputs?
+- [ ] Is there a fully reproducible workflow (scripts/notebooks + environment + parameters) that runs end‑to‑end?
+- [ ] Is the computational environment captured (lockfile/conda env, container image) and versioned?
+- [ ] Are QA/QC checks automated with logs and thresholds documented?
+- [ ] Are access controls and sensitive data handling documented and implemented?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do projects follow a common repo layout and release process (tags,
-    changelog, signed artifacts)?
-  \item
-    Are standard storage classes, lifecycle policies, and archival rules
-    applied?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-4}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Are security, backup/retention, and audit requirements defined and
-    routinely verified?
-  \item
-    Is there a trusted long‑term archive with fixity checking and
-    preservation metadata?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Do projects follow a common repo layout and release process (tags, changelog, signed artifacts)?
+- [ ] Are standard storage classes, lifecycle policies, and archival rules applied?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization-4}
+
+\begin{verbatim}
+- [ ] Are security, backup/retention, and audit requirements defined and routinely verified?
+- [ ] Is there a trusted long‑term archive with fixity checking and preservation metadata?
+\end{verbatim}
 
 Evidence to collect: workflow definition, environment files, container
 references, QA/QC reports, storage/backup settings.
@@ -2016,97 +1905,56 @@ references, QA/QC reports, storage/backup settings.
 \subsection{Practice 6 --- Incentivize and Track Sharing and
 Reuse}\label{practice-6-incentivize-and-track-sharing-and-reuse}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-5}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is a clear citation and license statement included in metadata and
-    README?
-  \item
-    Are reuse metrics collected (downloads, citations, API hits) and
-    reviewed?
-  \item
-    Do release notes document what changed and implications for users?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Is a clear citation and license statement included in metadata and README?
+- [ ] Are reuse metrics collected (downloads, citations, API hits) and reviewed?
+- [ ] Do release notes document what changed and implications for users?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Are common metrics dashboards available for priority datasets and
-    updated automatically?
-  \item
-    Are data citations tracked in assessments, reports, and staff
-    evaluations?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-5}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do policies require citation guidance and permissive, appropriate
-    licensing where possible?
-  \item
-    Are automated reports of reuse (e.g., via DOI provider APIs)
-    delivered to product owners and leadership?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Are common metrics dashboards available for priority datasets and updated automatically?
+- [ ] Are data citations tracked in assessments, reports, and staff evaluations?
+\end{verbatim}
 
-Evidence to collect: LICENSE, CITATION.cff, reuse dashboard link, policy
+\paragraph{Organization}\label{organization-5}
+
+\begin{verbatim}
+- [ ] Do policies require citation guidance and permissive, appropriate licensing where possible?
+- [ ] Are automated reports of reuse (e.g., via DOI provider APIs) delivered to product owners and leadership?
+\end{verbatim}
+
+Evidence to collect: LICENSE, CITATION, reuse dashboard link, policy
 excerpts, sample citations in reports.
 
 \subsection{Practice 7 --- Build Community Through Co‑Development and
 Mutual
 Benefit}\label{practice-7-build-community-through-codevelopment-and-mutual-benefit}
 
-\begin{itemize}
-\tightlist
-\item
-  Project
+\paragraph{Project}\label{project-6}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Are stakeholders identified, including First
-    Nations/Tribes/Indigenous partners, and engagement needs documented?
-  \item
-    Have you held at least one co‑design session to validate user needs
-    and success criteria?
-  \item
-    Is there an open feedback channel (issues form, contact) and a
-    published roadmap?
-  \end{itemize}
-\item
-  Program
+\begin{verbatim}
+- [ ] Are stakeholders identified, including First Nations/Tribes/Indigenous partners, and engagement needs documented?
+- [ ] Have you held at least one co‑design session to validate user needs and success criteria?
+- [ ] Is there an open feedback channel (issues form, contact) and a published roadmap?
+\end{verbatim}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Do cross‑project working groups exist for models, vocabularies, and
-    tooling with regular cadence and notes?
-  \item
-    Are community contributions recognized (authorship,
-    acknowledgements, meeting time, funding)?
-  \end{itemize}
-\item
-  Organization
+\paragraph{Program}\label{program-6}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Is there an endorsed governance body or community of practice with
-    decision records?
-  \item
-    Are procurement/funding mechanisms available to support shared
-    components and Indigenous partnerships?
-  \end{itemize}
-\end{itemize}
+\begin{verbatim}
+- [ ] Do cross‑project working groups exist for models, vocabularies, and tooling with regular cadence and notes?
+- [ ] Are community contributions recognized (authorship, acknowledgements, meeting time, funding)?
+\end{verbatim}
+
+\paragraph{Organization}\label{organization-6}
+
+\begin{verbatim}
+- [ ] Is there an endorsed governance body or community of practice with decision records?
+- [ ] Are procurement/funding mechanisms available to support shared components and Indigenous partnerships?
+\end{verbatim}
 
 Evidence to collect: stakeholder map, engagement records, roadmap,
 working group notes, decision log.
@@ -2123,13 +1971,13 @@ Plan}\label{quick-start-306090day-plan}
 
   \begin{itemize}
   \tightlist
-  \item
+  \item[$\square$]
     Create/standardize DMP + RACI; draft data product charters for top
     1--2 datasets.
-  \item
+  \item[$\square$]
     Move code to version control; document repo structure; capture
     environment file.
-  \item
+  \item[$\square$]
     Choose metadata profile and draft a minimal data dictionary; list
     code lists in use.
   \end{itemize}
@@ -2138,13 +1986,13 @@ Plan}\label{quick-start-306090day-plan}
 
   \begin{itemize}
   \tightlist
-  \item
+  \item[$\square$]
     Mint/plan PIDs (project page/protocols), add ORCIDs to metadata,
     prepare DOI for first dataset.
-  \item
+  \item[$\square$]
     Add schema + vocab validation to CI; separate raw/processed;
     automate QA/QC checks.
-  \item
+  \item[$\square$]
     Stand up a reuse dashboard or basic metrics capture; add
     citation/license to README and metadata.
   \end{itemize}
@@ -2153,13 +2001,13 @@ Plan}\label{quick-start-306090day-plan}
 
   \begin{itemize}
   \tightlist
-  \item
+  \item[$\square$]
     Publish first governed release to approved repository with DOI and
     complete metadata.
-  \item
+  \item[$\square$]
     Formalize cross‑project working group and change control for
     vocabularies.
-  \item
+  \item[$\square$]
     Document archival/retention path and verify backups; schedule
     governance reviews.
   \end{itemize}
@@ -2172,23 +2020,23 @@ Level)}\label{minimal-artifacts-checklist-project-level}
 
 \begin{itemize}
 \tightlist
-\item
+\item[$\square$]
   DMP (with IDS considerations) and RACI
-\item
+\item[$\square$]
   Data product charter(s) for priority dataset(s)
-\item
+\item[$\square$]
   Versioned repository with releases and changelog
-\item
+\item[$\square$]
   Metadata profile file + data dictionary + code lists
-\item
+\item[$\square$]
   Reproducible workflow + environment file or container
-\item
+\item[$\square$]
   QA/QC checks and results log
-\item
+\item[$\square$]
   Citation and license statements
-\item
+\item[$\square$]
   Plan for PIDs (ORCID list, dataset/protocol DOIs)
-\item
+\item[$\square$]
   Evidence of stakeholder engagement and roadmap
 \end{itemize}
 
@@ -2196,7 +2044,7 @@ Maintain this list as a living issue in your repository and review
 quarterly.
 
 \textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-3-getting-started-checklist-preview.html\#454edf0c-0379-49db-a45c-ffa3400c9f4c}{Appendix
+\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-3-getting-started-checklist-preview.html\#4b192801-5963-4d43-856c-af81fe79b6c7}{Appendix
 3: Getting Started Checklist}}
 
 
