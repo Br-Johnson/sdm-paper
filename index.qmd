@@ -275,6 +275,9 @@ To do items:
 -   Consider re-working table to replace practical applications column with 'next step'
 -   Incorporate edits to Appendices from PSF folks
 -   Incorporate edits from Gottfried Pestal
+-   Update with links to DFO Salmon Ontology and Data Package Spec and Custom GPT
+-   Figure out where to cite <https://doi.org/10.1139/cjfas-2024-0387> Atkinson et al 2025
+-   Cite Price et al 2025
 
 ### Competing interests
 
