@@ -11,3 +11,14 @@
 create_wordcloud.py
 lightning-talk-outline.md
 __pycache__/create_wordcloud.cpython-314.pyc
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml

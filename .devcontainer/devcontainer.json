@@ -1,0 +1,28 @@
+{
+  "name": "nix-dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // Installs Nix inside the devcontainer.
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {}
+  },
+
+  "mounts": [
+    "source=nix-devstore,target=/nix,type=volume"
+  ],
+
+  "postCreateCommand": "./.devcontainer/post.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jnoortheen.nix-ide",
+        "mkhl.direnv"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "nix.enableLanguageServer": true
+      }
+    }
+  }
+}
