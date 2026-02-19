@@ -16,9 +16,18 @@ __pycache__/create_wordcloud.cpython-314.pyc
 .devenv*
 devenv.local.nix
 devenv.local.yaml
+.venv/
 
 # direnv
 .direnv
 
 # pre-commit
 .pre-commit-config.yaml
+AGENTS.md
+docs/adr/0001.md
+docs/plans/
+docs/entrypoints.md
+docs/tech-debt.md
+docs/todo-list.md
+.cursorignore
+.cursor/

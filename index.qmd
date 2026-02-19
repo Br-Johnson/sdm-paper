@@ -1,10 +1,11 @@
 ---
 title: Practical Data Stewardship for Salmon Biologists
-subtitle: DRAFT A Blueprint for Domain-Specific Best Practices
+subtitle: A Blueprint for Domain-Specific Best Practices
 
 authors:
   - name: Brett Johnson
     affiliation: Fisheries and Oceans Canada
+    orcid: 0000-0001-9317-0364
     roles: writing - original draft, conceptualization, data curation, project administration, investigation, methodology
     corresponding: true
   - name: Scott Akenhead
@@ -63,14 +64,13 @@ authors:
     roles: writing - review and editing
 
 bibliography: references.bib
+csl: apa.csl
 appendix-style: plain
+
+keywords: [Salmon data stewardship, data interoperability, FAIR principles, persistent identifiers (PIDs), controlled vocabularies, metadata standards, application programming Interface (API), data citation, ontology development]
+
+abstract: "Fisheries management, research, and broader conservation efforts increasingly generate vast, diverse datasets needed for timely decision-making. Yet these data remain fragmented across jurisdictions, disciplines, and legacy infrastructure, limiting responsive management. The lack of access, interoperability, and reuse of data are major impediments to better science; data stewardship—the set of social and technical practices that ensure data are responsibly created, managed, shared, and reused over time—is the solution. Biologists are increasingly taking on data stewardship responsibilities to address these challenges, often without clear guidance, training, or support. Shared, community-agreed practices for implementing domain-specific data standards are needed to move beyond generic data management guidance toward fit-for-purpose tools and workflows. To address this gap—and to show how other communities can do so—we develop seven practices for salmon data stewardship. Through a case study of a historically important sockeye salmon Oncorhynchus nerka productivity analysis that spanned Pacific Coast jurisdictions, we highlight how clearly defined data stewardship practices could improve data integration, management efficacy, and reduce the overall cost of updating the analysis annually. We provide practical guidance for those transitioning into these essential stewardship roles, including salmon domain specific data tools, templates, and examples. These practices integrate both sociocultural and technical approaches to ensure data meet modern open science principles and respect Indigenous Data Sovereignty. With a foundation of shared practices, data stewards will enable faster, more transparent decision-making. They will expand the reuse of cross-jurisdictional datasets and support machine-actionable data with high-quality metadata and consistent semantics. Together, these outcomes strengthen the management and conservation of salmon populations and the ecosystems they inhabit, with broader relevance to other data-rich fisheries domains."
 ---
-
-**Keywords:** Salmon data stewardship, data interoperability, FAIR principles, persistent identifiers (PIDs), controlled vocabularies, metadata standards, application programming Interface (API), data citation, ontology development
-
-### Abstract
-
-Fisheries management, research, and broader conservation efforts increasingly generate vast, diverse datasets needed for timely decision-making. Yet these data remain fragmented across jurisdictions, disciplines, and legacy infrastructure, limiting responsive management. The lack of access, interoperability, and reuse of data are major impediments to better science; data stewardship—the set of social and technical practices that ensure data are responsibly created, managed, shared, and reused over time—is the solution. Biologists are increasingly taking on data stewardship responsibilities to address these challenges, often without clear guidance, training, or support. Shared, community-agreed practices for implementing domain-specific data standards are needed to move beyond generic data management guidance toward fit-for-purpose tools and workflows. To address this gap—and to show how other communities can do so—we develop seven practices for salmon data stewardship. Through a case study of a historically important sockeye salmon productivity analysis that spanned Pacific Coast jurisdictions, we highlight how clearly defined data stewardship practices could improve data integration, management efficacy, and reduce the overall cost of updating the analysis annually. We provide practical guidance for those transitioning into these essential stewardship roles, including salmon domain specific data tools, templates, and examples. These practices integrate both sociocultural and technical approaches to ensure data meet modern open science principles and respect Indigenous Data Sovereignty. With a foundation of shared practices, data stewards will enable faster, more transparent decision-making. They will expand the reuse of cross-jurisdictional datasets and support machine-actionable data with high-quality metadata and consistent semantics. Together, these outcomes strengthen the management and conservation of salmon populations and the ecosystems they inhabit, with broader relevance to other data-rich fisheries domains.
 
 ## The Data Stewardship Challenge
 
@@ -124,7 +124,7 @@ Dedicated stewardship roles empower salmon biologists to bridge disciplinary div
 
 ## Updating Sockeye Productivity Synthesis: A Case Study for What Agencies Could Do Now
 
-This case study revisits a comprehensive sockeye productivity dataset assembled from several agency sources by academic researchers [@peterman2012]. We reflect not on the significant work the research team accomplished, but rather on the preventable organizational and technical barriers that impeded their work—and continue to burden data compilation updates and reuse efforts today. Their study examined productivity trends across 64 sockeye salmon stocks spanning Washington, British Columbia (B.C.), and Alaska and found common trends in declining productivity across the North American range of sockeye salmon [@peterman2012]. This work was important for sockeye conservation and management in that it pointed to common, broad-scale marine trends in sockeye salmon productivity, rather than idiosyncratic stock-specific, freshwater effects—an insight not accessible without a monumental data integration effort. Attempting to replicate or build upon this analysis today is an arduous, time-consuming, and error-prone endeavour due to fragmented data sources, inconsistent formats, and lack of standardized practices among the key organizations involved: the Washington Department of Fish and Wildlife (WDFW), Fisheries and Oceans Canada (DFO), and the Alaska Department of Fish and Game (ADF&G).
+This case study revisits a comprehensive Sockeye Salmon Oncorhynchus nerka productivity dataset assembled from several agency sources by academic researchers [@peterman2012]. We reflect not on the significant work the research team accomplished, but rather on the preventable organizational and technical barriers that impeded their work—and continue to burden data compilation updates and reuse efforts today. Their study examined productivity trends across 64 Sockeye Salmon stocks spanning Washington, British Columbia (B.C.), and Alaska and found common trends in declining productivity across the North American range of Sockeye Salmon [@peterman2012]. This work was important for sockeye conservation and management in that it pointed to common, broad-scale marine trends in sockeye salmon productivity, rather than idiosyncratic stock-specific, freshwater effects—an insight not accessible without a monumental data integration effort. Attempting to replicate or build upon this analysis today is an arduous, time-consuming, and error-prone endeavour due to fragmented data sources, inconsistent formats, and lack of standardized practices among the key organizations involved: the Washington Department of Fish and Wildlife (WDFW), Fisheries and Oceans Canada (DFO), and the Alaska Department of Fish and Game (ADF&G).
 
 Each section below highlights a key challenge faced by the team and proposes practical steps based on our best practices (@tbl-bestpractices) that data-holding agencies could do to enable easier integration, validation, and updating of salmon datasets across jurisdictions and decades. This case study illustrates how implementing the foundational concepts and practical recommendations outlined in this paper can transform data stewardship practices within these organizations. By doing so, they can significantly enhance data accessibility, quality, and interoperability---ultimately enabling more efficient and accurate analyses that support salmon conservation and management.
 
@@ -279,9 +279,19 @@ To do items:
 -   Figure out where to cite <https://doi.org/10.1139/cjfas-2024-0387> Atkinson et al 2025
 -   Cite Price et al 2025
 
-### Competing interests
-
 ### Acknowledgements
+
+### Conflicts of Interest
+
+None declared.
+
+### Ethics Statement
+
+This manuscript does not involve primary research with human or animal subjects. All cited research was conducted in accordance with applicable ethical guidelines and legal requirements of the jurisdictions in which the studies were performed.
+
+### Funding
+
+This work was supported in part by the Pacific Salmon Foundation and Fisheries and Oceans Canada.
 
 ### References
 
@@ -290,8 +300,8 @@ To do items:
 
 # Appendices
 
-{{< embed appendices/appendix-1-real-world-examples.qmd >}}
+{{< include appendices/appendix-1-real-world-examples.qmd >}}
 
-{{< embed appendices/appendix-2-training-roadmap.qmd >}}
+{{< include appendices/appendix-2-training-roadmap.qmd >}}
 
-{{< embed appendices/appendix-3-getting-started-checklist.qmd >}}
+{{< include appendices/appendix-3-getting-started-checklist.qmd >}}

@@ -1,13 +1,10 @@
 ## Appendix 3: Getting Started Checklist
 
-
-# Getting Started Checklist for Salmon Data Stewardship
-
 Use this practical checklist to assess how well your project, program, or organization aligns to the seven Best Practices. Start at the Project level, then scale to Program and Organization. Check off items you’ve completed and note gaps to prioritize.
 
 Tip: For each item, capture a link to the living source (e.g., repository, shared drive, policy page) and the responsible owner.
 
-## Practice 1 — Make Data Governance Explicit
+### Practice 1 — Make Data Governance Explicit
 
 #### Project
     - [ ] Do you have a Data Management Plan (DMP) covering scope, sensitive data, retention, and sharing? (link)
@@ -28,7 +25,7 @@ Tip: For each item, capture a link to the living source (e.g., repository, share
 
 Evidence to collect: DMP link, data product charter(s), RACI, IDS guidance, sharing agreements registry.
 
-## Practice 2 — Reuse Proven Infrastructure
+### Practice 2 — Reuse Proven Infrastructure
 
 #### Project
     - [ ] Have you researched the existing data sharing infrastructure and data storage options specific to your data and context? Eg. Ocean Biodiversity Information System, Global Biodiversity Information Facility, Knowledge Network for Biocomplexity, Zenodo, Dataverse, etc.
@@ -44,7 +41,7 @@ Evidence to collect: DMP link, data product charter(s), RACI, IDS guidance, shar
 
 Evidence to collect: repository URLs, infrastructure inventory, intake criteria, backup/DR documentation.
 
-## Practice 3 — Use Persistent Identifiers (PIDs) for People, Projects, Data, and Methods
+### Practice 3 — Use Persistent Identifiers (PIDs) for People, Projects, Data, and Methods
 
 #### Project
     - [ ] Do all contributors have ORCID IDs recorded in metadata?
@@ -60,7 +57,7 @@ Evidence to collect: repository URLs, infrastructure inventory, intake criteria,
 
 Evidence to collect: ORCID list, PID policy, DOI records, resolver links in the catalog.
 
-## Practice 4 — Shared Data Models, Vocabularies, and Metadata
+### Practice 4 — Shared Data Models, Vocabularies, and Metadata
 
 #### Project
     - [ ] Which metadata profile is used (e.g., ISO 19115, EML)? Is the minimum profile complete and machine‑readable?
@@ -76,7 +73,7 @@ Evidence to collect: ORCID list, PID policy, DOI records, resolver links in the 
 
 Evidence to collect: metadata profiles, data dictionary, code lists, schema validators, mapping documentation.
 
-## Practice 5 — Store and Analyze Data for Easy Access, Use, and Trust
+### Practice 5 — Store and Analyze Data for Easy Access, Use, and Trust
 
 #### Project
     - [ ] Is raw data immutable and separated from processed/analysis outputs?
@@ -93,7 +90,7 @@ Evidence to collect: metadata profiles, data dictionary, code lists, schema vali
 
 Evidence to collect: workflow definition, environment files, container references, QA/QC reports, storage/backup settings.
 
-## Practice 6 — Incentivize and Track Sharing and Reuse
+### Practice 6 — Incentivize and Track Sharing and Reuse
 
 #### Project
     - [ ] Is a clear citation and license statement included in metadata and README?
@@ -108,7 +105,7 @@ Evidence to collect: workflow definition, environment files, container reference
 
 Evidence to collect: LICENSE, CITATION, reuse dashboard link, policy excerpts, sample citations in reports.
 
-## Practice 7 — Build Community Through Co‑Development and Mutual Benefit
+### Practice 7 — Build Community Through Co‑Development and Mutual Benefit
 
 #### Project
     - [ ] Are stakeholders identified, including First Nations/Tribes/Indigenous partners, and engagement needs documented?
@@ -125,7 +122,7 @@ Evidence to collect: stakeholder map, engagement records, roadmap, working group
 
 ------------------------------------------------------------------------
 
-# Quick Start: 30/60/90‑Day Plan
+### Quick Start: 30/60/90‑Day Plan
 
 -   First 30 days
     - [ ] Create/standardize DMP + RACI; draft data product charters for top 1–2 datasets.
@@ -142,7 +139,7 @@ Evidence to collect: stakeholder map, engagement records, roadmap, working group
 
 ------------------------------------------------------------------------
 
-# Minimal Artifacts Checklist (Project Level)
+### Minimal Artifacts Checklist (Project Level)
 
 - [ ] DMP (with IDS considerations) and RACI
 - [ ] Data product charter(s) for priority dataset(s)

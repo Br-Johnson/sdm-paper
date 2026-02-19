@@ -1,0 +1,126 @@
+figure_id: fig-blueprint-seven-practices
+title: Seven Practices for Salmon Data Stewardship (Blueprint)
+intent: >
+  Provide a one-page, skimmable “anchor” graphic that names the seven practices,
+  shows that metadata governance is cross-cutting, and cues FAIR/CARE as guiding principles.
+audience: Interdisciplinary fisheries scientists, managers, data stewards
+
+source_of_truth:
+  manuscript: index.qmd
+  practices_table_ref: tbl-bestpractices
+  lifecycle_table_ref: tbl-lifecycle
+
+journal_constraints:
+  venue: Fisheries (Perspective)
+  print_assumptions:
+    - may_be_reduced_percent: [35, 50]
+    - print_may_be_grayscale: true
+  layout:
+    target_column_width_mm: 85
+    preferred_aspect_ratio: "3:4"
+    no_outer_border: true
+  typography:
+    axis_label_font_guidance: Times Roman
+    target_min_legible_size_pt_after_reduction: 6
+    target_max_size_pt_after_reduction: 9
+    avoid:
+      - heavy_bold
+      - italics_for_body_text
+  accessibility:
+    - colorblind_safe
+    - grayscale_safe
+    - avoid_red_green_pairing
+
+deliverables:
+  masters:
+    - format: svg
+      notes: "Editable vector master; preserve text as text."
+    - format: pdf
+      notes: "Submission-friendly vector; preserve text as text."
+  optional_raster:
+    - format: tiff
+      dpi: 600
+      notes: "Only if required by the journal; ensure crisp text/lines."
+
+figma_file_conventions:
+  page_name: Figures
+  frame_name: "fig-blueprint-seven-practices__85mm"
+  units: mm
+  frame:
+    width_mm: 85
+    height_mm: 113.3
+  layout_grid:
+    type: columns
+    columns: 3
+    gutter_mm: 3
+    margin_mm: 4
+  styles:
+    color_tokens:
+      ink: "#111111"
+      gray_70: "#4D4D4D"
+      gray_50: "#808080"
+      gray_20: "#D9D9D9"
+      paper: "#FFFFFF"
+    stroke:
+      default_px: 1
+      emphasis_px: 1.5
+    corner_radius_px: 6
+
+semantic_layer_naming:
+  rule: "Name layers by concept, not shape."
+  examples:
+    - Practice::DataGovernance
+    - Practice::ReuseInfrastructure
+    - Practice::PersistentIdentifiers
+    - Practice::SharedDataModels
+    - Practice::AccessibleStorage
+    - Practice::IncentivizeSharing
+    - Practice::CommunityBuilding
+    - CrossCutting::MetadataGovernance
+    - Principles::FAIR
+    - Principles::CARE
+
+content:
+  headline:
+    text: "Practical Data Stewardship for Salmon Biologists"
+  subhead:
+    text: "Seven practices (blueprint) and the cross-cutting role of metadata governance"
+  practices:
+    - id: Practice::DataGovernance
+      label: "1. Data Governance"
+      one_liner: "Clarify roles, decision rights, and agreements for shared data products."
+    - id: Practice::ReuseInfrastructure
+      label: "2. Reuse Infrastructure"
+      one_liner: "Adopt proven repositories, catalogs, and tooling instead of bespoke systems."
+    - id: Practice::PersistentIdentifiers
+      label: "3. Persistent Identifiers (PIDs)"
+      one_liner: "Make data, people, and outputs citable and linked (e.g., DOI, ORCID)."
+    - id: Practice::SharedDataModels
+      label: "4. Shared Data Models & Vocabularies"
+      one_liner: "Use shared schemas, controlled terms, and ontologies to enable integration."
+    - id: Practice::AccessibleStorage
+      label: "5. Accessible Storage & Analysis"
+      one_liner: "Store data in trusted, structured ways others can access, use, and trust."
+    - id: Practice::IncentivizeSharing
+      label: "6. Incentivize & Track Sharing"
+      one_liner: "Enable credit, metrics, and visibility to sustain contributions and reuse."
+    - id: Practice::CommunityBuilding
+      label: "7. Community Building"
+      one_liner: "Co-develop standards and workflows across jurisdictions and communities."
+  cross_cutting:
+    - id: CrossCutting::MetadataGovernance
+      label: "Metadata governance (cross-cutting)"
+      one_liner: "Continuous documentation, QA, and stewardship of meaning across the lifecycle."
+  principles_callout:
+    id: Principles::FAIR_CARE
+    label: "Guiding principles"
+    items:
+      - "FAIR (Findable, Accessible, Interoperable, Reusable)"
+      - "CARE (Collective benefit, Authority to control, Responsibility, Ethics)"
+
+composition:
+  recommended_structure: "7-card stack + cross-cutting band"
+  notes:
+    - "Prefer a clean card stack (print-friendly) over a wheel."
+    - "Use subtle grayscale hierarchy (stroke/weight/spacing) over color dependence."
+    - "Keep each one-liner ≤ ~12 words where possible; wrap to 2 lines max."

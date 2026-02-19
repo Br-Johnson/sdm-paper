@@ -92,6 +92,12 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
 
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
@@ -202,6 +208,10 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Practical Data Stewardship for Salmon Biologists},
+  pdfkeywords={Salmon data stewardship, data interoperability, FAIR
+principles, persistent identifiers (PIDs), controlled
+vocabularies, metadata standards, application programming Interface
+(API), data citation, ontology development},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -230,45 +240,6 @@ Xu}
 \maketitle
 
 
-\textbf{Keywords:} Salmon data stewardship, data interoperability, FAIR
-principles, persistent identifiers (PIDs), controlled vocabularies,
-metadata standards, application programming Interface (API), data
-citation, ontology development
-
-\subsubsection{Abstract}\label{abstract}
-
-Fisheries management, research, and broader conservation efforts
-increasingly generate vast, diverse datasets needed for timely
-decision-making. Yet these data remain fragmented across jurisdictions,
-disciplines, and legacy infrastructure, limiting responsive management.
-The lack of access, interoperability, and reuse of data are major
-impediments to better science; data stewardship---the set of social and
-technical practices that ensure data are responsibly created, managed,
-shared, and reused over time---is the solution. Biologists are
-increasingly taking on data stewardship responsibilities to address
-these challenges, often without clear guidance, training, or support.
-Shared, community-agreed practices for implementing domain-specific data
-standards are needed to move beyond generic data management guidance
-toward fit-for-purpose tools and workflows. To address this gap---and to
-show how other communities can do so---we develop seven practices for
-salmon data stewardship. Through a case study of a historically
-important sockeye salmon productivity analysis that spanned Pacific
-Coast jurisdictions, we highlight how clearly defined data stewardship
-practices could improve data integration, management efficacy, and
-reduce the overall cost of updating the analysis annually. We provide
-practical guidance for those transitioning into these essential
-stewardship roles, including salmon domain specific data tools,
-templates, and examples. These practices integrate both sociocultural
-and technical approaches to ensure data meet modern open science
-principles and respect Indigenous Data Sovereignty. With a foundation of
-shared practices, data stewards will enable faster, more transparent
-decision-making. They will expand the reuse of cross-jurisdictional
-datasets and support machine-actionable data with high-quality metadata
-and consistent semantics. Together, these outcomes strengthen the
-management and conservation of salmon populations and the ecosystems
-they inhabit, with broader relevance to other data-rich fisheries
-domains.
-
 \subsection{The Data Stewardship
 Challenge}\label{the-data-stewardship-challenge}
 
@@ -290,13 +261,13 @@ limit the utility of these data for research and management.
 
 For salmon in particular, the integration and mobilization of salmon
 data mirrors the complexity of their life cycle, life histories, and
-migrations across ecological regions (Groot and Margolis 1991) and
+migrations across ecological regions (Groot \& Margolis, 1991) and
 jurisdictional boundaries. Salmon biologists routinely collect
 information managed by diverse agencies and organizations, often
 isolated within their operational context and without a focus on
 interoperability. While localized successes in data coordination
 exist---particularly within regional fisheries management offices and
-treaty commissions ({``Fraser {River} {Panel} {Data} {Application}''}
+treaty commissions (\emph{Fraser {River} {Panel} {Data} {Application}},
 2025)---salmon data integrated across agencies for each phase of the
 salmon life cycle is uncommon and costly for most programs. Even within
 organizations, data can be siloed by data type with freshwater, estuary,
@@ -322,8 +293,8 @@ time-sensitive management decisions, conservation actions, or
 restoration plans. Large volumes of data collected through long-term
 monitoring programs hold tremendous value, especially for secondary
 users---but are often inaccessible due to a lack of time, resources, and
-incentives for data producers to publish them (LINDENMAYER et al. 2012).
-When critical datasets are hard to find, access, or interpret,
+incentives for data producers to publish them (LINDENMAYER et al.,
+2012). When critical datasets are hard to find, access, or interpret,
 biologists and analysts lose valuable time trying to reconstruct or
 harmonize them. This reduces transparency, increases the risk of errors,
 delays urgent conservation or management responses, which in turn
@@ -353,12 +324,12 @@ are typically performed off the side of a biologist's desk. Done well,
 data stewardship is skilled, labor-intensive work---combining domain
 expertise, information science, and relationship-building---and it
 requires dedicated time and institutional support rather than ad hoc
-effort. A lack of organizational support (Diack et al. 2024), training
-(Volk, Lucero, and Barnas 2014), and dedicated roles for data management
-further relegate critical data stewardship tasks to an \emph{ad hoc}
-status. Deferred documentation, governance, and standardization tasks
-accumulate as data technical debt---work left undone that compounds over
-time, making integration and reanalysis progressively slower and more
+effort. A lack of organizational support (Diack et al., 2024), training
+(Volk et al., 2014), and dedicated roles for data management further
+relegate critical data stewardship tasks to an \emph{ad hoc} status.
+Deferred documentation, governance, and standardization tasks accumulate
+as data technical debt---work left undone that compounds over time,
+making integration and reanalysis progressively slower and more
 error-prone. The absence of clear roles, standards, and
 community-endorsed practices leaves even motivated scientists unsure how
 to structure their data for future use. As a result, data stewardship is
@@ -367,26 +338,26 @@ bottleneck to adaptive management and ecosystem-scale learning.
 
 Due to a lack of practical resources, both salmon biologists struggle to
 align their data with community-agreed principles such as FAIR
-(Findable, Accessible, Interoperable, and Reusable) (Wilkinson et al.
+(Findable, Accessible, Interoperable, and Reusable) (Wilkinson et al.,
 2016) and Indigenous Data Sovereignty frameworks like the CARE
 principles (Collective Benefit, Authority to Control, Responsibility,
-and Ethics) (Carroll, Rodriguez-Lonebear, and Martinez 2019; Jennings et
-al. 2023). Adhering to CARE data management principles is all the more
-important when it comes to salmon related data given the sociocultural
-importance of salmon to First Nations, Tribes, and Indigenous
-communities throughout the North Pacific and North Atlantic regions
-(Ween and Colombi 2013; Earth Economics 2021). While both FAIR and CARE
-present laudable goals with respect to data stewardship, these sets of
-principles can sometimes be at odds with each other and implementing
-both presents an inherent challenge. Nonetheless, several of the best
-practices we propose can help clarify shared objectives and increase
-transparency and trust that is essential for integrating both FAIR and
-CARE principles. Without clear support and guidance, well-intentioned
-practitioners are left with ad hoc approaches that limit reuse and
-interoperability. This gap can only be bridged by equipping both data
-producers and stewards with tools, support, and organizational backing
-to publish interoperable, machine-readable metadata and datasets in
-alignment with shared principles.
+and Ethics) (Carroll et al., 2019; Jennings et al., 2023). Adhering to
+CARE data management principles is all the more important when it comes
+to salmon related data given the sociocultural importance of salmon to
+First Nations, Tribes, and Indigenous communities throughout the North
+Pacific and North Atlantic regions (Earth Economics, 2021; Ween \&
+Colombi, 2013). While both FAIR and CARE present laudable goals with
+respect to data stewardship, these sets of principles can sometimes be
+at odds with each other and implementing both presents an inherent
+challenge. Nonetheless, several of the best practices we propose can
+help clarify shared objectives and increase transparency and trust that
+is essential for integrating both FAIR and CARE principles. Without
+clear support and guidance, well-intentioned practitioners are left with
+ad hoc approaches that limit reuse and interoperability. This gap can
+only be bridged by equipping both data producers and stewards with
+tools, support, and organizational backing to publish interoperable,
+machine-readable metadata and datasets in alignment with shared
+principles.
 
 \subsubsection{Framework for Action}\label{framework-for-action}
 
@@ -396,7 +367,7 @@ salmon biologists improve the usability, traceability, and long-term
 impact of their data. We offer seven practices for salmon data
 stewardship Table~\ref{tbl-bestpractices} and use a retrospective,
 real-world case study of cross-jurisdictional sockeye productivity
-synthesis (Peterman and Dorner 2012)to illustrate how the absence of
+synthesis (Peterman \& Dorner, 2012)to illustrate how the absence of
 shared practices made integration time-consuming and keeps annual
 updates costly and difficult to this day. To support adoption, we
 provide real-world examples from multiple organizations (Appendix 1), a
@@ -411,8 +382,8 @@ governance structures, and incentives to turn data stewardship
 principles in to practical applications.
 
 A coordinated approach to stewarding salmon data should follow
-established open science standards and principles (Johnson and Stap
-2024; Wilkinson et al. 2016; Carroll et al. 2020), tailored specifically
+established open science standards and principles (Carroll et al., 2020;
+Johnson \& Stap, 2024; Wilkinson et al., 2016), tailored specifically
 within the context of salmon research and management. Our practices
 build upon and extend existing data and metadata standards and
 infrastructure including Darwin Core, OBIS, schema.org, and OBO Foundry
@@ -438,12 +409,12 @@ Science}\label{defining-data-stewardship-in-salmon-science}
 
 Data stewardship encompasses the coordinated practices, roles, and
 responsibilities necessary to effectively manage, share, and reuse data
-throughout its lifecycle (NOAA 2007; Plotkin 2014; Peng et al. 2018). It
-includes ensuring data quality, compliance with agreed-upon standards,
-and the establishment of clear governance to guide data collection,
-documentation, integration, and preservation. However, given the
-complexity of the salmon data landscape, stewardship goes beyond mere
-technical data management to include actively facilitating
+throughout its lifecycle (NOAA, 2007; Peng et al., 2018; Plotkin, 2014).
+It includes ensuring data quality, compliance with agreed-upon
+standards, and the establishment of clear governance to guide data
+collection, documentation, integration, and preservation. However, given
+the complexity of the salmon data landscape, stewardship goes beyond
+mere technical data management to include actively facilitating
 collaboration, communication, and consensus-building among data
 producers and users across multiple organizations and jurisdictions.
 
@@ -462,16 +433,16 @@ agencies, Nations, and disciplines serving as community coordinators,
 convening diverse stakeholders to build sustained communities of
 practice. This boundary-spanning role is particularly critical in
 transboundary contexts where data integration requires navigating
-complex jurisdictional and cultural boundaries (Ward et al. 2025). These
-responsibilities demand specialized expertise and sustained effort;
-without dedicated capacity, standards and workflows tend to degrade, and
-technical debt accumulates. By facilitating communication, translating
-between different organizational cultures and technical systems, and
-maintaining long-term relationships, data stewards create the social
-infrastructure necessary for effective cross-boundary data
+complex jurisdictional and cultural boundaries (Ward et al., 2025).
+These responsibilities demand specialized expertise and sustained
+effort; without dedicated capacity, standards and workflows tend to
+degrade, and technical debt accumulates. By facilitating communication,
+translating between different organizational cultures and technical
+systems, and maintaining long-term relationships, data stewards create
+the social infrastructure necessary for effective cross-boundary data
 collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, coltitle=black, toprule=.15mm, opacitybacktitle=0.6, bottomtitle=1mm, titlerule=0mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, arc=.35mm, toptitle=1mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, left=2mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Critical Functions of Salmon Data Stewards}, breakable, titlerule=0mm, colframe=quarto-callout-note-color-frame, toptitle=1mm, toprule=.15mm, bottomtitle=1mm, opacityback=0, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colback=white, opacitybacktitle=0.6]
 
 Effective salmon data stewards perform several critical functions:
 
@@ -520,7 +491,7 @@ culturally appropriate protocols for the data themselves. For example,
 stewards can document consent constraints in metadata fields and enforce
 access restrictions via repository user roles, ensuring that Indigenous
 data sovereignty is respected while maintaining data discoverability and
-appropriate reuse (Montenegro 2019; Local Contexts 2025). This
+appropriate reuse (Local Contexts, 2025; Montenegro, 2019). This
 governance approach is particularly critical for sensitive data such as
 Traditional Knowledge and sensitive habitat locations, where stewardship
 practices must balance open science principles with appropriate access
@@ -555,14 +526,14 @@ Now}\label{updating-sockeye-productivity-synthesis-a-case-study-for-what-agencie
 
 This case study revisits a comprehensive sockeye productivity dataset
 assembled from several agency sources by academic researchers (Peterman
-and Dorner 2012). We reflect not on the significant work the research
+\& Dorner, 2012). We reflect not on the significant work the research
 team accomplished, but rather on the preventable organizational and
 technical barriers that impeded their work---and continue to burden data
 compilation updates and reuse efforts today. Their study examined
 productivity trends across 64 sockeye salmon stocks spanning Washington,
 British Columbia (B.C.), and Alaska and found common trends in declining
 productivity across the North American range of sockeye salmon (Peterman
-and Dorner 2012). This work was important for sockeye conservation and
+\& Dorner, 2012). This work was important for sockeye conservation and
 management in that it pointed to common, broad-scale marine trends in
 sockeye salmon productivity, rather than idiosyncratic stock-specific,
 freshwater effects---an insight not accessible without a monumental data
@@ -840,7 +811,7 @@ models, demonstrating their broad applicability beyond salmon science.
 The NOAA Data Lifecycle provides a widely recognized framework with six
 sequential stages (Plan, Obtain, Process, Preserve, Access, Disposition)
 and four cross-cutting elements (Document, Track and Monitor, Quality,
-Security) (NOAA Data Governance Committee 2024). This alignment ensures
+Security) (NOAA Data Governance Committee, 2024). This alignment ensures
 our practices are grounded in established federal data management
 standards and can be readily adopted by other agencies and research
 communities.
@@ -926,10 +897,10 @@ Quality \\
 Salmon biologists and data stewards across the globe have generated
 extensive datasets on salmon abundance, environmental conditions, and
 biological characteristics. When integrated, these data become valuable
-assets, a fact powerfully demonstrated by studies such as (Peterman and
-Dorner 2012). However, as noted by reports to the Cohen Commission
+assets, a fact powerfully demonstrated by studies such as (Peterman \&
+Dorner, 2012). However, as noted by reports to the Cohen Commission
 investigating the decline of Fraser River sockeye salmon (Marmorek et
-al. 2011), these data are often incomplete, inconsistently collected,
+al., 2011), these data are often incomplete, inconsistently collected,
 and fragmented across organizations and jurisdictions. Integrating
 across such diverse sources can be done but requires effort that is
 often not accounted for in smaller-scale studies or perpetually
@@ -949,7 +920,7 @@ transparency, reusability, and interoperability of salmon data. A
 coordinated, future-oriented data stewardship strategy can leverage the
 full potential of data in science and management. The case study
 presented in this paper---drawn from one of the Pacific Region's most
-influential salmon survival syntheses (Peterman and Dorner
+influential salmon survival syntheses (Peterman \& Dorner,
 2012)---illustrates how technical and social data management gaps
 directly obstructed efforts to answer pressing questions. If some of the
 best practices we propose had been adopted by the data producers
@@ -959,8 +930,8 @@ Because data practices underpin nearly every analysis and decision,
 strengthening data stewardship is one of the most effective ways salmon
 programs can improve outcomes within their control.
 
-The emergence of the data stewardship role (Plotkin 2014) represents one
-of the most critical organizational shifts needed to realize this
+The emergence of the data stewardship role (Plotkin, 2014) represents
+one of the most critical organizational shifts needed to realize this
 vision. Historically, the work of managing, documenting, and maintaining
 data has been diffuse and undervalued---often falling to biologists
 without support, training, or recognition. As the volume and complexity
@@ -1061,154 +1032,157 @@ To do items:
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-bull2022}
-Bull, C D, S D Gregory, E Rivot, T F Sheehan, D Ensing, G Woodward, and
-W Crozier. 2022. {``The Likely Suspects Framework: The Need for a Life
-Cycle Approach for Managing Atlantic Salmon ({\emph{Salmo Salar}})
-Stocks Across Multiple Scales.''} Edited by Wesley Flannery. \emph{ICES
-Journal of Marine Science} 79 (5): 1445--56.
-\url{https://doi.org/10.1093/icesjms/fsac099}.
+Bull, C. D., Gregory, S. D., Rivot, E., Sheehan, T. F., Ensing, D.,
+Woodward, G., \& Crozier, W. (2022). The likely suspects framework: the
+need for a life cycle approach for managing Atlantic salmon
+({\emph{Salmo salar}}) stocks across multiple scales. \emph{ICES Journal
+of Marine Science}, \emph{79}(5), 1445--1456.
+\url{https://doi.org/10.1093/icesjms/fsac099}
 
 \bibitem[\citeproctext]{ref-carroll2020}
-Carroll, Stephanie Russo, Ibrahim Garba, Oscar L. Figueroa-Rodríguez,
-Jarita Holbrook, Raymond Lovett, Simeon Materechera, Mark Parsons, et
-al. 2020. {``The CARE Principles for Indigenous Data Governance.''}
-\emph{Data Science Journal} 19.
-\url{https://doi.org/10.5334/dsj-2020-043}.
+Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., Holbrook, J.,
+Lovett, R., Materechera, S., Parsons, M., Raseroka, K.,
+Rodriguez-Lonebear, D., Rowe, R., Sara, R., Walker, J. D., Anderson, J.,
+\& Hudson, M. (2020). The CARE Principles for Indigenous Data
+Governance. \emph{Data Science Journal}, \emph{19}.
+\url{https://doi.org/10.5334/dsj-2020-043}
 
 \bibitem[\citeproctext]{ref-carroll2019}
-Carroll, Stephanie Russo, Desi Rodriguez-Lonebear, and Andrew Martinez.
-2019. {``Indigenous Data Governance: Strategies from United States
-Native Nations.''} \emph{Data Science Journal} 18 (1): 31.
-\url{https://doi.org/10.5334/dsj-2019-031}.
+Carroll, S. R., Rodriguez-Lonebear, D., \& Martinez, A. (2019).
+Indigenous data governance: Strategies from united states native
+nations. \emph{Data Science Journal}, \emph{18}(1), 31.
+\url{https://doi.org/10.5334/dsj-2019-031}
 
 \bibitem[\citeproctext]{ref-diack2024}
-Diack, Graeme, Tom Bird, Scott Akenhead, Jennifer Bayer, Deirdre Brophy,
-Colin Bull, Elvira de Eyto, et al. 2024. {``Salmon Data Mobilization.''}
-\emph{North Pacific Anadromous Fish Commission Bulletin}, December.
-\url{https://doi.org/10.23849/npafcb7/x3rlpo23a}.
+Diack, G., Bird, T., Akenhead, S., Bayer, J., Brophy, D., Bull, C.,
+Eyto, E. de, Johnson, B., Jones, M., Knight, A., Nevoux, M., Stap, T.
+van der, \& Walker, A. (2024). Salmon data mobilization. \emph{North
+Pacific Anadromous Fish Commission Bulletin}.
+\url{https://doi.org/10.23849/npafcb7/x3rlpo23a}
 
 \bibitem[\citeproctext]{ref-eartheconomics2021}
-Earth Economics. 2021. {``The Sociocultural Significance of Pacific
-Salmon to Tribes and First Nations.''} Tacoma, Washington.
-\url{https://www.psc.org/wp-content/uploads/wpfd/preview_files/The-Sociocultural-Significance-of-Salmon-to-Tribes-and-First-Nations(5da9942da9fb4fe0d77eb32bd6165e43).pdf}.
+Earth Economics. (2021). \emph{The Sociocultural Significance of Pacific
+Salmon to Tribes and First Nations} (p. 73).
+\url{https://www.psc.org/wp-content/uploads/wpfd/preview_files/The-Sociocultural-Significance-of-Salmon-to-Tribes-and-First-Nations(5da9942da9fb4fe0d77eb32bd6165e43).pdf}
 
 \bibitem[\citeproctext]{ref-noauthor_fraser_2025}
-{``Fraser {River} {Panel} {Data} {Application}.''} 2025. Pacific Salmon
-Commission. \url{https://psc1.shinyapps.io/PSC_In_Season_Fraser/}.
+\emph{Fraser {River} {Panel} {Data} {Application}}. (2025). Pacific
+Salmon Commission. \url{https://psc1.shinyapps.io/PSC_In_Season_Fraser/}
 
 \bibitem[\citeproctext]{ref-groot1991}
-Groot, Cornelis, and L. Margolis. 1991. \emph{Pacific Salmon Life
-Histories}. UBC Press.
-\url{https://books.google.ca/books?id=I_S0xCME0CYC}.
+Groot, C., \& Margolis, L. (1991). \emph{Pacific Salmon Life Histories}.
+UBC Press. \url{https://books.google.ca/books?id=I_S0xCME0CYC}
 
 \bibitem[\citeproctext]{ref-inman2021}
-Inman, Sarah, Janessa Esquible, Michael Jones, William Bechtol, and
-Brendan Connors. 2021. {``Opportunities and Impediments for Use of Local
-Data in the Management of Salmon Fisheries.''} \emph{Ecology and
-Society} 26 (2). \url{https://doi.org/10.5751/ES-12117-260226}.
+Inman, S., Esquible, J., Jones, M., Bechtol, W., \& Connors, B. (2021).
+Opportunities and impediments for use of local data in the management of
+salmon fisheries. \emph{Ecology and Society}, \emph{26}(2).
+\url{https://doi.org/10.5751/ES-12117-260226}
 
 \bibitem[\citeproctext]{ref-jennings2023a}
-Jennings, Lydia, Talia Anderson, Andrew Martinez, Rogena Sterling,
-Dominique David Chavez, Ibrahim Garba, Maui Hudson, Nanibaa' A.
-Garrison, and Stephanie Russo Carroll. 2023. {``Applying the {`}CARE
-Principles for Indigenous Data Governance{'} to Ecology and Biodiversity
-Research.''} \emph{Nature Ecology \& Evolution} 7 (10): 1547--51.
-\url{https://doi.org/10.1038/s41559-023-02161-2}.
+Jennings, L., Anderson, T., Martinez, A., Sterling, R., Chavez, D. D.,
+Garba, I., Hudson, M., Garrison, N. A., \& Carroll, S. R. (2023).
+Applying the {`}CARE Principles for Indigenous Data Governance{'} to
+ecology and biodiversity research. \emph{Nature Ecology \& Evolution},
+\emph{7}(10), 1547--1551.
+\url{https://doi.org/10.1038/s41559-023-02161-2}
 
 \bibitem[\citeproctext]{ref-johnson2024}
-Johnson, Brett, and Tim van der Stap. 2024. {``Data Mobilization Through
-the International Year of the Salmon Ocean Observing System.''}
-\emph{North Pacific Anadromous Fish Commission Bulletin}, December.
-\url{https://doi.org/10.23849/npafcb7/6a4ddpde4}.
+Johnson, B., \& Stap, T. van der. (2024). Data mobilization through the
+international year of the salmon ocean observing system. \emph{North
+Pacific Anadromous Fish Commission Bulletin}.
+\url{https://doi.org/10.23849/npafcb7/6a4ddpde4}
 
 \bibitem[\citeproctext]{ref-lindenmayer2012}
-LINDENMAYER, DAVID B., GENE E. LIKENS, ALAN ANDERSEN, DAVID BOWMAN, C.
-MICHAEL BULL, EMMA BURNS, CHRIS R. DICKMAN, et al. 2012. {``Value of
-Long{-}Term Ecological Studies.''} \emph{Austral Ecology} 37 (7):
-745--57. \url{https://doi.org/10.1111/j.1442-9993.2011.02351.x}.
+LINDENMAYER, D. B., LIKENS, G. E., ANDERSEN, A., BOWMAN, D., BULL, C.
+M., BURNS, E., DICKMAN, C. R., HOFFMANN, A. A., KEITH, D. A., LIDDELL,
+M. J., LOWE, A. J., METCALFE, D. J., PHINN, S. R., RUSSELL-SMITH, J.,
+THURGATE, N., \& WARDLE, G. M. (2012). Value of long{-}term ecological
+studies. \emph{Austral Ecology}, \emph{37}(7), 745--757.
+\url{https://doi.org/10.1111/j.1442-9993.2011.02351.x}
 
 \bibitem[\citeproctext]{ref-LocalContexts2025}
-Local Contexts. 2025. {``Local Contexts: Grounding Indigenous Rights in
-Data and Collections.''} {Local Contexts}. 2025.
-\url{https://localcontexts.org/}.
+Local Contexts. (2025). \emph{Local contexts: Grounding indigenous
+rights in data and collections}. {Local Contexts}.
+\url{https://localcontexts.org/}
 
 \bibitem[\citeproctext]{ref-marmorek2011}
-Marmorek, David, Darcy Pickard, Alexander Hall, Katherine Bryan, Liz
-Martell, Clint Alexander, Katherine Wieckowski, Lorne Greig, and Carl
-Schwarz. 2011. {``Cohen Commision Technical Report 6-Fraser River
-Sockeye Salmon: Data Synthesis and Cumulative Impacts.''} Vancouver,
-B.C. \url{http://www.cohencommission.ca/}.
+Marmorek, D., Pickard, D., Hall, A., Bryan, K., Martell, L., Alexander,
+C., Wieckowski, K., Greig, L., \& Schwarz, C. (2011). \emph{Cohen
+Commision Technical Report 6-Fraser River sockeye salmon: data synthesis
+and cumulative impacts} (p. 273). \url{http://www.cohencommission.ca/}
 
 \bibitem[\citeproctext]{ref-montenegro2019}
-Montenegro, María. 2019. {``Subverting the Universality of Metadata
-Standards.''} \emph{Journal of Documentation} 75 (4): 731--49.
-\url{https://doi.org/10.1108/jd-08-2018-0124}.
+Montenegro, M. (2019). Subverting the universality of metadata
+standards. \emph{Journal of Documentation}, \emph{75}(4), 731--749.
+\url{https://doi.org/10.1108/jd-08-2018-0124}
 
 \bibitem[\citeproctext]{ref-environm2007}
-NOAA. 2007. \emph{Environmental Data Management at NOAA}. National
-Academies Press. \url{https://doi.org/10.17226/12017}.
+NOAA. (2007). \emph{Environmental data management at NOAA}. National
+Academies Press. \url{https://doi.org/10.17226/12017}
 
 \bibitem[\citeproctext]{ref-noaadatagovernancecommittee2024}
-NOAA Data Governance Committee. 2024. {``Management of NOAA Data and
-Information, Data Management Handbook,''} January.
-\url{https://www.noaa.gov/sites/default/files/2025-03/NAO_212-15B_-_Data_Management_Handbook.pdf}.
+NOAA Data Governance Committee. (2024). \emph{Management of NOAA Data
+and Information, Data Management Handbook}.
+\url{https://www.noaa.gov/sites/default/files/2025-03/NAO_212-15B_-_Data_Management_Handbook.pdf}
 
 \bibitem[\citeproctext]{ref-peng2018}
-Peng, Ge, Jeffrey L. Privette, Curt Tilmes, Sky Bristol, Tom Maycock,
-John J. Bates, Scott Hausman, Otis Brown, and Edward J. Kearns. 2018.
-{``A Conceptual Enterprise Framework for Managing Scientific Data
-Stewardship.''} \emph{Data Science Journal} 17.
-\url{https://doi.org/10.5334/dsj-2018-015}.
+Peng, G., Privette, J. L., Tilmes, C., Bristol, S., Maycock, T., Bates,
+J. J., Hausman, S., Brown, O., \& Kearns, E. J. (2018). A Conceptual
+Enterprise Framework for Managing Scientific Data Stewardship.
+\emph{Data Science Journal}, \emph{17}.
+\url{https://doi.org/10.5334/dsj-2018-015}
 
 \bibitem[\citeproctext]{ref-peterman2012}
-Peterman, Randall~M., and Brigitte Dorner. 2012. {``A Widespread
-Decrease in Productivity of Sockeye Salmon ({\emph{Oncorhynchus Nerka}})
-Populations in Western North America.''} Edited by Jordan S. Rosenfeld.
-\emph{Canadian Journal of Fisheries and Aquatic Sciences} 69 (8):
-1255--60. \url{https://doi.org/10.1139/f2012-063}.
+Peterman, Randall~M., \& Dorner, B. (2012). A widespread decrease in
+productivity of sockeye salmon ({\emph{Oncorhynchus nerka}}) populations
+in western North America. \emph{Canadian Journal of Fisheries and
+Aquatic Sciences}, \emph{69}(8), 1255--1260.
+\url{https://doi.org/10.1139/f2012-063}
 
 \bibitem[\citeproctext]{ref-plotkin2014}
-Plotkin, David. 2014. \emph{Data Stewardship}. Elsevier.
-\url{https://doi.org/10.1016/c2012-0-07057-3}.
+Plotkin, D. (2014). \emph{Data Stewardship}. Elsevier.
+\url{https://doi.org/10.1016/c2012-0-07057-3}
 
 \bibitem[\citeproctext]{ref-roche2020}
-Roche, Dominique G., Monica Granados, Claire C. Austin, Scott Wilson,
-Gregory M. Mitchell, Paul A. Smith, Steven J. Cooke, and Joseph R.
-Bennett. 2020. {``Open Government Data and Environmental Science: A
-Federal Canadian Perspective.''} Edited by Tanzy Love. \emph{FACETS} 5
-(1): 942--62. \url{https://doi.org/10.1139/facets-2020-0008}.
+Roche, D. G., Granados, M., Austin, C. C., Wilson, S., Mitchell, G. M.,
+Smith, P. A., Cooke, S. J., \& Bennett, J. R. (2020). Open government
+data and environmental science: a federal Canadian perspective.
+\emph{FACETS}, \emph{5}(1), 942--962.
+\url{https://doi.org/10.1139/facets-2020-0008}
 
 \bibitem[\citeproctext]{ref-volk2014}
-Volk, Carol J., Yasmin Lucero, and Katie Barnas. 2014. {``Why Is Data
-Sharing in Collaborative Natural Resource Efforts so Hard and What Can
-We Do to Improve It?''} \emph{Environmental Management} 53 (5): 883--93.
-\url{https://doi.org/10.1007/s00267-014-0258-2}.
+Volk, C. J., Lucero, Y., \& Barnas, K. (2014). Why is Data Sharing in
+Collaborative Natural Resource Efforts so Hard and What can We Do to
+Improve it? \emph{Environmental Management}, \emph{53}(5), 883--893.
+\url{https://doi.org/10.1007/s00267-014-0258-2}
 
 \bibitem[\citeproctext]{ref-ward_surveyjoin_2025}
-Ward, Eric J, Philina A English, Christopher N Rooper, Bridget E
-Ferriss, Curt E Whitmire, Chantel R Wetzel, Lewis Ak Barnett, et al.
-2025. {```Surveyjoin`: {A} {Standardized} {Database} of {Fisheries}
-{Bottom} {Trawl} {Surveys} in the {Northeast} {Pacific} {Ocean}.''}
-\url{https://doi.org/10.1101/2025.03.14.643022}.
+Ward, E. J., English, P. A., Rooper, C. N., Ferriss, B. E., Whitmire, C.
+E., Wetzel, C. R., Barnett, L. A., Anderson, S. C., Thorson, J. T.,
+Johnson, K. F., Indivero, J., \& Markowitz, E. H. (2025).
+\emph{`Surveyjoin`: {A} {Standardized} {Database} of {Fisheries}
+{Bottom} {Trawl} {Surveys} in the {Northeast} {Pacific} {Ocean}}.
+\url{https://doi.org/10.1101/2025.03.14.643022}
 
 \bibitem[\citeproctext]{ref-ween2013}
-Ween, Gro, and Benedict Colombi. 2013. {``Two Rivers: The Politics of
-Wild Salmon, Indigenous Rights and Natural Resource Management.''}
-\emph{Sustainability} 5 (2): 478--95.
-\url{https://doi.org/10.3390/su5020478}.
+Ween, G., \& Colombi, B. (2013). Two Rivers: The Politics of Wild
+Salmon, Indigenous Rights and Natural Resource Management.
+\emph{Sustainability}, \emph{5}(2), 478--495.
+\url{https://doi.org/10.3390/su5020478}
 
 \bibitem[\citeproctext]{ref-wilkinson2016}
-Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg,
-Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al.
-2016. {``The FAIR Guiding Principles for Scientific Data Management and
-Stewardship.''} \emph{Scientific Data} 3 (1): 160018.
-\url{https://doi.org/10.1038/sdata.2016.18}.
+Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G.,
+Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., Silva Santos, L. B.
+da, Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M.,
+Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., \ldots{}
+Mons, B. (2016). The FAIR Guiding Principles for scientific data
+management and stewardship. \emph{Scientific Data}, \emph{3}(1), 160018.
+\url{https://doi.org/10.1038/sdata.2016.18}
 
 \end{CSLReferences}
 
 \section{Appendices}\label{appendices}
-
-\section{}\label{section}
 
 \subsection{Appendix 1. Real-world Example Applications of the Best
 Practices}\label{appendix-1.-real-world-example-applications-of-the-best-practices}
@@ -1227,7 +1201,7 @@ Reuse}}{1. Make Data Governance Explicit to Support Trust and Reuse}}\label{make
 Clear governance defines roles, responsibilities, and procedures
 ensuring data quality, long-term maintenance, accountability, and
 compliance with community principles such as FAIR and CARE. Effective
-governance fosters trust, facilitates data sharing, reduces ambiguity
+governance fosters trust, and facilitate data sharing, reduces ambiguity
 regarding decision making, and is critical for coordinating both
 technical and sociocultural aspects of data stewardship.
 
@@ -1356,6 +1330,10 @@ to ensure accountability and traceability.
   IYS-related data packages which are served by a CKAN catalogue at
   \url{https://data.npafc.org}. The Commission also assigns DOIs to
   NPAFC Technical Reports and Bulletins.
+\item
+  The Pacific Salmon Foundation's State of Salmon report
+  (stateofsalmon.ca) has unique DOIs for each version, improving
+  specificity and citability of each year's results.
 \end{itemize}
 
 3.4 Embed DOIs in dashboards, figures, and metadata so they persist in
@@ -1384,7 +1362,8 @@ publication.
 \item
   The Pacific Salmon Foundation's data portal asks contributors to
   provide metadata in ISO 19115 or other standard formats.
-  marinedata.psf.ca, ensuring consistent metadata structure
+  \href{https://marinedata.psf.ca/data/data-submission-form/\#:~:text=}{\ul{marinedata.psf.ca}},
+  ensuring consistent metadata structure
 \item
   The NPAFC uses ISO 19115 metadata standard in their data catalogue
   https://data.npafc.org
@@ -1401,8 +1380,8 @@ publication.
   Institute Juvenile Salmon Program}
 \item
   The International Year of the Salmon High Seas Expeditions data
-  mobilization efforts {[}Johnson and Stap (2024){]} published their
-  data to OBIS: \url{https://www.gbif.org/dataset/search?project_id=IYS}
+  mobilization efforts (Johnson \& Stap, 2024) published their data to
+  OBIS: \url{https://www.gbif.org/dataset/search?project_id=IYS}
 \end{itemize}
 
 4.3 Re-use or publish data terms that are shared online using a
@@ -1468,6 +1447,22 @@ EMODnet
 5.3 Leverage the integration between GitHub and Zenodo to automate
 archiving and DOI assignment, ensuring long-term data preservation.
 
+\begin{itemize}
+\tightlist
+\item
+  The Pacific Salmon Foundation conducted an extensive cleaning of DFO's
+  New Salmon Escapement Database System (NuSEDS) to maximize data
+  recovery. The R code for this procedure is available on
+  \href{https://github.com/salmonwatersheds/population-indicators/tree/master/spawner-surveys/code}{GitHub},
+  while the resulting dataset is archived on
+  \href{https://doi.org/10.5281/zenodo.14194638}{Zenodo}, with
+  accompanying
+  \href{https://bookdown.org/salmonwatersheds/1_nuseds_collation/}{R
+  Markdown documentation} linked on both platforms. The code and dataset
+  are updated in parallel with NuSEDS, and each dataset version is
+  assigned a DOI to ensure proper citation and traceability.
+\end{itemize}
+
 \paragraph{\texorpdfstring{\textbf{6. Incentivize and Track Data Sharing
 and
 Reuse}}{6. Incentivize and Track Data Sharing and Reuse}}\label{incentivize-and-track-data-sharing-and-reuse}
@@ -1514,6 +1509,12 @@ references, not just in a Data Availability statement
   and the recommended citation in the list of references with the
   publication of NPAFC Bulletin 7 titled, \emph{Highlights of the 2022
   International Year of the Salmon Pan--Pacific Winter Expedition}.
+\item
+  The cleaned NuSEDS dataset (see Section 5.3) was used in an analysis
+  and cited in the associated publication
+  (\href{https://doi.org/10.1139/cjfas-2024-0387}{Atkinson et al.,
+  2025}) using the DOI and citation provided with the dataset on
+  \href{https://doi.org/10.5281/zenodo.15625993}{Zenodo}.
 \end{itemize}
 
 6.5 Promote the view that well documented data publications are primary
@@ -1552,12 +1553,6 @@ alignment
 (e.g.~\href{https://salmonprize.com}{The Salmon Prize Project}) that
 provides tangible value to the communities in which research or
 monitoring was conducted.
-
-\textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-1-real-world-examples-preview.html\#f74d3bc4-54eb-4715-971f-d77b337c50f9}{Appendix
-1. Real-world Example Applications of the Best Practices}}
-
-\section{}\label{section-1}
 
 \subsection{Appendix 2: Training Roadmap for Salmon Biologists
 Transitioning to Data
@@ -1825,18 +1820,8 @@ This roadmap serves as a structured guide to equip salmon biologists
 with the practical and theoretical skills required to excel in data
 stewardship roles.
 
-\textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-2-training-roadmap-preview.html\#718196ae-8a7f-4f9d-94a8-00b0045c1356}{Appendix
-2: Training Roadmap for Salmon Biologists Transitioning to Data
-Stewardship}}
-
-\section{}\label{section-2}
-
 \subsection{Appendix 3: Getting Started
 Checklist}\label{appendix-3-getting-started-checklist}
-
-\section{Getting Started Checklist for Salmon Data
-Stewardship}\label{getting-started-checklist-for-salmon-data-stewardship}
 
 Use this practical checklist to assess how well your project, program,
 or organization aligns to the seven Best Practices. Start at the Project
@@ -1846,7 +1831,7 @@ completed and note gaps to prioritize.
 Tip: For each item, capture a link to the living source (e.g.,
 repository, shared drive, policy page) and the responsible owner.
 
-\subsection{Practice 1 --- Make Data Governance
+\subsubsection{Practice 1 --- Make Data Governance
 Explicit}\label{practice-1-make-data-governance-explicit}
 
 \paragraph{Project}\label{project}
@@ -1878,7 +1863,7 @@ Explicit}\label{practice-1-make-data-governance-explicit}
 Evidence to collect: DMP link, data product charter(s), RACI, IDS
 guidance, sharing agreements registry.
 
-\subsection{Practice 2 --- Reuse Proven
+\subsubsection{Practice 2 --- Reuse Proven
 Infrastructure}\label{practice-2-reuse-proven-infrastructure}
 
 \paragraph{Project}\label{project-1}
@@ -1907,8 +1892,8 @@ Infrastructure}\label{practice-2-reuse-proven-infrastructure}
 Evidence to collect: repository URLs, infrastructure inventory, intake
 criteria, backup/DR documentation.
 
-\subsection{Practice 3 --- Use Persistent Identifiers (PIDs) for People,
-Projects, Data, and
+\subsubsection{Practice 3 --- Use Persistent Identifiers (PIDs) for
+People, Projects, Data, and
 Methods}\label{practice-3-use-persistent-identifiers-pids-for-people-projects-data-and-methods}
 
 \paragraph{Project}\label{project-2}
@@ -1937,7 +1922,7 @@ Methods}\label{practice-3-use-persistent-identifiers-pids-for-people-projects-da
 Evidence to collect: ORCID list, PID policy, DOI records, resolver links
 in the catalog.
 
-\subsection{Practice 4 --- Shared Data Models, Vocabularies, and
+\subsubsection{Practice 4 --- Shared Data Models, Vocabularies, and
 Metadata}\label{practice-4-shared-data-models-vocabularies-and-metadata}
 
 \paragraph{Project}\label{project-3}
@@ -1966,8 +1951,8 @@ Metadata}\label{practice-4-shared-data-models-vocabularies-and-metadata}
 Evidence to collect: metadata profiles, data dictionary, code lists,
 schema validators, mapping documentation.
 
-\subsection{Practice 5 --- Store and Analyze Data for Easy Access, Use,
-and
+\subsubsection{Practice 5 --- Store and Analyze Data for Easy Access,
+Use, and
 Trust}\label{practice-5-store-and-analyze-data-for-easy-access-use-and-trust}
 
 \paragraph{Project}\label{project-4}
@@ -1997,7 +1982,7 @@ Trust}\label{practice-5-store-and-analyze-data-for-easy-access-use-and-trust}
 Evidence to collect: workflow definition, environment files, container
 references, QA/QC reports, storage/backup settings.
 
-\subsection{Practice 6 --- Incentivize and Track Sharing and
+\subsubsection{Practice 6 --- Incentivize and Track Sharing and
 Reuse}\label{practice-6-incentivize-and-track-sharing-and-reuse}
 
 \paragraph{Project}\label{project-5}
@@ -2025,7 +2010,7 @@ Reuse}\label{practice-6-incentivize-and-track-sharing-and-reuse}
 Evidence to collect: LICENSE, CITATION, reuse dashboard link, policy
 excerpts, sample citations in reports.
 
-\subsection{Practice 7 --- Build Community Through Co‑Development and
+\subsubsection{Practice 7 --- Build Community Through Co‑Development and
 Mutual
 Benefit}\label{practice-7-build-community-through-codevelopment-and-mutual-benefit}
 
@@ -2056,7 +2041,7 @@ working group notes, decision log.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Quick Start: 30/60/90‑Day
+\subsubsection{Quick Start: 30/60/90‑Day
 Plan}\label{quick-start-306090day-plan}
 
 \begin{itemize}
@@ -2110,7 +2095,7 @@ Plan}\label{quick-start-306090day-plan}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Minimal Artifacts Checklist (Project
+\subsubsection{Minimal Artifacts Checklist (Project
 Level)}\label{minimal-artifacts-checklist-project-level}
 
 \begin{itemize}
@@ -2137,10 +2122,6 @@ Level)}\label{minimal-artifacts-checklist-project-level}
 
 Maintain this list as a living issue in your repository and review
 quarterly.
-
-\textsubscript{Source:
-\href{https://br-johnson.github.io/sdm-paper/appendices/appendix-3-getting-started-checklist-preview.html\#ed8748e7-1461-446c-a601-f2e142e8c505}{Appendix
-3: Getting Started Checklist}}
 
 
 

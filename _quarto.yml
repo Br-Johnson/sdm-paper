@@ -14,11 +14,8 @@ manuscript:
     - examples/Cal_DMP.pdf
 
 format:
-  html:
-    comments:
-      giscus:
-        repo: br-johnson/sdm-paper
-  docx: default
+  apaquarto-docx: default
+  html: default
   pdf: default
 
 execute:

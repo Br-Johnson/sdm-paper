@@ -153,7 +153,7 @@
 <p>Here we provide detailed descriptions of the seven best practices for salmon data stewardship, along with practical applications and real-world examples. This is not an exhaustive list, but rather a starting point for salmon biologists and data stewards to implement effective data stewardship practices in their work based on examples from the salmon research and management community.</p>
 <section id="make-data-governance-explicit-to-support-trust-and-reuse" class="level4">
 <h4 class="anchored" data-anchor-id="make-data-governance-explicit-to-support-trust-and-reuse"><strong>1. Make Data Governance Explicit to Support Trust and Reuse</strong></h4>
-<p>Clear governance defines roles, responsibilities, and procedures ensuring data quality, long-term maintenance, accountability, and compliance with community principles such as FAIR and CARE. Effective governance fosters trust, facilitates data sharing, reduces ambiguity regarding decision making, and is critical for coordinating both technical and sociocultural aspects of data stewardship.</p>
+<p>Clear governance defines roles, responsibilities, and procedures ensuring data quality, long-term maintenance, accountability, and compliance with community principles such as FAIR and CARE. Effective governance fosters trust, and facilitate data sharing, reduces ambiguity regarding decision making, and is critical for coordinating both technical and sociocultural aspects of data stewardship.</p>
 <p>In collaborative international or multi-organizational settings, establishing governance at the outset of a project is crucial for aligning diverse groups, including biologists, data managers, Indigenous communities, policymakers, and other participants. Early governance planning should establish clear, collaborative frameworks that respect each group’s expertise and needs from the beginning.&nbsp;</p>
 <section id="practical-applications" class="level5">
 <h5 class="anchored" data-anchor-id="practical-applications">Practical Applications:</h5>
@@ -197,6 +197,7 @@
 <p>3.3 Assign DOIs to data packages, protocols, and reports using DataCite. Maintain version history for all metadata records and document the provenance of metadata creation, updates, and quality control processes to ensure accountability and traceability.</p>
 <ul>
 <li>The North Pacific Anadromous FIsh Commission (NPAFC) assigns DOIs to IYS-related data packages which are served by a CKAN catalogue at <a href="https://data.npafc.org" class="uri">https://data.npafc.org</a>. The Commission also assigns DOIs to NPAFC Technical Reports and Bulletins.</li>
+<li>The Pacific Salmon Foundation’s State of Salmon report (stateofsalmon.ca) has unique DOIs for each version, improving specificity and citability of each year’s results.</li>
 </ul>
 <p>3.4 Embed DOIs in dashboards, figures, and metadata so they persist in derivative products.</p>
 </section>
@@ -240,6 +241,9 @@
 <li>TODO</li>
 </ul>
 <p>5.3 Leverage the integration between GitHub and Zenodo to automate archiving and DOI assignment, ensuring long-term data preservation.</p>
+<ul>
+<li>The Pacific Salmon Foundation conducted an extensive cleaning of DFO’s New Salmon Escapement Database System (NuSEDS) to maximize data recovery. The R code for this procedure is available on <a href="https://github.com/salmonwatersheds/population-indicators/tree/master/spawner-surveys/code">GitHub</a>, while the resulting dataset is archived on <a href="https://doi.org/10.5281/zenodo.14194638">Zenodo</a>, with accompanying <a href="https://bookdown.org/salmonwatersheds/1_nuseds_collation/">R Markdown documentation</a> linked on both platforms. The code and dataset are updated in parallel with NuSEDS, and each dataset version is assigned a DOI to ensure proper citation and traceability.</li>
+</ul>
 </section>
 </section>
 <section id="incentivize-and-track-data-sharing-and-reuse" class="level4">
@@ -256,6 +260,7 @@
 <p>6.4 Ensure that datasets are properly cited in journal articles using in text citations and the recommended citation in the articles list of references, not just in a Data Availability statement</p>
 <ul>
 <li>In late 2024, the NPAFC began citing data sets using in-text citations and the recommended citation in the list of references with the publication of NPAFC Bulletin 7 titled, <em>Highlights of the 2022 International Year of the Salmon Pan–Pacific Winter Expedition</em>.</li>
+<li>The cleaned NuSEDS dataset (see Section 5.3) was used in an analysis and cited in the associated publication (<a href="https://doi.org/10.1139/cjfas-2024-0387">Atkinson et al., 2025</a>) using the DOI and citation provided with the dataset on <a href="https://doi.org/10.5281/zenodo.15625993">Zenodo</a>.</li>
 </ul>
 <p>6.5 Promote the view that well documented data publications are primary research outputs and are significant contributions to the field</p>
 </section>
@@ -674,34 +679,6 @@
       }
     }
   });
-  </script>  <input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "br-johnson/sdm-paper";
-    script.dataset.repoId = "R_kgDOPQ5wkg";
-    script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOPQ5wks4CtSJn";
-    script.dataset.mapping = "title";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>  </div> <!-- /content --> 
+  </script>  </div> <!-- /content --> 
   
 </body></html>
