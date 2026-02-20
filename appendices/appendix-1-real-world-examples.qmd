@@ -74,11 +74,7 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 4.3 Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology
 
--   DFO Salmon Ontology...
-
--   State of Alaska Salmon and People...
-
--   Measurement Types in OBIS...
+-   The DFO Salmon Ontology publishes stable identifiers and definitions for salmon-domain concepts to support semantic alignment and crosswalks: <https://dfo-pacific-science.github.io/dfo-salmon-ontology/>
 
 -   WDFW has definitions of all hatchery escapement data. [Hatchery escapement reports \| Washington Department of Fish & Wildlife](https://wdfw.wa.gov/fishing/management/hatcheries/escapement#definitions)
 
@@ -92,11 +88,14 @@ Making data easily accessible promotes its use in research and management, enabl
 
 5.1 Provide Direct Data Access via Application Programming Interfaces (APIs) using tools such as FastAPI, Flask, or Django REST Framework that allows users to access, filter, and retrieve data programmatically, facilitating automation and integration into analytical tools and decision-support systems
 
--   The Pacific States Marine Fisheries Commission make's their [PIT Tag Information System](https://www.psmfc.org/program/pit-tag-information-systems-ptagis) data accessible via the [PTAGIS API](https://api.ptagis.org/index.html#:~:text=PTAGIS%20API%20Gets%20a%20list,PTAGIS%20and%20currently%20contributing%20data)
+-   The Pacific States Marine Fisheries Commission makes their [PIT Tag Information System](https://www.psmfc.org/program/pit-tag-information-systems-ptagis) data accessible via the [PTAGIS API](https://api.ptagis.org/index.html#:~:text=PTAGIS%20API%20Gets%20a%20list,PTAGIS%20and%20currently%20contributing%20data)
 
 5.2 Archive data in certified long-term, domain-specific repositories such as the Global Biodiversity Information Facility, the Federated Research Data Repository (FRDR), or NOAA’s NCEI, USGS ScienceBase, or EMODnet
 
--   TODO
+-   Global Biodiversity Information Facility (GBIF): <https://www.gbif.org/>
+-   Federated Research Data Repository (FRDR): <https://frdr-dfdr.ca/>
+-   NOAA National Centers for Environmental Information (NCEI): <https://www.ncei.noaa.gov/>
+-   USGS ScienceBase: <https://www.sciencebase.gov/>
 
 5.3 Leverage the integration between GitHub and Zenodo to automate archiving and DOI assignment, ensuring long-term data preservation.
 
@@ -110,7 +109,7 @@ The currency of research lies in recognition—credit, citations, and opportunit
 
 6.1 License data for reuse using liberal licenses
 
--   All data accessible through the [NPAFC data catalogue](https://data.npafc.org) is licenced as  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en)
+-   All data accessible through the [NPAFC data catalogue](https://data.npafc.org) is licensed as  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en)
 
 6.2 Provide recommended citation text and visible credit fields in metadata
 
