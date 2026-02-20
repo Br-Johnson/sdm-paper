@@ -82,7 +82,7 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 #### **Best Practice 5: Store and Analyze Data in Ways That Others Can Easily Access, Use, and Trust**
 
-Making data easily accessible promotes its use in research and management, enabling seamless integration with tools and applications. Ensuring accessible, persistent data storage requires more than just file hosting. Data should be structured, accessible via API, and stored in repositories that support long-term preservation.
+Making data easily accessible promotes its use in research and management, enabling integration with tools and applications. Ensuring accessible, persistent data storage requires more than file hosting [@coretrustseal_2022_requirements]. Data should be structured and well-documented, stored in repositories that support long-term preservation, and---where it materially improves reuse---made available via programmatic access such as APIs.
 
 ##### Practical Applications:
 
@@ -124,7 +124,7 @@ The currency of research lies in recognition—credit, citations, and opportunit
 
 #### **7. Build Community Through Co-Development and Mutual Benefit**
 
-Creating an infrastructure that standardizes and provides cross-border and cross-ecosystem data integration is only effective if there’s community engagement. Standards and tools must be co-developed with their intended users using user-centred design principles (citation required) to be effective. Engaging biologists, Indigenous stewards, and data managers ensures relevance, usability, and long-term participation.
+Creating an infrastructure that standardizes and provides cross-border and cross-ecosystem data integration is only effective if there’s community engagement. Standards and tools must be co-developed with their intended users using user-centred design principles [@iso9241_210_2019] to be effective. Engaging biologists, Indigenous stewards, and data managers ensures relevance, usability, and long-term participation.
 
 ##### Practical Applications:
 
