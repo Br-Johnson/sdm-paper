@@ -90,7 +90,7 @@ Due to a lack of practical resources, both salmon biologists struggle to align t
 
 ### Framework for Action
 
-In this paper, we provide a framework for translating data stewardship principles into actionable practices, examples, and workflows to help salmon biologists improve the usability, traceability, and long-term impact of their data. We offer seven practices for salmon data stewardship @tbl-bestpractices and use a retrospective, real-world case study of cross-jurisdictional sockeye productivity synthesis [@peterman2012] to illustrate how the absence of shared practices made integration time-consuming and keeps annual updates costly and difficult to this day. To support adoption, we provide real-world examples from multiple organizations (Appendix 1), a training roadmap for biologists taking on stewardship responsibilities (Appendix 2), and a getting-started checklist (Appendix 3). We also map the seven practices to widely used data-lifecycle model @tbl-lifecycle to make adaptation straightforward outside salmon contexts. Although salmon provide the worked example, the approach is intended as a transferable blueprint: other scientific communities can substitute their own vocabularies, repositories, governance structures, and incentives to turn data stewardship principles into practical applications.
+In this paper, we provide a framework for translating data stewardship principles into actionable practices, examples, and workflows to help salmon biologists improve the usability, traceability, and long-term impact of their data. We offer seven practices for salmon data stewardship @tbl-bestpractices and use a retrospective, real-world case study of cross-jurisdictional sockeye productivity synthesis [@peterman2012] to illustrate how the absence of shared practices made integration time-consuming and keeps annual updates costly and difficult to this day. To support adoption, we provide real-world examples from multiple organizations (Appendix 1), a training roadmap for biologists taking on stewardship responsibilities (Appendix 2), and a getting-started checklist (Appendix 3). We also map the seven practices to widely used data-lifecycle model @tbl-lifecycle to make adaptation straightforward outside salmon contexts. Although salmon provide the worked example, the approach is intended as a transferable blueprint: other scientific communities can substitute their own vocabularies, repositories, governance structures, and incentives to turn data stewardship principles into practical applications. We also include a short worked example---the Salmon Data Integration System (SDIS)---to show how the practices can be implemented as an end-to-end, versioned workflow in an operational salmon data program.
 
 ::: callout-note
 ## Key terms (quick primer)
@@ -235,13 +235,25 @@ The **Salmon Data Integration System (SDIS)** is a concrete implementation of th
 
 SDIS combines:
 
--   **metasalmon (R):** scaffolds datasets with required metadata and runs validation checks (<https://dfo-pacific-science.github.io/metasalmon/index.html>).
--   **Salmon data package specification:** defines the package “contract” (structure + required metadata) that supports consistent reuse (<https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>).
--   **DFO Salmon Ontology:** provides stable identifiers and definitions for key salmon-domain concepts to support semantic alignment and crosswalks (<https://dfo-pacific-science.github.io/dfo-salmon-ontology/>).
--   **Salmon Data GPT:** supports discovery and interpretation by grounding answers in package versions, metadata, and ontology terms (<https://github.com/dfo-pacific-science/smn-gpt>). This should be presented as decision support, not an authority.
+-   **metasalmon (R):** scaffolds datasets with required metadata and runs validation checks [@metasalmon] (<https://dfo-pacific-science.github.io/metasalmon/index.html>).
+-   **Salmon data package specification:** defines the package “contract” (structure + required metadata) that supports consistent reuse [@smn_data_pkg_spec] (<https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>).
+-   **DFO Salmon Ontology:** provides stable identifiers and definitions for key salmon-domain concepts to support semantic alignment and crosswalks [@dfo_salmon_ontology] (<https://dfo-pacific-science.github.io/dfo-salmon-ontology/>).
+-   **Salmon Data GPT:** supports discovery and interpretation by grounding answers in package versions, metadata, and ontology terms [@smn_gpt] (<https://github.com/dfo-pacific-science/smn-gpt>). This should be presented as decision support, not an authority.
 
 In SDIS, the best practices become actionable steps: explicit governance and permissions; standardized packaging and metadata; controlled terminology and ontology-backed identifiers; automated validation and quality checks; provenance-friendly releases; and an interface that improves discovery and reuse.
 :::
+
+SDIS is intentionally scoped to solve a practical, recurring problem in fisheries science: how to publish and maintain *living* salmon datasets that remain interpretable and reusable across time, teams, and institutions. We include it here not as a full software/methods description, but as a practitioner-facing example of how **deep interoperability** can be operationalized when governance, metadata, packaging, validation, and semantics are treated as a single workflow rather than separate afterthoughts.
+
+Conservatively, SDIS illustrates how each best practice can be implemented in a concrete way:
+
+-   **Best Practice 1 (Governance):** specify roles, permissions, and reuse constraints in the data product documentation and metadata, consistent with FAIR and CARE.
+-   **Best Practice 2 (Reuse infrastructure):** build on proven, widely used tooling and standards rather than bespoke one-off systems.
+-   **Best Practice 3 (PIDs):** treat releases as citable products by supporting persistent identifiers and versioning for both data and supporting artifacts.
+-   **Best Practice 4 (Shared models/vocabularies):** align key terms and fields using a shared specification and ontology-backed identifiers.
+-   **Best Practice 5 (Accessible storage and trust):** publish structured, validated releases that can be accessed programmatically and re-used without reconstructing context from emails and grey literature.
+-   **Best Practice 6 (Incentives):** make credit and citation easy by embedding recommended citations and contributor metadata.
+-   **Best Practice 7 (Community):** keep standards and mappings “alive” through transparent iteration (e.g., open documentation, issue tracking, and co-development where appropriate).
 
 ### Metadata governance as a cross-cutting foundation
 
