@@ -1,0 +1,63 @@
+figure_id: fig-broad-vs-deep-interoperability
+title: Broad vs deep interoperability (conceptual spine)
+intent: >
+  Clarify the paper’s conceptual distinction between broad interoperability (exchange + discovery)
+  and deep interoperability (preserving meaning for integration + reanalysis).
+audience: Salmon biologists; data stewards; interdisciplinary collaborators
+
+journal_constraints:
+  venue: Fisheries (Perspective)
+  print_assumptions:
+    - may_be_reduced_percent: [35, 50]
+    - print_may_be_grayscale: true
+  layout:
+    target_column_width_mm: 85
+    preferred_aspect_ratio: "3:4"
+    no_outer_border: true
+  typography:
+    guidance: "Times-like"
+    target_min_legible_size_pt_after_reduction: 6
+
+deliverables:
+  masters:
+    - format: svg
+    - format: pdf
+
+figma_file_conventions:
+  page_name: Figures
+  frame_name: "fig-2-broad-vs-deep-interoperability__85mm"
+  units: mm
+  frame:
+    width_mm: 85
+    height_mm: 113.3
+  layout_grid:
+    type: columns
+    columns: 3
+    gutter_mm: 3
+    margin_mm: 4
+
+content:
+  headline: "Interoperability has two parts"
+  subhead: "Broad interoperability enables exchange; deep interoperability preserves meaning"
+  broad:
+    title: "Broad interoperability"
+    bullets:
+      - "Structured formats + machine-readable metadata"
+      - "Clear access conditions (FAIR ≠ open-by-default)"
+      - "Persistent identifiers and stable landing pages"
+      - "Trusted repositories / catalogs and search indexing"
+    footer: "Without this: people cannot reliably find or retrieve data products."
+  deep:
+    title: "Deep interoperability"
+    bullets:
+      - "Shared definitions for terms, methods, and units"
+      - "Controlled vocabularies + ontology-backed identifiers"
+      - "Mappings/crosswalks across programs and jurisdictions"
+      - "Provenance and versioning for reanalysis over time"
+    footer: "Without this: data may be accessible but meaning drifts and integration fails."
+
+composition:
+  recommended_structure: "two stacked panels (top=broad, bottom=deep)"
+  notes:
+    - "Make the contrast obvious in grayscale via subtle fill difference."
+    - "Keep bullets short; no more than 4 each."
