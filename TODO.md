@@ -19,7 +19,8 @@ Last updated: 2026-02-20
 
 ### Tables + figures
 
-- [x] Add Figure 1 (seven practices blueprint): exported SVG master and embedded in the manuscript.
+- [x] Add Figure 1 (living data products workflow): exported SVG master and embedded in the manuscript.
+- [x] Add Figure 2 (broad vs deep interoperability): exported SVG master and embedded in the manuscript.
 - [ ] Consider renaming Best Practices table right column from “practical applications” → “next steps (examples)” (ultra-light table tweak).
 - [ ] Optional: convert ASCII-grid tables to cleaner Quarto tables for journal aesthetics.
 
