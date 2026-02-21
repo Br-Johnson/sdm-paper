@@ -2,6 +2,22 @@
 
 Here we provide detailed descriptions of the seven best practices for salmon data stewardship, along with practical applications and real-world examples. This is not an exhaustive list, but rather a starting point for salmon biologists and data stewards to implement effective data stewardship practices in their work based on examples from the salmon research and management community.
 
+**Example-to-practice matrix (illustrative):** many real-world implementations support multiple best practices at once.
+
+| Example (illustrative) | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| Northwest Indian Fisheries Commission (NWIFC) password-protected co-manager portal | ● |  |  |  | ● |  | ● |
+| Pacific Salmon Commission Technical Committee on Data Sharing | ● |  |  |  |  |  | ● |
+| PSF spawner surveys on Zenodo (discoverability vs local portal) |  | ● | ● |  | ● | ● |  |
+| NPAFC CKAN catalogue + DOIs for reports/data packages |  | ● | ● |  | ● |  |  |
+| ROR + DataCite Commons (e.g., Pacific Salmon Foundation) |  |  | ● |  |  | ● |  |
+| DFO Salmon Ontology term identifiers |  |  |  | ● |  |  | ● |
+| StreamNet Data Exchange Standard (DES) | ● |  |  | ● |  |  | ● |
+| PTAGIS API |  |  |  |  | ● |  |  |
+| GitHub + Zenodo (NuSEDS cleaning code + versioned dataset DOIs) |  |  | ● |  | ● | ● |  |
+| Workshops (e.g., AFS “Fishing for Clarity”) |  |  |  | ● |  |  | ● |
+
+
 #### **1. Make Data Governance Explicit to Support Trust and Reuse**
 
 Clear governance defines roles, responsibilities, and procedures ensuring data quality, long-term maintenance, accountability, and compliance with community principles such as FAIR and CARE. Effective governance fosters trust, and facilitate data sharing, reduces ambiguity regarding decision making, and is critical for coordinating both technical and sociocultural aspects of data stewardship.

@@ -19,7 +19,7 @@ Last updated: 2026-02-20
 
 ### Tables + figures
 
-- [ ] Add figures (start with the “Seven practices blueprint” figure spec; export SVG/PDF and embed once).
+- [x] Add Figure 1 (seven practices blueprint): exported SVG master and embedded in the manuscript.
 - [ ] Consider renaming Best Practices table right column from “practical applications” → “next steps (examples)” (ultra-light table tweak).
 - [ ] Optional: convert ASCII-grid tables to cleaner Quarto tables for journal aesthetics.
 
@@ -27,7 +27,7 @@ Last updated: 2026-02-20
 
 - [x] Appendix 1: removed placeholders/TODOs and added more concrete examples.
 - [x] Appendix 1: added StreamNet DES as a concrete example of a data exchange standard.
-- [ ] Appendix 1: add an **examples × best practices matrix** (checkmarks) to reflect that examples map to multiple practices.
+- [x] Appendix 1: add an **examples × best practices matrix** (checkmarks) to reflect that examples map to multiple practices.
 - [ ] Appendix 1: fill BP 5–7 more thoroughly (aim: +1–2 additional examples each).
 - [ ] Appendix 2: refine/reorg “training roadmap” (keep content, but add Beginner/Intermediate/Advanced labels; weave in SDIS resources as salmon-domain examples).
 
