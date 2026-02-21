@@ -14,7 +14,7 @@ manuscript:
     - examples/Cal_DMP.pdf
 
 format:
-  apaquarto-docx: default
+  docx: default
   html: default
   pdf: default
 
