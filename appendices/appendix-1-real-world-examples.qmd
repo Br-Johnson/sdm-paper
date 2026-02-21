@@ -72,6 +72,8 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 -   The International Year of the Salmon High Seas Expeditions data mobilization efforts [@johnson2024] published their data to OBIS: <https://www.gbif.org/dataset/search?project_id=IYS>
 
+-   StreamNet’s Data Exchange Standard (DES) provides a concrete example of collaboratively developed data exchange rules (structures, definitions, and business rules) for fish monitoring and related data [@streamnet_des_2024_1].
+
 4.3 Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology
 
 -   The DFO Salmon Ontology publishes stable identifiers and definitions for salmon-domain concepts to support semantic alignment and crosswalks: <https://dfo-pacific-science.github.io/dfo-salmon-ontology/>

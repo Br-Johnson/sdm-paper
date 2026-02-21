@@ -1,16 +1,54 @@
-# SDM-paper — internal TODOs
+# SDM-paper — internal TODOs (living)
 
-(These are working notes; not intended for the submitted manuscript.)
+(Working notes; not intended for the submitted manuscript text.)
 
-- Discuss differences between data management plans, data governance charters, and data sharing agreements.
-- Incorporate reference to StreamNet Data Exchange Standards.
-- Add figures.
-- Fill out Appendix 1 more thoroughly.
-- Refine/reorg Appendix 2 (training roadmap) and decide whether to move some content into a third column in Table 1.
-- Consider removing paragraph 2 (Data Science adjacency) in the “Data Stewardship” definition section.
-- Consider re-working the Best Practices table to replace the “practical applications” column with “next step.”
-- Incorporate edits to appendices from PSF folks.
-- Incorporate edits from Gottfried Pestal.
-- Update with links to DFO Salmon Ontology, data package specification, and Salmon Data GPT.
-- Figure out where to cite Atkinson et al. 2025 (https://doi.org/10.1139/cjfas-2024-0387).
-- Cite Price et al. 2025.
+Last updated: 2026-02-20
+
+## Manuscript tasks (submission-facing)
+
+### Content + framing
+
+- [ ] Add a short distinction between **Data Management Plans** vs **Data Product Governance Charters** vs **Data Sharing Agreements** (2–6 sentences or a small box).
+- [ ] Clarify and standardize the terms **data lifecycle** vs **salmon lifecycle** (define once; use consistently).
+- [ ] Improve the **first mention / placement** of the Best Practices table (make it obvious how to use @tbl-bestpractices when it is first referenced).
+- [x] SDIS integrated at “worked example” level (metasalmon + spec + DFO Salmon Ontology + Salmon Data GPT links + BibTeX).
+- [x] Cite Atkinson et al. (declines in monitoring / stewardship urgency): https://doi.org/10.1139/cjfas-2024-0387
+- [x] Cite Price & Moore “From policy to practice…” (monitoring declines / conservation context).
+- [x] FAIR ≠ open-by-default citations + CARE/FAIR tension citations (Landi; GO FAIR A1.2; Tattersall).
+- [ ] Decide whether to remove/compress the “Data stewardship as a sub-discipline of data science” paragraph (keep if useful; compress if it reads like a detour for *Fisheries*).
+
+### Tables + figures
+
+- [ ] Add figures (start with the “Seven practices blueprint” figure spec; export SVG/PDF and embed once).
+- [ ] Consider renaming Best Practices table right column from “practical applications” → “next steps (examples)” (ultra-light table tweak).
+- [ ] Optional: convert ASCII-grid tables to cleaner Quarto tables for journal aesthetics.
+
+### Appendices
+
+- [x] Appendix 1: removed placeholders/TODOs and added more concrete examples.
+- [x] Appendix 1: added StreamNet DES as a concrete example of a data exchange standard.
+- [ ] Appendix 1: add an **examples × best practices matrix** (checkmarks) to reflect that examples map to multiple practices.
+- [ ] Appendix 1: fill BP 5–7 more thoroughly (aim: +1–2 additional examples each).
+- [ ] Appendix 2: refine/reorg “training roadmap” (keep content, but add Beginner/Intermediate/Advanced labels; weave in SDIS resources as salmon-domain examples).
+
+### Journal boilerplate / compliance (target: *Fisheries*)
+
+- [ ] Fill Acknowledgements (brief, accurate).
+- [ ] Add Data availability + Code availability statements (as required/appropriate).
+- [ ] Check whether *Fisheries* prefers fewer inline URLs (convert key URLs to citations/footnotes if needed).
+
+## Feedback incorporation tracking
+
+- [x] Gottfried Pestal: key terms primer + SDIS worked example + reduced overclaiming (conceptual feedback applied).
+- [ ] Gottfried: add a tiny “before vs after” illustration (messy spreadsheet vs machine-actionable release).
+- [x] PSF/Bruno/Steph/Eric: obvious nits + key citation integrated.
+- [ ] PSF/Bruno/Steph/Eric: second pass on remaining docx comments that affect flow/structure/word choice (do after you review current branch).
+
+## Research / audit process
+
+- [x] Deep Research run completed + ingested + claim-softening pass.
+- [ ] Optional: final Deep Research run after figures/tables are stabilized.
+
+## Ops / tooling
+
+- [x] Improved /paper workflow staging for Deep Research file upload (copy to /tmp/openclaw/uploads + contenteditable composer logic).
