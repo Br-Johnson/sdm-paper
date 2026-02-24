@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Figure 1 (SVG master): Living data products workflow (salmon data stewardship)
+Target: 85 mm wide (single column)
+Grayscale-safe; text preserved as text.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="85mm" height="113.3mm" viewBox="0 0 85 113.3" role="img" aria-label="Workflow for producing living salmon data products with cross-cutting governance and metadata governance, showing steps from collect to reuse and iterative improvement.">
+  <defs>
+    <style><![CDATA[
+      .ink { fill: #111111; }
+      .g70 { fill: #4D4D4D; }
+      .paper { fill: #FFFFFF; }
+      .card { fill: #FFFFFF; stroke: #111111; stroke-width: 0.35; }
+      .band { fill: #F1F1F1; stroke: #111111; stroke-width: 0.2; }
+      .arrow { stroke: #111111; stroke-width: 0.35; fill: none; }
+      .arrowThin { stroke: #4D4D4D; stroke-width: 0.3; fill: none; }
+      .h1 { font-family: "Times New Roman", Times, serif; font-size: 3.6px; font-weight: 600; fill: #111111; }
+      .h2 { font-family: "Times New Roman", Times, serif; font-size: 2.4px; font-weight: 400; fill: #4D4D4D; }
+      .label { font-family: "Times New Roman", Times, serif; font-size: 2.4px; font-weight: 600; fill: #111111; }
+      .body { font-family: "Times New Roman", Times, serif; font-size: 2.15px; font-weight: 400; fill: #111111; }
+      .small { font-family: "Times New Roman", Times, serif; font-size: 2.05px; font-weight: 400; fill: #4D4D4D; }
+    ]]></style>
+    <marker id="arrowHead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 z" fill="#111111" />
+    </marker>
+    <marker id="arrowHeadGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 z" fill="#4D4D4D" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="4" y="8" class="h1">Living data products (workflow)</text>
+  <text x="4" y="12" class="h2">How stewardship turns field outputs into reusable, maintained data products</text>
+
+  <!-- Cross-cutting governance + metadata governance band -->
+  <g id="CrossCutting::Governance_MetadataGovernance">
+    <rect x="4" y="15.2" width="77" height="10" class="band" />
+    <text x="6" y="19.2" class="label">Cross-cutting</text>
+    <text x="30" y="19.2" class="body">Governance + metadata governance</text>
+    <text x="30" y="22.3" class="small">Roles, access conditions, documentation, QA, and change control</text>
+  </g>
+
+  <!-- Workflow cards -->
+  <!-- Geometry: x=6..79, y start=28, card h=11, gap=2 -->
+
+  <g id="Step::Collect_Compile">
+    <rect x="6" y="28" width="73" height="11" class="card" />
+    <text x="8" y="32.0" class="label">1. Collect / compile</text>
+    <text x="8" y="35.3" class="body">Field data, lab data, assessments, and existing datasets</text>
+  </g>
+
+  <g id="Step::Package_Document">
+    <rect x="6" y="41" width="73" height="11" class="card" />
+    <text x="8" y="45.0" class="label">2. Package + document</text>
+    <text x="8" y="48.3" class="body">Standard structure + machine-readable metadata (what, how, where, who)</text>
+  </g>
+
+  <g id="Step::Validate_Version">
+    <rect x="6" y="54" width="73" height="11" class="card" />
+    <text x="8" y="58.0" class="label">3. Validate + version</text>
+    <text x="8" y="61.3" class="body">Automated checks; track changes; release versions</text>
+  </g>
+
+  <g id="Step::Publish_Preserve">
+    <rect x="6" y="67" width="73" height="11" class="card" />
+    <text x="8" y="71.0" class="label">4. Publish + preserve</text>
+    <text x="8" y="74.3" class="body">Repository/catalog; persistent identifiers; long-term stewardship</text>
+  </g>
+
+  <g id="Step::Discover_Reuse">
+    <rect x="6" y="80" width="73" height="11" class="card" />
+    <text x="8" y="84.0" class="label">5. Discover + reuse</text>
+    <text x="8" y="87.3" class="body">Find, access appropriately, integrate, analyze, and update</text>
+  </g>
+
+  <!-- Arrows between steps -->
+  <path d="M42.5 39.5 V41" class="arrow" marker-end="url(#arrowHead)" />
+  <path d="M42.5 52.5 V54" class="arrow" marker-end="url(#arrowHead)" />
+  <path d="M42.5 65.5 V67" class="arrow" marker-end="url(#arrowHead)" />
+  <path d="M42.5 78.5 V80" class="arrow" marker-end="url(#arrowHead)" />
+
+  <!-- Improvement loop (from reuse back to packaging) -->
+  <g id="Loop::Measure_Improve">
+    <path d="M79 90 C82 90, 82 45, 79 45" class="arrowThin" marker-end="url(#arrowHeadGray)" />
+    <text x="58" y="96.5" class="small">Measure, learn, improve</text>
+    <text x="58" y="99.2" class="small">(community feedback loop)</text>
+  </g>
+
+  <!-- Small footer note -->
+  <text x="4" y="110.8" class="h2">Figure 1. Stewardship workflow for publishing and maintaining living data products.</text>
+</svg>
