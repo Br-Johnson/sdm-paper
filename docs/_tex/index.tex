@@ -409,7 +409,7 @@ Integration System (SDIS)---to show how the practices can be implemented
 as an end-to-end, versioned workflow in an operational salmon data
 program.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, opacityback=0, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, breakable, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key terms (quick primer)}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key terms (quick primer)}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
 
 \begin{itemize}
 \tightlist
@@ -506,7 +506,7 @@ systems, and maintaining long-term relationships, data stewards create
 the social infrastructure necessary for effective cross-boundary data
 collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, opacityback=0, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, breakable, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Common Functions of Salmon Data Stewards}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Common Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
 
 Effective salmon data stewards often perform several common functions:
 
@@ -749,94 +749,93 @@ Similar barriers and solutions apply to trawl survey data integration,
 invertebrate monitoring programs, and water quality datasets that span
 multiple agencies and jurisdictions.
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+\begin{figure}
+
+\centering{
+
 \includegraphics[width=85mm,height=\textheight,keepaspectratio]{index_files/mediabag/figures/fig-1-living-data-products-workflow.pdf}
 
-Best Practice \textbar{} Next steps (examples) \textbar{}
+}
 
-+:===================================================================================================================================================================================================================================================================================================================================+:=======================================================================================================================================+
-\textbar{} \textbf{1. Make Data Governance Foundational and Explicit to
-Establish and Sustain Trust and Reuse.} Establishing clear governance
-structures promotes quality, accountability, and alignment with FAIR and
-CARE principles enabling trust and long-term stewardship across
-multi-organization projects. \textbar{} - Document roles and
-responsibilities using a Data Product Governance Charter and structured
-responsibility frameworks. \textbar{} \textbar{} \textbar{} \textbar{}
-\textbar{} \textbar{} - Integrate CARE principles to respect First
-Nations, Tribes, and Indigenous data rights. \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} - Form a governance or
-oversight committee to review data standards, timelines, and agreements.
-\textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{2. Reuse Proven Infrastructure to Save Time and
-Increase Interoperability.} Leveraging existing platforms and
-technologies by building on and extending them rather than building
-bespoke solutions reduces costs and improves long-term interoperability
-and sustainability. \textbar{} - Use domain-specific repositories
-\textbar{} \textbar{} \textbar{} \textbar{} \textbar{} \textbar{} -
-Publish and archive data with appropriate established repositories
-(e.g., KNB, Zenodo) for your data type and governance context.
-\textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{3. Make Data, People, Projects, and Outputs
-Discoverable, Linked and Citable with Persistent Identifiers.}
-Persistent identifiers (PIDs) connect data with researchers,
-organizations, and outputs---supporting data citation, reuse, and
-automated attribution. \textbar{} - Encourage use of ORCIDs for
-researchers. \textbar{} \textbar{} \textbar{} \textbar{} \textbar{}
-\textbar{} - Use ROR IDs for organizations. \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} - Assign DOIs via DataCite
-for data packages. \textbar{} \textbar{} \textbar{} \textbar{}
-\textbar{} \textbar{} - Embed DOIs in dashboards and metadata.
-\textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{4. Use Shared Data Models, Vocabularies and Metadata
-to Enable Integration.} Common vocabularies, metadata standards, and
-ontologies support integration across systems and preserve semantic
-meaning. \textbar{} - Adopt ISO 19115, EML, or DataCite metadata
-standards. \textbar{} \textbar{} \textbar{} \textbar{} \textbar{}
-\textbar{} - Re-use terms defined in Salmon Domain Ontology. \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} \textbar{} - Model datasets
-using the Darwin Core Data Package Model. \textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{5. Store and Analyze Data in Ways That Others Can
-Easily Access, Use and Trust.} Structured and accessible data formats
-ease reusability, and support integration with analytical tools and
-applications while data analyzed or wrangled using programmatic scripts
-(R, Python etc.) enable reproducibility and increase trust. \textbar{} -
-Provide programmatic access (e.g., APIs) where appropriate. \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} \textbar{} - Archive in
-trusted repositories (e.g., GBIF, FRDR, USGS). \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} - Write scripts in a
-programming language to wrangle, transform, and analyze data. \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} \textbar{} - Use GitHub to
-host code for collaboration and transparency and the GitHub / Zenodo
-integration for DOI assignment and preservation. \textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{6. Incentivize and Track Data Sharing and Reuse.}
-Recognizing data contributors and tracking reuse promotes a culture of
-sharing and supports professional recognition. \textbar{} - License data
-with CC-BY 4.0. \textbar{} \textbar{} \textbar{} \textbar{} \textbar{}
-\textbar{} - Include citation text and visible credit fields. \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} \textbar{} - Use COUNTER
-metrics and DataCite APIs to monitor reuse. \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} - Encourage dataset citation
-in references. \textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-\textbar{} \textbf{7. Build Community Through Co-Development and Mutual
-Benefit.} Engaging users early ensures tools and standards meet
-real-world needs and enhances long-term stewardship. \textbar{} -
-Participate in RDA Salmon Interest Group. \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} \textbar{} - Facilitate workshops for
-metadata and vocabulary alignment. \textbar{} \textbar{} \textbar{}
-\textbar{} \textbar{} \textbar{} - Support community-engaged research
-with tangible benefits. \textbar{}
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+\caption{\label{fig-living-data-products}Stewardship workflow for
+publishing and maintaining living data products.}
 
-: Best practices for salmon data stewardship with quick-start next steps
-\{\#tbl-bestpractices\}
+\end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, opacityback=0, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, breakable, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box: Salmon Data Integration System (SDIS) --- a worked example}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, bottomrule=.15mm, left=2mm]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\caption{Best practices for salmon data stewardship with quick-start
+next steps}\label{tbl-bestpractices}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Next steps (examples)
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Best Practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Next steps (examples)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{1. Make Data Governance Foundational and Explicit to Establish
+and Sustain Trust and Reuse.} Establishing clear governance structures
+promotes quality, accountability, and alignment with FAIR and CARE
+principles enabling trust and long-term stewardship across
+multi-organization projects. & • Document roles and responsibilities
+using a Data Product Governance Charter and structured responsibility
+frameworks.• Integrate CARE principles to respect First Nations, Tribes,
+and Indigenous data rights.• Form a governance or oversight committee to
+review data standards, timelines, and agreements. \\
+\textbf{2. Reuse Proven Infrastructure to Save Time and Increase
+Interoperability.} Leveraging existing platforms and technologies by
+building on and extending them rather than building bespoke solutions
+reduces costs and improves long-term interoperability and
+sustainability. & • Use domain-specific repositories.• Publish and
+archive data with established repositories (e.g., KNB, Zenodo) matched
+to your data type and governance context. \\
+\textbf{3. Make Data, People, Projects, and Outputs Discoverable, Linked
+and Citable with Persistent Identifiers.} Persistent identifiers (PIDs)
+connect data with researchers, organizations, and outputs---supporting
+data citation, reuse, and automated attribution. & • Encourage ORCID use
+for researchers.• Use ROR IDs for organizations.• Assign DOIs via
+DataCite for data packages.• Embed DOIs in dashboards and metadata. \\
+\textbf{4. Use Shared Data Models, Vocabularies and Metadata to Enable
+Integration.} Common vocabularies, metadata standards, and ontologies
+support integration across systems and preserve semantic meaning. & •
+Adopt ISO 19115, EML, or DataCite metadata standards.• Re-use terms
+defined in Salmon Domain Ontology.• Model datasets using the Darwin Core
+Data Package model. \\
+\textbf{5. Store and Analyze Data in Ways That Others Can Easily Access,
+Use and Trust.} Structured and accessible data formats ease reusability
+and integration with analytical tools, while programmatic workflows
+(e.g., R, Python) increase reproducibility and trust. & • Provide
+programmatic access (e.g., APIs) where appropriate.• Archive in trusted
+repositories (e.g., GBIF, FRDR, USGS).• Use scripts to wrangle,
+transform, and analyze data reproducibly.• Use GitHub for transparent
+collaboration and GitHub/Zenodo for DOI assignment and preservation. \\
+\textbf{6. Incentivize and Track Data Sharing and Reuse.} Recognizing
+data contributors and tracking reuse promotes a culture of sharing and
+supports professional recognition. & • License data with CC-BY 4.0.•
+Include citation text and visible credit fields.• Use COUNTER metrics
+and DataCite APIs to monitor reuse.• Encourage dataset citation in
+references. \\
+\textbf{7. Build Community Through Co-Development and Mutual Benefit.}
+Engaging users early ensures tools and standards meet real-world needs
+and enhances long-term stewardship. & • Participate in RDA Salmon
+Interest Group.• Facilitate workshops for metadata and vocabulary
+alignment.• Support community-engaged research with tangible
+benefits. \\
+\end{longtable}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box: Salmon Data Integration System (SDIS) --- a worked example}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
 
 SDIS (Salmon Data Integration System) is a worked example of how the
 seven best practices can be implemented together in a salmon monitoring
@@ -854,12 +853,17 @@ Core SDIS components (illustrative):
   \textbf{metasalmon (R)} (DFO Pacific Science, 2026b)
   (\url{https://dfo-pacific-science.github.io/metasalmon/index.html})
 \item
-  \textbf{Salmon data package specification} (DFO Pacific Science,
+  \textbf{Salmon Data Package specification} (DFO Pacific Science,
   2026c)
   (\url{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md})
 \item
+  \textbf{Salmon Domain Ontology} (canonical interoperability layer for
+  shared salmon concepts)
+\item
   \textbf{DFO Salmon Ontology} (DFO Pacific Science, 2026a)
   (\url{https://dfo-pacific-science.github.io/dfo-salmon-ontology/})
+  (organization-specific ontology and controlled vocabularies aligned to
+  the broader Salmon Domain Ontology layer)
 \item
   \textbf{Salmon Data GPT} (DFO Pacific Science, 2026d)
   (\url{https://github.com/dfo-pacific-science/smn-gpt})
@@ -1071,7 +1075,8 @@ data packaging and validation}.
 \url{https://dfo-pacific-science.github.io/metasalmon/index.html}
 
 \bibitem[\citeproctext]{ref-smn_data_pkg_spec}
-DFO Pacific Science. (2026c). \emph{SMN data package: specification}.
+DFO Pacific Science. (2026c). \emph{{Salmon Data Package}:
+specification}.
 \url{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md}
 
 \bibitem[\citeproctext]{ref-smn_gpt}
@@ -1252,58 +1257,6 @@ real-world examples. This is not an exhaustive list, but rather a
 starting point for salmon biologists and data stewards to implement
 effective data stewardship practices in their work based on examples
 from the salmon research and management community.
-
-\textbf{Example-to-practice matrix (illustrative):} many real-world
-implementations support multiple best practices at once.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0968}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}
-  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1290}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Example (illustrative)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-1
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-2
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-3
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-4
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-5
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-6
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-7
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Northwest Indian Fisheries Commission (NWIFC) password-protected
-co-manager portal & ● & & & & ● & & ● \\
-Pacific Salmon Commission Technical Committee on Data Sharing & ● & & &
-& & & ● \\
-PSF spawner surveys on Zenodo (discoverability vs local portal) & & ● &
-● & & ● & ● & \\
-NPAFC CKAN catalogue + DOIs for reports/data packages & & ● & ● & & ● &
-& \\
-ROR + DataCite Commons (e.g., Pacific Salmon Foundation) & & & ● & & & ●
-& \\
-DFO Salmon Ontology term identifiers & & & & ● & & & ● \\
-StreamNet Data Exchange Standard (DES) & ● & & & ● & & & ● \\
-PTAGIS API & & & & & ● & & \\
-GitHub + Zenodo (NuSEDS cleaning code + versioned dataset DOIs) & & & ●
-& & ● & ● & \\
-Workshops (e.g., AFS ``Fishing for Clarity'') & & & & ● & & & ● \\
-\end{longtable}
 
 \paragraph{\texorpdfstring{\textbf{1. Make Data Governance Explicit to
 Support Trust and
@@ -1505,8 +1458,12 @@ persistent identifier in a controlled vocabulary or ontology
 
 \begin{itemize}
 \item
-  The DFO Salmon Ontology publishes stable identifiers and definitions
-  for salmon-domain concepts to support semantic alignment and
+  Treat the Salmon Domain Ontology as the canonical interoperability
+  layer for shared salmon concepts across organizations.
+\item
+  The DFO Salmon Ontology is one organization-specific ontology and
+  controlled vocabulary set aligned to that broader layer, publishing
+  stable identifiers and definitions to support semantic alignment and
   crosswalks:
   \url{https://dfo-pacific-science.github.io/dfo-salmon-ontology/}
 \item
@@ -1819,13 +1776,14 @@ and responsible data use.
 \tightlist
 \item
   Read the
-  \href{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md}{SMN
-  data package specification}.
+  \href{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md}{Salmon
+  Data Package specification}.
 \item
-  Review the
+  Treat the Salmon Domain Ontology as the canonical interoperability
+  layer, then review the
   \href{https://dfo-pacific-science.github.io/dfo-salmon-ontology/}{DFO
-  Salmon Ontology} landing page and identify relevant terms for one
-  dataset.
+  Salmon Ontology} as an organization-specific ontology and controlled
+  vocabulary set aligned to that broader layer.
 \item
   Explore
   \href{https://dfo-pacific-science.github.io/metasalmon/index.html}{metasalmon
@@ -1893,11 +1851,12 @@ reusable data products.
 \begin{itemize}
 \tightlist
 \item
-  Build one versioned dataset package using metasalmon + the SMN
-  specification.
+  Build one versioned dataset package using metasalmon + the Salmon Data
+  Package specification.
 \item
-  Map at least 10 core fields to stable terms in the DFO Salmon
-  Ontology.
+  Map at least 10 core fields to the Salmon Domain Ontology first, then
+  use the DFO Salmon Ontology where organization-specific controlled
+  vocabularies are needed.
 \item
   Publish a release with persistent metadata and DOI-backed citation
   text.

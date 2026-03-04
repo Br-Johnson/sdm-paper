@@ -202,8 +202,9 @@ SDIS (Salmon Data Integration System) is a worked example of how the seven best 
 Core SDIS components (illustrative):
 
 -   **metasalmon (R)** [@metasalmon] (<https://dfo-pacific-science.github.io/metasalmon/index.html>)
--   **Salmon data package specification** [@smn_data_pkg_spec] (<https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>)
--   **DFO Salmon Ontology** [@dfo_salmon_ontology] (<https://dfo-pacific-science.github.io/dfo-salmon-ontology/>)
+-   **Salmon Data Package specification** [@smn_data_pkg_spec] (<https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>)
+-   **Salmon Domain Ontology** (canonical interoperability layer for shared salmon concepts)
+-   **DFO Salmon Ontology** [@dfo_salmon_ontology] (<https://dfo-pacific-science.github.io/dfo-salmon-ontology/>) (organization-specific ontology and controlled vocabularies aligned to the broader Salmon Domain Ontology layer)
 -   **Salmon Data GPT** [@smn_gpt] (<https://github.com/dfo-pacific-science/smn-gpt>)
 
 Other programs can implement the same stewardship pattern using different tools. Where provenance is important, relationships among datasets, methods, and releases can be expressed using standard conceptual models (e.g., PROV-DM) [@w3c_prov_dm_2013].

@@ -76,7 +76,8 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 4.3 Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology
 
--   The DFO Salmon Ontology publishes stable identifiers and definitions for salmon-domain concepts to support semantic alignment and crosswalks: <https://dfo-pacific-science.github.io/dfo-salmon-ontology/>
+-   Treat the Salmon Domain Ontology as the canonical interoperability layer for shared salmon concepts across organizations.
+-   The DFO Salmon Ontology is one organization-specific ontology and controlled vocabulary set aligned to that broader layer, publishing stable identifiers and definitions to support semantic alignment and crosswalks: <https://dfo-pacific-science.github.io/dfo-salmon-ontology/>
 
 -   WDFW has definitions of all hatchery escapement data. [Hatchery escapement reports \| Washington Department of Fish & Wildlife](https://wdfw.wa.gov/fishing/management/hatcheries/escapement#definitions)
 
