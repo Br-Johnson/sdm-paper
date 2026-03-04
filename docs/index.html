@@ -449,10 +449,67 @@ Agencies can use repositories or catalogues that make data discoverable using PI
 </ul>
 <p>While the barriers encountered in compiling, interpreting, and maintaining the data&nbsp;made the work considerably more difficult than necessary and hinder efforts by others seeking to extend or build upon this work, they remain instructive. These challenges are not unique to Peterman’s team—they reflect systemic gaps in data governance, documentation, infrastructure, and incentives. By adopting the seven best practices detailed in the Best Practices table, organizations and researchers can improve the reusability of legacy datasets, easing collaboration and supporting more timely synthesis across the salmon research and management community.</p>
 <p>The challenges and solutions demonstrated in this salmon case study generalize across fisheries and environmental monitoring domains. Cross-jurisdictional data harmonization, quality assurance and control patterns, standardized metadata requirements, and long-term archiving strategies are universal needs that extend far beyond salmon science. Similar barriers and solutions apply to trawl survey data integration, invertebrate monitoring programs, and water quality datasets that span multiple agencies and jurisdictions.</p>
-<p>+————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ <img src="figures/fig-1-living-data-products-workflow.svg" id="fig-living-data-products" class="img-fluid" style="width:85mm" alt="Stewardship workflow for publishing and maintaining living data products."></p>
-<div class="line-block">Best Practice | Next steps (examples) |</div>
-<p>+:===================================================================================================================================================================================================================================================================================================================================+:=======================================================================================================================================+ | <strong>1. Make Data Governance Foundational and Explicit to Establish and Sustain Trust and Reuse.</strong> Establishing clear governance structures promotes quality, accountability, and alignment with FAIR and CARE principles enabling trust and long-term stewardship across multi-organization projects. | - Document roles and responsibilities using a Data Product Governance Charter and structured responsibility frameworks. | | | | | | - Integrate CARE principles to respect First Nations, Tribes, and Indigenous data rights. | | | | | | - Form a governance or oversight committee to review data standards, timelines, and agreements. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>2. Reuse Proven Infrastructure to Save Time and Increase Interoperability.</strong> Leveraging existing platforms and technologies by building on and extending them rather than building bespoke solutions reduces costs and improves long-term interoperability and sustainability. | - Use domain-specific repositories | | | | | | - Publish and archive data with appropriate established repositories (e.g., KNB, Zenodo) for your data type and governance context. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>3. Make Data, People, Projects, and Outputs Discoverable, Linked and Citable with Persistent Identifiers.</strong> Persistent identifiers (PIDs) connect data with researchers, organizations, and outputs—supporting data citation, reuse, and automated attribution. | - Encourage use of ORCIDs for researchers. | | | | | | - Use ROR IDs for organizations. | | | | | | - Assign DOIs via DataCite for data packages. | | | | | | - Embed DOIs in dashboards and metadata. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>4. Use Shared Data Models, Vocabularies and Metadata to Enable Integration.</strong> Common vocabularies, metadata standards, and ontologies support integration across systems and preserve semantic meaning. | - Adopt ISO 19115, EML, or DataCite metadata standards. | | | | | | - Re-use terms defined in Salmon Domain Ontology. | | | | | | - Model datasets using the Darwin Core Data Package Model. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>5. Store and Analyze Data in Ways That Others Can Easily Access, Use and Trust.</strong> Structured and accessible data formats ease reusability, and support integration with analytical tools and applications while data analyzed or wrangled using programmatic scripts (R, Python etc.) enable reproducibility and increase trust. | - Provide programmatic access (e.g., APIs) where appropriate. | | | | | | - Archive in trusted repositories (e.g., GBIF, FRDR, USGS). | | | | | | - Write scripts in a programming language to wrangle, transform, and analyze data. | | | | | | - Use GitHub to host code for collaboration and transparency and the GitHub / Zenodo integration for DOI assignment and preservation. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>6. Incentivize and Track Data Sharing and Reuse.</strong> Recognizing data contributors and tracking reuse promotes a culture of sharing and supports professional recognition. | - License data with CC-BY 4.0. | | | | | | - Include citation text and visible credit fields. | | | | | | - Use COUNTER metrics and DataCite APIs to monitor reuse. | | | | | | - Encourage dataset citation in references. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+ | <strong>7. Build Community Through Co-Development and Mutual Benefit.</strong> Engaging users early ensures tools and standards meet real-world needs and enhances long-term stewardship. | - Participate in RDA Salmon Interest Group. | | | | | | - Facilitate workshops for metadata and vocabulary alignment. | | | | | | - Support community-engaged research with tangible benefits. | +————————————————————————————————————————————————————————————————————————————————————————————————————————————+—————————————————————————————————————————————-+</p>
-<p>: Best practices for salmon data stewardship with quick-start next steps {#tbl-bestpractices}</p>
+<div id="fig-living-data-products" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-living-data-products-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig-1-living-data-products-workflow.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Stewardship workflow for publishing and maintaining living data products."><img src="figures/fig-1-living-data-products-workflow.svg" class="img-fluid figure-img" style="width:85mm"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-living-data-products-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Stewardship workflow for publishing and maintaining living data products.
+</figcaption>
+</figure>
+</div>
+<div id="tbl-bestpractices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bestpractices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Best practices for salmon data stewardship with quick-start next steps
+</figcaption>
+<div aria-describedby="tbl-bestpractices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Best Practice</th>
+<th>Next steps (examples)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Make Data Governance Foundational and Explicit to Establish and Sustain Trust and Reuse.</strong> Establishing clear governance structures promotes quality, accountability, and alignment with FAIR and CARE principles enabling trust and long-term stewardship across multi-organization projects.</td>
+<td>• Document roles and responsibilities using a Data Product Governance Charter and structured responsibility frameworks.<br>• Integrate CARE principles to respect First Nations, Tribes, and Indigenous data rights.<br>• Form a governance or oversight committee to review data standards, timelines, and agreements.</td>
+</tr>
+<tr class="even">
+<td><strong>2. Reuse Proven Infrastructure to Save Time and Increase Interoperability.</strong> Leveraging existing platforms and technologies by building on and extending them rather than building bespoke solutions reduces costs and improves long-term interoperability and sustainability.</td>
+<td>• Use domain-specific repositories.<br>• Publish and archive data with established repositories (e.g., KNB, Zenodo) matched to your data type and governance context.</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Make Data, People, Projects, and Outputs Discoverable, Linked and Citable with Persistent Identifiers.</strong> Persistent identifiers (PIDs) connect data with researchers, organizations, and outputs—supporting data citation, reuse, and automated attribution.</td>
+<td>• Encourage ORCID use for researchers.<br>• Use ROR IDs for organizations.<br>• Assign DOIs via DataCite for data packages.<br>• Embed DOIs in dashboards and metadata.</td>
+</tr>
+<tr class="even">
+<td><strong>4. Use Shared Data Models, Vocabularies and Metadata to Enable Integration.</strong> Common vocabularies, metadata standards, and ontologies support integration across systems and preserve semantic meaning.</td>
+<td>• Adopt ISO 19115, EML, or DataCite metadata standards.<br>• Re-use terms defined in Salmon Domain Ontology.<br>• Model datasets using the Darwin Core Data Package model.</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Store and Analyze Data in Ways That Others Can Easily Access, Use and Trust.</strong> Structured and accessible data formats ease reusability and integration with analytical tools, while programmatic workflows (e.g., R, Python) increase reproducibility and trust.</td>
+<td>• Provide programmatic access (e.g., APIs) where appropriate.<br>• Archive in trusted repositories (e.g., GBIF, FRDR, USGS).<br>• Use scripts to wrangle, transform, and analyze data reproducibly.<br>• Use GitHub for transparent collaboration and GitHub/Zenodo for DOI assignment and preservation.</td>
+</tr>
+<tr class="even">
+<td><strong>6. Incentivize and Track Data Sharing and Reuse.</strong> Recognizing data contributors and tracking reuse promotes a culture of sharing and supports professional recognition.</td>
+<td>• License data with CC-BY 4.0.<br>• Include citation text and visible credit fields.<br>• Use COUNTER metrics and DataCite APIs to monitor reuse.<br>• Encourage dataset citation in references.</td>
+</tr>
+<tr class="odd">
+<td><strong>7. Build Community Through Co-Development and Mutual Benefit.</strong> Engaging users early ensures tools and standards meet real-world needs and enhances long-term stewardship.</td>
+<td>• Participate in RDA Salmon Interest Group.<br>• Facilitate workshops for metadata and vocabulary alignment.<br>• Support community-engaged research with tangible benefits.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
