@@ -409,7 +409,7 @@ Integration System (SDIS)---to show how the practices can be implemented
 as an end-to-end, versioned workflow in an operational salmon data
 program.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key terms (quick primer)}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key terms (quick primer)}, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, colback=white, leftrule=.75mm, opacityback=0, left=2mm, rightrule=.15mm, toprule=.15mm, titlerule=0mm, bottomtitle=1mm, breakable, coltitle=black]
 
 \begin{itemize}
 \tightlist
@@ -506,7 +506,7 @@ systems, and maintaining long-term relationships, data stewards create
 the social infrastructure necessary for effective cross-boundary data
 collaboration.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Common Functions of Salmon Data Stewards}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box 1: Common Functions of Salmon Data Stewards}, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, colback=white, leftrule=.75mm, opacityback=0, left=2mm, rightrule=.15mm, toprule=.15mm, titlerule=0mm, bottomtitle=1mm, breakable, coltitle=black]
 
 Effective salmon data stewards often perform several common functions:
 
@@ -811,8 +811,10 @@ DataCite for data packages.• Embed DOIs in dashboards and metadata. \\
 Integration.} Common vocabularies, metadata standards, and ontologies
 support integration across systems and preserve semantic meaning. & •
 Adopt ISO 19115, EML, or DataCite metadata standards.• Re-use terms
-defined in Salmon Domain Ontology.• Model datasets using the Darwin Core
-Data Package model. \\
+defined in
+\href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+Domain Ontology}.• Model datasets using the Darwin Core Data Package
+model. \\
 \textbf{5. Store and Analyze Data in Ways That Others Can Easily Access,
 Use and Trust.} Structured and accessible data formats ease reusability
 and integration with analytical tools, while programmatic workflows
@@ -835,7 +837,7 @@ alignment.• Support community-engaged research with tangible
 benefits. \\
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, titlerule=0mm, bottomtitle=1mm, breakable, opacityback=0, toptitle=1mm, bottomrule=.15mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box: Salmon Data Integration System (SDIS) --- a worked example}, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, bottomrule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Box: Salmon Data Integration System (SDIS) --- a worked example}, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, colback=white, leftrule=.75mm, opacityback=0, left=2mm, rightrule=.15mm, toprule=.15mm, titlerule=0mm, bottomtitle=1mm, breakable, coltitle=black]
 
 SDIS (Salmon Data Integration System) is a worked example of how the
 seven best practices can be implemented together in a salmon monitoring
@@ -857,13 +859,16 @@ Core SDIS components (illustrative):
   2026c)
   (\url{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md})
 \item
-  \textbf{Salmon Domain Ontology} (canonical interoperability layer for
-  shared salmon concepts)
+  \textbf{\href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+  Domain Ontology}} (canonical interoperability layer for shared salmon
+  concepts)
 \item
   \textbf{DFO Salmon Ontology} (DFO Pacific Science, 2026a)
   (\url{https://dfo-pacific-science.github.io/dfo-salmon-ontology/})
   (organization-specific ontology and controlled vocabularies aligned to
-  the broader Salmon Domain Ontology layer)
+  the broader
+  \href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+  Domain Ontology} layer)
 \item
   \textbf{Salmon Data GPT} (DFO Pacific Science, 2026d)
   (\url{https://github.com/dfo-pacific-science/smn-gpt})
@@ -1458,8 +1463,10 @@ persistent identifier in a controlled vocabulary or ontology
 
 \begin{itemize}
 \item
-  Treat the Salmon Domain Ontology as the canonical interoperability
-  layer for shared salmon concepts across organizations.
+  Treat the
+  \href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+  Domain Ontology} as the canonical interoperability layer for shared
+  salmon concepts across organizations.
 \item
   The DFO Salmon Ontology is one organization-specific ontology and
   controlled vocabulary set aligned to that broader layer, publishing
@@ -1779,8 +1786,10 @@ and responsible data use.
   \href{https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md}{Salmon
   Data Package specification}.
 \item
-  Treat the Salmon Domain Ontology as the canonical interoperability
-  layer, then review the
+  Treat the
+  \href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+  Domain Ontology} as the canonical interoperability layer, then review
+  the
   \href{https://dfo-pacific-science.github.io/dfo-salmon-ontology/}{DFO
   Salmon Ontology} as an organization-specific ontology and controlled
   vocabulary set aligned to that broader layer.
@@ -1854,9 +1863,10 @@ reusable data products.
   Build one versioned dataset package using metasalmon + the Salmon Data
   Package specification.
 \item
-  Map at least 10 core fields to the Salmon Domain Ontology first, then
-  use the DFO Salmon Ontology where organization-specific controlled
-  vocabularies are needed.
+  Map at least 10 core fields to the
+  \href{https://github.com/salmon-data-mobilization/salmon-domain-ontology/}{Salmon
+  Domain Ontology} first, then use the DFO Salmon Ontology where
+  organization-specific controlled vocabularies are needed.
 \item
   Publish a release with persistent metadata and DOI-backed citation
   text.

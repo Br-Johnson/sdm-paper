@@ -466,10 +466,6 @@ Table&nbsp;1: Best practices for salmon data stewardship with quick-start next s
 </figcaption>
 <div aria-describedby="tbl-bestpractices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Best Practice</th>
@@ -491,7 +487,7 @@ Table&nbsp;1: Best practices for salmon data stewardship with quick-start next s
 </tr>
 <tr class="even">
 <td><strong>4. Use Shared Data Models, Vocabularies and Metadata to Enable Integration.</strong> Common vocabularies, metadata standards, and ontologies support integration across systems and preserve semantic meaning.</td>
-<td>• Adopt ISO 19115, EML, or DataCite metadata standards.<br>• Re-use terms defined in Salmon Domain Ontology.<br>• Model datasets using the Darwin Core Data Package model.</td>
+<td>• Adopt ISO 19115, EML, or DataCite metadata standards.<br>• Re-use terms defined in <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a>.<br>• Model datasets using the Darwin Core Data Package model.</td>
 </tr>
 <tr class="odd">
 <td><strong>5. Store and Analyze Data in Ways That Others Can Easily Access, Use and Trust.</strong> Structured and accessible data formats ease reusability and integration with analytical tools, while programmatic workflows (e.g., R, Python) increase reproducibility and trust.</td>
@@ -525,8 +521,8 @@ Table&nbsp;1: Best practices for salmon data stewardship with quick-start next s
 <ul>
 <li><strong>metasalmon (R)</strong> <span class="citation" data-cites="metasalmon">(<a href="#ref-metasalmon" role="doc-biblioref">DFO Pacific Science, 2026b</a>)</span> (<a href="https://dfo-pacific-science.github.io/metasalmon/index.html" class="uri">https://dfo-pacific-science.github.io/metasalmon/index.html</a>)</li>
 <li><strong>Salmon Data Package specification</strong> <span class="citation" data-cites="smn_data_pkg_spec">(<a href="#ref-smn_data_pkg_spec" role="doc-biblioref">DFO Pacific Science, 2026c</a>)</span> (<a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a>)</li>
-<li><strong>Salmon Domain Ontology</strong> (canonical interoperability layer for shared salmon concepts)</li>
-<li><strong>DFO Salmon Ontology</strong> <span class="citation" data-cites="dfo_salmon_ontology">(<a href="#ref-dfo_salmon_ontology" role="doc-biblioref">DFO Pacific Science, 2026a</a>)</span> (<a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" class="uri">https://dfo-pacific-science.github.io/dfo-salmon-ontology/</a>) (organization-specific ontology and controlled vocabularies aligned to the broader Salmon Domain Ontology layer)</li>
+<li><strong><a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a></strong> (canonical interoperability layer for shared salmon concepts)</li>
+<li><strong>DFO Salmon Ontology</strong> <span class="citation" data-cites="dfo_salmon_ontology">(<a href="#ref-dfo_salmon_ontology" role="doc-biblioref">DFO Pacific Science, 2026a</a>)</span> (<a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" class="uri">https://dfo-pacific-science.github.io/dfo-salmon-ontology/</a>) (organization-specific ontology and controlled vocabularies aligned to the broader <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a> layer)</li>
 <li><strong>Salmon Data GPT</strong> <span class="citation" data-cites="smn_gpt">(<a href="#ref-smn_gpt" role="doc-biblioref">DFO Pacific Science, 2026d</a>)</span> (<a href="https://github.com/dfo-pacific-science/smn-gpt" class="uri">https://github.com/dfo-pacific-science/smn-gpt</a>)</li>
 </ul>
 <p>Other programs can implement the same stewardship pattern using different tools. Where provenance is important, relationships among datasets, methods, and releases can be expressed using standard conceptual models (e.g., PROV-DM) <span class="citation" data-cites="w3c_prov_dm_2013">(<a href="#ref-w3c_prov_dm_2013" role="doc-biblioref">W3C, 2013</a>)</span>.</p>
@@ -763,7 +759,7 @@ Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., B
 </ul>
 <p>4.3 Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology</p>
 <ul>
-<li><p>Treat the Salmon Domain Ontology as the canonical interoperability layer for shared salmon concepts across organizations.</p></li>
+<li><p>Treat the <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a> as the canonical interoperability layer for shared salmon concepts across organizations.</p></li>
 <li><p>The DFO Salmon Ontology is one organization-specific ontology and controlled vocabulary set aligned to that broader layer, publishing stable identifiers and definitions to support semantic alignment and crosswalks: <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" class="uri">https://dfo-pacific-science.github.io/dfo-salmon-ontology/</a></p></li>
 <li><p>WDFW has definitions of all hatchery escapement data. <a href="https://wdfw.wa.gov/fishing/management/hatcheries/escapement#definitions">Hatchery escapement reports | Washington Department of Fish &amp; Wildlife</a></p></li>
 <li><p>Fish Passage Counts has defined metadata that can be used across OFDW and WDFW. <a href="https://www.fpc.org/111_sharedfiles/ColumbiaRiverBasinAdultFishPassageCountsMetadata.pdf" class="uri">https://www.fpc.org/111_sharedfiles/ColumbiaRiverBasinAdultFishPassageCountsMetadata.pdf</a></p></li>
@@ -897,7 +893,7 @@ Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., B
 <p><strong>Beginner SDIS starter tasks (salmon-domain):</strong></p>
 <ul>
 <li>Read the <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon Data Package specification</a>.</li>
-<li>Treat the Salmon Domain Ontology as the canonical interoperability layer, then review the <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/">DFO Salmon Ontology</a> as an organization-specific ontology and controlled vocabulary set aligned to that broader layer.</li>
+<li>Treat the <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a> as the canonical interoperability layer, then review the <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/">DFO Salmon Ontology</a> as an organization-specific ontology and controlled vocabulary set aligned to that broader layer.</li>
 <li>Explore <a href="https://dfo-pacific-science.github.io/metasalmon/index.html">metasalmon documentation</a> to understand package structure and metadata expectations.</li>
 </ul>
 </section>
@@ -929,7 +925,7 @@ Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., B
 <p><strong>Intermediate SDIS practicum tasks (salmon-domain):</strong></p>
 <ul>
 <li>Build one versioned dataset package using metasalmon + the Salmon Data Package specification.</li>
-<li>Map at least 10 core fields to the Salmon Domain Ontology first, then use the DFO Salmon Ontology where organization-specific controlled vocabularies are needed.</li>
+<li>Map at least 10 core fields to the <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/">Salmon Domain Ontology</a> first, then use the DFO Salmon Ontology where organization-specific controlled vocabularies are needed.</li>
 <li>Publish a release with persistent metadata and DOI-backed citation text.</li>
 </ul>
 </section>
