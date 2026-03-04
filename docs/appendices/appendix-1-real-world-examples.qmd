@@ -2,6 +2,22 @@
 
 Here we provide detailed descriptions of the seven best practices for salmon data stewardship, along with practical applications and real-world examples. This is not an exhaustive list, but rather a starting point for salmon biologists and data stewards to implement effective data stewardship practices in their work based on examples from the salmon research and management community.
 
+**Example-to-practice matrix (illustrative):** many real-world implementations support multiple best practices at once.
+
+| Example (illustrative) | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| Northwest Indian Fisheries Commission (NWIFC) password-protected co-manager portal | ● |  |  |  | ● |  | ● |
+| Pacific Salmon Commission Technical Committee on Data Sharing | ● |  |  |  |  |  | ● |
+| PSF spawner surveys on Zenodo (discoverability vs local portal) |  | ● | ● |  | ● | ● |  |
+| NPAFC CKAN catalogue + DOIs for reports/data packages |  | ● | ● |  | ● |  |  |
+| ROR + DataCite Commons (e.g., Pacific Salmon Foundation) |  |  | ● |  |  | ● |  |
+| DFO Salmon Ontology term identifiers |  |  |  | ● |  |  | ● |
+| StreamNet Data Exchange Standard (DES) | ● |  |  | ● |  |  | ● |
+| PTAGIS API |  |  |  |  | ● |  |  |
+| GitHub + Zenodo (NuSEDS cleaning code + versioned dataset DOIs) |  |  | ● |  | ● | ● |  |
+| Workshops (e.g., AFS “Fishing for Clarity”) |  |  |  | ● |  |  | ● |
+
+
 #### **1. Make Data Governance Explicit to Support Trust and Reuse**
 
 Clear governance defines roles, responsibilities, and procedures ensuring data quality, long-term maintenance, accountability, and compliance with community principles such as FAIR and CARE. Effective governance fosters trust, and facilitate data sharing, reduces ambiguity regarding decision making, and is critical for coordinating both technical and sociocultural aspects of data stewardship.
@@ -50,7 +66,7 @@ Persistent identifiers (PIDs), including Digital Object Identifiers (DOI) are es
 
 3.3 Assign DOIs to data packages, protocols, and reports using DataCite. Maintain version history for all metadata records and document the provenance of metadata creation, updates, and quality control processes to ensure accountability and traceability.
 
--   The North Pacific Anadromous FIsh Commission (NPAFC) assigns DOIs to IYS-related data packages which are served by a CKAN catalogue at <https://data.npafc.org>. The Commission also assigns DOIs to NPAFC Technical Reports and Bulletins.
+-   The North Pacific Anadromous Fish Commission (NPAFC) assigns DOIs to IYS-related data packages which are served by a CKAN catalogue at <https://data.npafc.org>. The Commission also assigns DOIs to NPAFC Technical Reports and Bulletins.
 -   The Pacific Salmon Foundation’s State of Salmon report (stateofsalmon.ca) has unique DOIs for each version, improving specificity and citability of each year’s results.
 
 3.4 Embed DOIs in dashboards, figures, and metadata so they persist in derivative products.
@@ -72,13 +88,11 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 -   The International Year of the Salmon High Seas Expeditions data mobilization efforts [@johnson2024] published their data to OBIS: <https://www.gbif.org/dataset/search?project_id=IYS>
 
+-   StreamNet’s Data Exchange Standard (DES) provides a concrete example of collaboratively developed data exchange rules (structures, definitions, and business rules) for fish monitoring and related data [@streamnet_des_2024_1].
+
 4.3 Re-use or publish data terms that are shared online using a persistent identifier in a controlled vocabulary or ontology
 
--   DFO Salmon Ontology...
-
--   State of Alaska Salmon and People...
-
--   Measurement Types in OBIS...
+-   The DFO Salmon Ontology publishes stable identifiers and definitions for salmon-domain concepts to support semantic alignment and crosswalks: <https://dfo-pacific-science.github.io/dfo-salmon-ontology/>
 
 -   WDFW has definitions of all hatchery escapement data. [Hatchery escapement reports \| Washington Department of Fish & Wildlife](https://wdfw.wa.gov/fishing/management/hatcheries/escapement#definitions)
 
@@ -86,17 +100,21 @@ Standardizing metadata and terminology ensures data can be interpreted correctly
 
 #### **Best Practice 5: Store and Analyze Data in Ways That Others Can Easily Access, Use, and Trust**
 
-Making data easily accessible promotes its use in research and management, enabling seamless integration with tools and applications. Ensuring accessible, persistent data storage requires more than just file hosting. Data should be structured, accessible via API, and stored in repositories that support long-term preservation.
+Making data easily accessible promotes its use in research and management, enabling integration with tools and applications. Ensuring accessible, persistent data storage requires more than file hosting [@coretrustseal_2022_requirements]. Data should be structured and well-documented, stored in repositories that support long-term preservation, and---where it materially improves reuse---made available via programmatic access such as APIs.
 
 ##### Practical Applications:
 
-5.1 Provide Direct Data Access via Application Programming Interfaces (APIs) using tools such as FastAPI, Flask, or Django REST Framework that allows users to access, filter, and retrieve data programmatically, facilitating automation and integration into analytical tools and decision-support systems
+5.1 Provide direct data access via application programming interfaces (APIs) so users can retrieve, filter, and integrate data programmatically into analysis pipelines and decision-support tools.
 
--   The Pacific States Marine Fisheries Commission make's their [PIT Tag Information System](https://www.psmfc.org/program/pit-tag-information-systems-ptagis) data accessible via the [PTAGIS API](https://api.ptagis.org/index.html#:~:text=PTAGIS%20API%20Gets%20a%20list,PTAGIS%20and%20currently%20contributing%20data)
+-   The Pacific States Marine Fisheries Commission makes its [PIT Tag Information System](https://www.psmfc.org/program/pit-tag-information-systems-ptagis) data programmatically accessible via the [PTAGIS API](https://api.ptagis.org/index.html).
+-   The NPAFC CKAN catalogue exposes machine-actionable search and metadata endpoints (for example, [package search for salmon datasets](https://data.npafc.org/api/3/action/package_search?q=salmon)), enabling scripted discovery and harvesting.
 
-5.2 Archive data in certified long-term, domain-specific repositories such as the Global Biodiversity Information Facility, the Federated Research Data Repository (FRDR), or NOAA’s NCEI, USGS ScienceBase, or EMODnet
+5.2 Archive data in long-term, domain-relevant repositories that provide stable landing pages, machine-readable metadata, and explicit reuse conditions.
 
--   TODO
+-   NPAFC publishes salmon datasets with DOI-backed landing pages in its catalogue (for example, [Genetic stock identification...](https://data.npafc.org/dataset/ca-cioos_2dac6609-3541-458c-88b1-5564599d9621?local=en), DOI: <https://doi.org/10.21966/a59e-0t51>).
+-   The Hakai Institute Juvenile Salmon Program provides biodiversity records through OBIS/GBIF infrastructure with stable dataset pages and downloadable resources: <https://www.gbif.org/dataset/72de3af4-1572-4f2d-8006-2bfa2007065c>.
+-   USGS ScienceBase hosts salmon-relevant geospatial products with persistent item pages and downloadable files (for example, [State of the Salmon Range-wide Salmon Distribution](https://www.sciencebase.gov/catalog/item/50dfaef8e4b0dfbe79e6e88a)).
+-   NOAA Fisheries maintains operational salmon data resources with annual updates (for example, [U.S. Atlantic Salmon Assessment Committee Database](https://www.fisheries.noaa.gov/resource/data/us-atlantic-salmon-assessment-committee-database)).
 
 5.3 Leverage the integration between GitHub and Zenodo to automate archiving and DOI assignment, ensuring long-term data preservation.
 
@@ -110,22 +128,31 @@ The currency of research lies in recognition—credit, citations, and opportunit
 
 6.1 License data for reuse using liberal licenses
 
--   All data accessible through the [NPAFC data catalogue](https://data.npafc.org) is licenced as  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en)
+-   All data accessible through the [NPAFC data catalogue](https://data.npafc.org) is licensed as  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en)
 
 6.2 Provide recommended citation text and visible credit fields in metadata
 
-6.3 Create summary dashboards that highlight reuse using [COUNTER Code of Practice compliant metrics](https://www.countermetrics.org/) to track dataset views/downloads and the DataCite APIs
+-   NPAFC dataset landing pages expose citable DOI metadata and a dedicated citation section alongside contributors and licensing details (example dataset: <https://data.npafc.org/dataset/ca-cioos_2dac6609-3541-458c-88b1-5564599d9621?local=en>).
+-   NOAA InPort records provide reusable citation text directly on metadata landing pages (example: [AFSC/ABL: Karluk sockeye salmon scale time series](https://www.fisheries.noaa.gov/inport/item/17247)).
+
+6.3 Create summary dashboards that highlight reuse using [COUNTER Code of Practice compliant metrics](https://www.countermetrics.org/) to track dataset views/downloads and DataCite APIs
+
+-   Use [DataCite REST API endpoints](https://support.datacite.org/docs/api) to retrieve DOI metadata programmatically and feed organization-level tracking workflows.
+-   Combine repository-native metrics (views/downloads) with catalogue/API outputs (for example, NPAFC CKAN API results) to create repeatable monitoring reports.
 
 6.4 Ensure that datasets are properly cited in journal articles using in text citations and the recommended citation in the articles list of references, not just in a Data Availability statement
 
 -   In late 2024, the NPAFC began citing data sets using in-text citations and the recommended citation in the list of references with the publication of NPAFC Bulletin 7 titled, *Highlights of the 2022 International Year of the Salmon Pan–Pacific Winter Expedition*.
 -   The cleaned NuSEDS dataset (see Section 5.3) was used in an analysis and cited in the associated publication ([Atkinson et al., 2025](https://doi.org/10.1139/cjfas-2024-0387)) using the DOI and citation provided with the dataset on [Zenodo](https://doi.org/10.5281/zenodo.15625993).
 
-6.5 Promote the view that well documented data publications are primary research outputs and are significant contributions to the field
+6.5 Promote the view that well-documented data publications are primary research outputs and significant contributions to the field
+
+-   Treat dataset publication milestones (for example, DOI assignment, metadata completion, and versioned release) as reportable scholarly outputs in project and performance reporting.
+-   Encourage teams to include dataset DOIs in CVs, annual reports, and program dashboards alongside article outputs.
 
 #### **7. Build Community Through Co-Development and Mutual Benefit**
 
-Creating an infrastructure that standardizes and provides cross-border and cross-ecosystem data integration is only effective if there’s community engagement. Standards and tools must be co-developed with their intended users using user-centred design principles (citation required) to be effective. Engaging biologists, Indigenous stewards, and data managers ensures relevance, usability, and long-term participation.
+Creating an infrastructure that standardizes and provides cross-border and cross-ecosystem data integration is only effective if there’s community engagement. Standards and tools must be co-developed with their intended users using user-centred design principles [@iso9241_210_2019] to be effective. Engaging biologists, Indigenous stewards, and data managers ensures relevance, usability, and long-term participation.
 
 ##### Practical Applications:
 

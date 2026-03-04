@@ -90,7 +90,7 @@ Due to a lack of practical resources, many salmon biologists struggle to align t
 
 ### Framework for Action
 
-In this paper, we provide a framework for translating data stewardship principles into actionable practices, examples, and workflows to help salmon biologists improve the usability, traceability, and long-term impact of their data. We offer seven practices for salmon data stewardship, with the Best Practices table designed as the quick-start entry point: the left column defines each practice and the right column lists concrete next steps. We then use a retrospective, real-world case study of cross-jurisdictional sockeye productivity synthesis [@peterman2012] to illustrate how the absence of shared practices made integration time-consuming and keeps annual updates costly and difficult to this day. To support adoption, we provide real-world examples from multiple organizations (Appendix 1), a training roadmap for biologists taking on stewardship responsibilities (Appendix 2), and a getting-started checklist (Appendix 3). We also map the seven practices to widely used data lifecycle models (@tbl-lifecycle) to make adaptation straightforward outside salmon contexts. Although salmon provide the worked example, the approach is intended as a transferable blueprint: other scientific communities can substitute their own vocabularies, repositories, governance structures, and incentives to turn data stewardship principles into practical applications. We also include a short worked example---the Salmon Data Integration System (SDIS)---to show how the practices can be implemented as an end-to-end, versioned workflow in an operational salmon data program.
+In this paper, we provide a framework for translating data stewardship principles into actionable practices, examples, and workflows to help salmon biologists improve the usability, traceability, and long-term impact of their data. We offer seven practices for salmon data stewardship, with the Best Practices table designed as the quick-start entry point: the left column defines each practice and the right column lists concrete next steps. We then use a retrospective, real-world case study of cross-jurisdictional sockeye productivity synthesis [@peterman2012] to illustrate how the absence of shared practices made integration time-consuming and keeps annual updates costly and difficult to this day. To support adoption, we provide real-world examples from multiple organizations (Appendix 1), a training roadmap for biologists taking on stewardship responsibilities (Appendix 2), and a getting-started checklist (Appendix 3). For organizations that require lifecycle framing, the same seven practices can be applied across planning, processing, preservation, access, and governance. Although salmon provide the worked example, the approach is intended as a transferable blueprint: other scientific communities can substitute their own vocabularies, repositories, governance structures, and incentives to turn data stewardship principles into practical applications. We also include a short worked example---the Salmon Data Integration System (SDIS)---to show how the practices can be implemented as an end-to-end, versioned workflow in an operational salmon data program.
 
 ::: callout-note
 ## Key terms (quick primer)
@@ -237,61 +237,21 @@ The challenges and solutions demonstrated in this salmon case study generalize a
 ::: callout-note
 ## Box: Salmon Data Integration System (SDIS) — a worked example
 
-SDIS (Salmon Data Integration System) is presented here as a worked example of how the seven best practices can be implemented together in a salmon monitoring context. The intent is not to prescribe a particular software stack, but to illustrate a transferable pattern: make governance and access conditions explicit; package data with standardized, machine-readable metadata; use controlled terminology and persistent identifiers to improve interoperability; validate data automatically; and support discovery, citation, and reuse through stable landing pages and usage reporting.
+SDIS (Salmon Data Integration System) is a worked example of how the seven best practices can be implemented together in a salmon monitoring context. It is not a prescribed software stack; it is a transferable pattern: make governance and access conditions explicit, package data with standardized machine-readable metadata, use controlled terminology and persistent identifiers, validate automatically, and publish versioned, citable releases.
 
-SDIS includes the following components (linked for reference):
+Core SDIS components (illustrative):
 
 -   **metasalmon (R)** [@metasalmon] (<https://dfo-pacific-science.github.io/metasalmon/index.html>)
 -   **Salmon data package specification** [@smn_data_pkg_spec] (<https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>)
 -   **DFO Salmon Ontology** [@dfo_salmon_ontology] (<https://dfo-pacific-science.github.io/dfo-salmon-ontology/>)
 -   **Salmon Data GPT** [@smn_gpt] (<https://github.com/dfo-pacific-science/smn-gpt>)
 
-In SDIS, each practice corresponds to an operational choice aligned with widely used community standards and governance approaches; other programs could implement the same practices using different tools. Where provenance is important, relationships among datasets, methods, and releases can also be expressed using standard conceptual models (e.g., PROV-DM) [@w3c_prov_dm_2013].
+Other programs can implement the same stewardship pattern using different tools. Where provenance is important, relationships among datasets, methods, and releases can be expressed using standard conceptual models (e.g., PROV-DM) [@w3c_prov_dm_2013].
 :::
 
-SDIS is intentionally scoped to solve a practical, recurring problem in fisheries science: how to publish and maintain *living* salmon datasets that remain interpretable and reusable across time, teams, and institutions. We include it here not as a full software/methods description, but as a practitioner-facing example of how **deep interoperability** can be operationalized when governance, metadata, packaging, validation, and semantics are treated as a single workflow rather than separate afterthoughts.
+In SDIS, governance, metadata, packaging, validation, and semantics are treated as one operational workflow to support living datasets that remain interpretable and reusable across time, teams, and institutions.
 
-Conservatively, SDIS illustrates how each best practice can be implemented in a concrete way:
-
--   **Best Practice 1 (Governance):** specify roles, permissions, and reuse constraints in the data product documentation and metadata, consistent with FAIR and CARE.
--   **Best Practice 2 (Reuse infrastructure):** build on proven, widely used tooling and standards rather than bespoke one-off systems.
--   **Best Practice 3 (PIDs):** treat releases as citable products by supporting persistent identifiers and versioning for both data and supporting artifacts.
--   **Best Practice 4 (Shared models/vocabularies):** align key terms and fields using a shared specification and ontology-backed identifiers.
--   **Best Practice 5 (Accessible storage and trust):** publish structured, versioned releases with clear metadata and provenance; where appropriate, support programmatic access.
--   **Best Practice 6 (Incentives):** make credit and citation easy by embedding recommended citations and contributor metadata.
--   **Best Practice 7 (Community):** keep standards and mappings “alive” through transparent iteration (e.g., open documentation, issue tracking, and co-development where appropriate).
-
-### Metadata governance as a cross-cutting foundation
-
-Unlike the sequential stages of the data lifecycle, metadata governance operates as a continuous, cross-cutting practice that spans all phases simultaneously. While data moves through Plan → Obtain → Process → Preserve → Access → Disposition, metadata governance should be active throughout, ensuring that documentation, quality control, and discoverability are maintained at every stage. This cross-cutting nature means that metadata governance failures at any point can compromise downstream reuse and stewardship outcomes, making it a critical foundation rather than a discrete step in the process.
-
-The lifecycle mapping in @tbl-lifecycle reveals that data governance elements appear in every stage: planning metadata requirements (Plan), documenting collection methods (Obtain), structuring and validating metadata (Process), ensuring long-term preservation (Preserve), enabling discovery and access (Access), and managing final disposition (Disposition). This pervasive presence underscores why metadata governance must be treated as an organizational capability rather than a project-specific task, requiring dedicated resources, trained personnel, and systematic processes that operate continuously across all data activities.
-
-### How our seven practices align to the data lifecycle model
-
-Our seven best practices map directly to established data lifecycle models, demonstrating their broad applicability beyond salmon science. The NOAA Data Lifecycle provides a widely recognized framework with six sequential stages (Plan, Obtain, Process, Preserve, Access, Disposition) and four cross-cutting elements (Document, Track and Monitor, Quality, Security) [@noaadatagovernancecommittee2024]. This alignment ensures our practices are grounded in established federal data management standards and can be readily adopted by other agencies and research communities.
-
-The mapping shown in @tbl-lifecycle demonstrates how each practice addresses specific lifecycle stages while the cross-cutting elements ensure comprehensive data stewardship throughout the entire lifecycle. For example, Practice 1 (Data Governance) spans the entire lifecycle from planning through disposition, while Practice 4 (Shared Data Models) primarily supports the Process and Preserve stages. This systematic alignment with established frameworks enhances the credibility and portability of our approach across different domains and organizations.
-
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| Best Practice                 | Plan  | Obtain | Process | Preserve | Access | Disposition | Cross-cutting     |
-+:==============================+:=====:+:======:+:=======:+:========:+:======:+:===========:+:==================+
-| **1. Data Governance**        | ●     | ●      | ●       | ●        | ●      | ●           | Document, Quality |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **2. Reuse Infrastructure**   | ●     |        |         | ●        | ●      |             | Track and Monitor |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **3. Persistent Identifiers** | ●     |        |         | ●        | ●      | ●           | Document, Track   |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **4. Shared Data Models**     | ●     |        | ●       | ●        |        |             | Quality           |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **5. Accessible Storage**     |       |        | ●       | ●        | ●      |             | Security, Quality |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **6. Incentivize Sharing**    | ●     |        |         | ●        | ●      |             | Track and Monitor |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-| **7. Community Building**     | ●     | ●      | ●       | ●        | ●      | ●           | Document, Quality |
-+-------------------------------+-------+--------+---------+----------+--------+-------------+-------------------+
-
-: Mapping of seven best practices to NOAA Data Lifecycle stages and cross-cutting elements {#tbl-lifecycle}
+For teams that use lifecycle framing, these practices operate across the full data lifecycle, with metadata governance treated as a continuous cross-cutting function rather than a separate step.
 
 ## Conclusion
 

@@ -1,78 +1,75 @@
 ## Appendix 2: Training Roadmap for Salmon Biologists Transitioning to Data Stewardship
 
-This roadmap outlines essential topics, resources, and learning materials salmon biologists should engage with to effectively transition into data stewardship roles. The roadmap follows a structured progression similar to [roadmap.sh](https://roadmap.sh).
+This roadmap organizes training into three levels so biologists can build stewardship capacity in stages while applying skills directly to salmon data work.
 
-### 1. Foundations of Data Stewardship
+| Level | Suggested timeline | Primary goal |
+|---|---|---|
+| Beginner | 0-3 months | Build core stewardship literacy and governance habits |
+| Intermediate | 3-9 months | Publish interoperable, citable salmon data products |
+| Advanced | 9+ months | Lead operational stewardship programs across teams |
 
--   **Principles:**
-    -   [FAIR Data Principles](https://www.go-fair.org/fair-principles/)
-    -   [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
--   **Seminal Papers:**
-    -   Wilkinson et al. 2016 [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18)
-    -   Carroll et al. 2019 [Indigenous Data Governance](https://doi.org/10.5334/dsj-2019-031)
--   **Courses and Tutorials:**
-    -   [FAIR Principles Explained (GO-FAIR)](https://www.go-fair.org/resources/videos/fair-principles-explained/)
+### Beginner (0-3 months): Core stewardship literacy
 
-### 2. Data Management & Governance
+**Focus:** establish a shared language for governance, metadata, and responsible data use.
 
--   **Seminal Papers and Reports:**
-    -   Plotkin, 2014 [Data Stewardship](https://doi.org/10.1016/c2012-0-07057-3)
-    -   NOAA, 2007 [Environmental Data Management](https://doi.org/10.17226/12017)
--   **Practical Tools:**
-    -   Data Management Plan Templates ([DMPTool](https://dmptool.org))
-    -   DACI and RACI Frameworks ([Atlassian DACI Guide](https://www.atlassian.com/team-playbook/plays/daci))
+- **Principles and core readings**
+  - [FAIR Data Principles](https://www.go-fair.org/fair-principles/)
+  - [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
+  - Wilkinson et al. 2016, [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18)
+  - Carroll et al. 2019, [Indigenous Data Governance](https://doi.org/10.5334/dsj-2019-031)
+- **Governance and planning tools**
+  - [DMPTool templates](https://dmptool.org/public_templates?page=ALL)
+  - [DACI framework](https://www.atlassian.com/team-playbook/plays/daci)
+- **Foundational skills training**
+  - [Data Carpentry Lessons](https://datacarpentry.org/lessons/)
+  - [DataONE](https://www.dataone.org/)
 
-### 3. Metadata Standards and Ontologies
+**Beginner SDIS starter tasks (salmon-domain):**
 
--   **Standards to Master:**
-    -   [ISO 19115 Metadata Standard](https://www.iso.org/standard/53798.html)
-    -   [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/)
-    -   [Darwin Core Standard](https://dwc.tdwg.org/)
--   **Case Studies & Examples:**
-    -   [Pacific Salmon Foundation Metadata Standards](https://marinedata.psf.ca)
-    -   [Hakai Institute Juvenile Salmon Program](https://obis.org/dataset/81a9b931-8f47-49c4-94ff-0e46d7e9f1c9)
+- Read the [SMN data package specification](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md).
+- Review the [DFO Salmon Ontology](https://dfo-pacific-science.github.io/dfo-salmon-ontology/) landing page and identify relevant terms for one dataset.
+- Explore [metasalmon documentation](https://dfo-pacific-science.github.io/metasalmon/index.html) to understand package structure and metadata expectations.
 
-### 4. Controlled Vocabularies & Persistent Identifiers (PIDs)
+### Intermediate (3-9 months): Interoperable publication and integration
 
--   **PIDs to Implement:**
-    -   [DOIs via DataCite](https://datacite.org)
-    -   [ORCID IDs](https://orcid.org)
-    -   [Research Organization Registry (ROR)](https://ror.org)
--   **Practical Guides:**
-    -   [Introduction to PIDs (DataCite Blog)](https://blog.datacite.org/)
+**Focus:** move from internal data handling to publishable, reusable data products.
 
-### 5. Data Integration & Interoperability
+- **Metadata and semantic standards**
+  - [ISO geospatial metadata overview (FGDC)](https://www.fgdc.gov/metadata/iso-standards)
+  - [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/)
+  - [Darwin Core](https://dwc.tdwg.org/)
+- **Persistent identifiers and credit**
+  - [DataCite](https://datacite.org)
+  - [DataCite REST API intro](https://support.datacite.org/docs/api)
+  - [ORCID](https://orcid.org/)
+  - [ROR](https://ror.org/)
+- **Repository and API practice**
+  - [NPAFC data catalogue](https://data.npafc.org)
+  - [PTAGIS API](https://api.ptagis.org/index.html)
+  - [NPAFC CKAN API example](https://data.npafc.org/api/3/action/package_search?q=salmon)
+  - [Zenodo + GitHub citation guidance](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
--   **Seminal Papers:**
-    -   Johnson & Stap, 2024 [Salmon Ocean Observing System](https://doi.org/10.23849/npafcb7/6a4ddpde4)
-    -   Bull et al. 2022 [Likely Suspects Framework](https://doi.org/10.1093/icesjms/fsac099)
--   **Technical Skills & Tools:**
-    -   APIs with [FastAPI](https://fastapi.tiangolo.com), [Flask](https://flask.palletsprojects.com), [Django REST Framework](https://www.django-rest-framework.org)
-    -   [Zenodo-GitHub Integration](https://guides.github.com/activities/citable-code/)
+**Intermediate SDIS practicum tasks (salmon-domain):**
 
-### 6. Data Sharing, Citation & Metrics
+- Build one versioned dataset package using metasalmon + the SMN specification.
+- Map at least 10 core fields to stable terms in the DFO Salmon Ontology.
+- Publish a release with persistent metadata and DOI-backed citation text.
 
--   **Best Practices:**
-    -   [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
--   **Tracking & Metrics:**
-    -   [COUNTER Metrics](https://www.projectcounter.org/)
-    -   [DataCite API](https://datacite.org/service.html)
+### Advanced (9+ months): Operational stewardship leadership
 
-### 7. Community Engagement & Co-Development
+**Focus:** institutionalize stewardship as an ongoing organizational capability.
 
--   **Communities & Groups:**
-    -   [Research Data Alliance Salmon Research Group](https://rd-alliance.org/groups/salmon-data-management)
--   **Approaches & Frameworks:**
-    -   User-centered Design ([Interaction Design Foundation](https://www.interaction-design.org/literature/topics/user-centered-design))
-    -   Community Engaged Research ([University of Victoria Guide](https://www.uvic.ca/research/assets/docs/Community-Engaged-Research.pdf))
+- **Monitoring, incentives, and reporting**
+  - [COUNTER metrics](https://www.countermetrics.org/)
+  - [DataCite API](https://support.datacite.org/docs/api)
+- **Community co-development and governance coordination**
+  - [RDA Salmon Research and Monitoring Interest Group](https://www.rd-alliance.org/groups/salmon-research-and-monitoring-ig/)
+  - [PNAMP/AFS “Fishing for Clarity” workshop example](https://pnamp.org/event/workshop-fishing-for-clarity-knowledge-modeling-to-support-cross-organizational-collaboration-and-data-sharing-about-salmon-escapement/)
+  - User-centred design reference ([Interaction Design Foundation](https://www.interaction-design.org/literature/topics/user-centered-design))
 
-### Additional Resources
+**Advanced SDIS capstone (salmon-domain):**
 
--   **Free Courses:**
-    -   [Introduction to Open Science (FOSTER)](https://www.fosteropenscience.eu/toolkit)
-    -   [Research Data Management and Sharing (Coursera)](https://www.coursera.org/learn/data-management)
--   **Blogs & Websites:**
-    -   [Open Knowledge Foundation Blog](https://blog.okfn.org/)
-    -   [DataONE Data Management Resources](https://www.dataone.org/resources/)
+- Operate an end-to-end stewardship cycle (governance, packaging, validation, publication, citation, and reuse monitoring) for a recurring salmon data product.
+- Produce a quarterly stewardship report that summarizes metadata quality, release cadence, and reuse indicators.
 
-This roadmap serves as a structured guide to equip salmon biologists with the practical and theoretical skills required to excel in data stewardship roles.
+This progression is intended to be practical rather than prescriptive: teams can adjust pace and tooling while keeping the same capability milestones.
