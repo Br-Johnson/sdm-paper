@@ -1,0 +1,64 @@
+figure_id: fig-living-data-products-workflow
+title: Living data products workflow (salmon data stewardship)
+intent: >
+  Provide a single, wall-printable anchor figure that distills the spine of the paper:
+  stewardship as a repeatable workflow that produces and maintains living data products.
+audience: Salmon biologists transitioning into data stewardship roles; fisheries managers; data stewards
+
+journal_constraints:
+  venue: Fisheries (Perspective)
+  print_assumptions:
+    - may_be_reduced_percent: [35, 50]
+    - print_may_be_grayscale: true
+  layout:
+    target_column_width_mm: 85
+    preferred_aspect_ratio: "3:4"
+    no_outer_border: true
+  typography:
+    guidance: "Times-like"
+    target_min_legible_size_pt_after_reduction: 6
+    target_max_size_pt_after_reduction: 9
+  accessibility:
+    - colorblind_safe
+    - grayscale_safe
+
+deliverables:
+  masters:
+    - format: svg
+      notes: "Editable vector master; preserve text as text."
+    - format: pdf
+      notes: "Submission-friendly vector; preserve text as text."
+
+figma_file_conventions:
+  page_name: Figures
+  frame_name: "fig-1-living-data-products-workflow__85mm"
+  units: mm
+  frame:
+    width_mm: 85
+    height_mm: 113.3
+  layout_grid:
+    type: columns
+    columns: 3
+    gutter_mm: 3
+    margin_mm: 4
+
+content:
+  headline: "Living data products (workflow)"
+  subhead: "How stewardship turns field outputs into reusable, maintained data products"
+  cross_cutting_band:
+    label: "Cross-cutting"
+    primary: "Governance + metadata governance"
+    secondary: "Roles, access conditions, documentation, QA, and change control"
+  steps:
+    - "Collect / compile"
+    - "Package + document"
+    - "Validate + version"
+    - "Publish + preserve"
+    - "Discover + reuse"
+  loop_label: "Measure, learn, improve (community feedback loop)"
+
+composition:
+  recommended_structure: "vertical 5-step stack + cross-cutting band + loop arrow"
+  notes:
+    - "Minimize text; each step gets one short descriptor line."
+    - "Use hierarchy via spacing/stroke/gray fills; avoid color dependence."

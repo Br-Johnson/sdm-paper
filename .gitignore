@@ -31,3 +31,5 @@ docs/tech-debt.md
 docs/todo-list.md
 .cursorignore
 .cursor/
+
+tmp/

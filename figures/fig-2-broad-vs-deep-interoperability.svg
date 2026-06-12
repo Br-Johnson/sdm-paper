@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Figure 2 (SVG master): Broad vs deep interoperability (conceptual spine)
+Target: 85 mm wide (single column)
+Grayscale-safe; text preserved as text.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="85mm" height="113.3mm" viewBox="0 0 85 113.3" role="img" aria-label="Diagram contrasting broad interoperability and deep interoperability with examples of what each requires in salmon data stewardship.">
+  <defs>
+    <style><![CDATA[
+      .ink { fill: #111111; }
+      .g70 { fill: #4D4D4D; }
+      .paper { fill: #FFFFFF; }
+      .panel { fill: #FFFFFF; stroke: #111111; stroke-width: 0.35; }
+      .panel2 { fill: #F3F3F3; stroke: #111111; stroke-width: 0.35; }
+      .h1 { font-family: "Times New Roman", Times, serif; font-size: 3.6px; font-weight: 600; fill: #111111; }
+      .h2 { font-family: "Times New Roman", Times, serif; font-size: 2.35px; font-weight: 400; fill: #4D4D4D; }
+      .label { font-family: "Times New Roman", Times, serif; font-size: 2.6px; font-weight: 600; fill: #111111; }
+      .body { font-family: "Times New Roman", Times, serif; font-size: 2.2px; font-weight: 400; fill: #111111; }
+      .small { font-family: "Times New Roman", Times, serif; font-size: 2.05px; font-weight: 400; fill: #4D4D4D; }
+    ]]></style>
+  </defs>
+
+  <text x="4" y="8" class="h1">Interoperability has two parts</text>
+  <text x="4" y="12" class="h2">Broad interoperability enables data exchange; deep interoperability preserves meaning</text>
+
+  <!-- Two stacked panels -->
+  <g id="Concept::BroadInteroperability">
+    <rect x="4" y="18" width="77" height="38" class="panel" />
+    <text x="6" y="24" class="label">Broad interoperability</text>
+    <text x="6" y="28.5" class="body">Goal: data can move across systems and be found/accessed appropriately.</text>
+    <text x="8" y="33.5" class="body">• Structured formats + machine-readable metadata</text>
+    <text x="8" y="37.5" class="body">• Clear access conditions (FAIR ≠ open-by-default)</text>
+    <text x="8" y="41.5" class="body">• Persistent identifiers and stable landing pages</text>
+    <text x="8" y="45.5" class="body">• Trusted repositories / catalogs and search indexing</text>
+    <text x="6" y="52.2" class="small">Without this: people cannot reliably find or retrieve data products.</text>
+  </g>
+
+  <g id="Concept::DeepInteroperability">
+    <rect x="4" y="61" width="77" height="38" class="panel2" />
+    <text x="6" y="67" class="label">Deep interoperability</text>
+    <text x="6" y="71.5" class="body">Goal: reused data remains interpretable and comparable across contexts.</text>
+    <text x="8" y="76.5" class="body">• Shared definitions for terms, methods, and units</text>
+    <text x="8" y="80.5" class="body">• Controlled vocabularies + ontology-backed identifiers</text>
+    <text x="8" y="84.5" class="body">• Mappings/crosswalks across programs and jurisdictions</text>
+    <text x="8" y="88.5" class="body">• Provenance and versioning for reanalysis over time</text>
+    <text x="6" y="95.2" class="small">Without this: data may be accessible but meaning drifts and integration fails.</text>
+  </g>
+
+  <text x="4" y="110.8" class="h2">Figure 2. Broad vs deep interoperability as complementary requirements for reuse.</text>
+</svg>

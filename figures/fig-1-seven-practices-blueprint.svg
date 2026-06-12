@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Figure master (SVG): Seven Practices for Salmon Data Stewardship (Blueprint)
+Target width: 85 mm (Fisheries single-column)
+Grayscale-safe; text preserved as text.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="85mm" height="113.3mm" viewBox="0 0 85 113.3" role="img" aria-label="Seven Practices for Salmon Data Stewardship blueprint with cross-cutting metadata governance and guiding principles FAIR and CARE.">
+  <defs>
+    <style><![CDATA[
+      .ink { fill: #111111; }
+      .g70 { fill: #4D4D4D; }
+      .paper { fill: #FFFFFF; }
+      .bg { fill: #F7F7F7; }
+      .stroke { stroke: #111111; stroke-width: 0.35; }
+      .stroke2 { stroke: #111111; stroke-width: 0.5; }
+      .thin { stroke: #4D4D4D; stroke-width: 0.3; }
+      .card { fill: #FFFFFF; stroke: #111111; stroke-width: 0.35; }
+      .band { fill: #EFEFEF; stroke: none; }
+      .note { fill: #FFFFFF; stroke: #4D4D4D; stroke-width: 0.3; }
+      .h1 { font-family: "Times New Roman", Times, serif; font-size: 4.0px; font-weight: 600; fill: #111111; }
+      .h2 { font-family: "Times New Roman", Times, serif; font-size: 2.5px; font-weight: 400; fill: #4D4D4D; }
+      .label { font-family: "Times New Roman", Times, serif; font-size: 2.3px; font-weight: 600; fill: #111111; }
+      .body { font-family: "Times New Roman", Times, serif; font-size: 2.1px; font-weight: 400; fill: #111111; }
+      .small { font-family: "Times New Roman", Times, serif; font-size: 2.0px; font-weight: 400; fill: #111111; }
+      .caps { letter-spacing: 0.2px; }
+    ]]></style>
+  </defs>
+
+  <!-- Margins: 4 mm -->
+  <!-- Header -->
+  <text x="4" y="8" class="h1">Practical Data Stewardship for Salmon Biologists</text>
+  <text x="4" y="12" class="h2">Seven practices (blueprint) and the cross-cutting role of metadata governance</text>
+
+  <!-- Cross-cutting band behind the card stack -->
+  <rect x="4" y="16" width="77" height="76" class="band" />
+  <text x="4" y="15.2" class="h2">Metadata governance (cross-cutting): continuous documentation, QA, and stewardship of meaning</text>
+
+  <!-- Card stack geometry -->
+  <!-- Stack area: x=6..79, y=18..90; card height=10; gap=1 -->
+
+  <!-- Practice 1 -->
+  <g id="Practice::DataGovernance">
+    <rect x="6" y="18" width="73" height="10" class="card" />
+    <text x="7.5" y="22" class="label">1. Data Governance</text>
+    <text x="7.5" y="25.2" class="body">Clarify roles, decision rights, and agreements for shared data products.</text>
+  </g>
+
+  <!-- Practice 2 -->
+  <g id="Practice::ReuseInfrastructure">
+    <rect x="6" y="29" width="73" height="10" class="card" />
+    <text x="7.5" y="33" class="label">2. Reuse Infrastructure</text>
+    <text x="7.5" y="36.2" class="body">Adopt proven repositories, catalogs, and tooling instead of bespoke systems.</text>
+  </g>
+
+  <!-- Practice 3 -->
+  <g id="Practice::PersistentIdentifiers">
+    <rect x="6" y="40" width="73" height="10" class="card" />
+    <text x="7.5" y="44" class="label">3. Persistent Identifiers (PIDs)</text>
+    <text x="7.5" y="47.2" class="body">Make data, people, and outputs citable and linked (e.g., DOI, ORCID).</text>
+  </g>
+
+  <!-- Practice 4 -->
+  <g id="Practice::SharedDataModels">
+    <rect x="6" y="51" width="73" height="10" class="card" />
+    <text x="7.5" y="55" class="label">4. Shared Data Models &amp; Vocabularies</text>
+    <text x="7.5" y="58.2" class="body">Use shared schemas, controlled terms, and ontologies to enable integration.</text>
+  </g>
+
+  <!-- Practice 5 -->
+  <g id="Practice::AccessibleStorage">
+    <rect x="6" y="62" width="73" height="10" class="card" />
+    <text x="7.5" y="66" class="label">5. Accessible Storage &amp; Analysis</text>
+    <text x="7.5" y="69.2" class="body">Store data in trusted, structured ways others can access, use, and trust.</text>
+  </g>
+
+  <!-- Practice 6 -->
+  <g id="Practice::IncentivizeSharing">
+    <rect x="6" y="73" width="73" height="10" class="card" />
+    <text x="7.5" y="77" class="label">6. Incentivize &amp; Track Sharing</text>
+    <text x="7.5" y="80.2" class="body">Enable credit, metrics, and visibility to sustain contributions and reuse.</text>
+  </g>
+
+  <!-- Practice 7 -->
+  <g id="Practice::CommunityBuilding">
+    <rect x="6" y="84" width="73" height="10" class="card" />
+    <text x="7.5" y="88" class="label">7. Community Building</text>
+    <text x="7.5" y="91.2" class="body">Co-develop standards and workflows across jurisdictions and communities.</text>
+  </g>
+
+  <!-- Guiding principles callout -->
+  <g id="Principles::FAIR_CARE">
+    <rect x="44" y="96" width="37" height="13.3" class="note" />
+    <text x="45.5" y="100" class="label">Guiding principles</text>
+    <text x="45.5" y="103.2" class="small">• FAIR (Findable, Accessible, Interoperable, Reusable)</text>
+    <text x="45.5" y="106.0" class="small">• CARE (Collective benefit, Authority to control, Responsibility, Ethics)</text>
+  </g>
+
+  <!-- Footnote / caption cue (small) -->
+  <text x="4" y="111.6" class="h2">Figure 1. Blueprint summary of seven practices; metadata governance is cross-cutting.</text>
+</svg>
